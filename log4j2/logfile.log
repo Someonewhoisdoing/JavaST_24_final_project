@@ -7,3 +7,85 @@
 2020-05-09 00:33:52.073 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
 2020-05-09 00:33:53.231 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
 2020-05-09 00:33:53.231 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-09 00:41:10.898 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-09 00:41:10.902 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-09 00:41:10.902 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-09 00:41:10.923 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-09 00:41:43.197 [main] ERROR training.coffee.shop.pool.JDBCConnection - Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:897) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:822) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:189) ~[java.sql:?]
+	at by.training.coffee.shop.pool.JDBCConnection.getConnection(JDBCConnection.java:45) [classes/:?]
+	at by.training.coffee.shop.pool.JDBCConnection.closeConnection(JDBCConnection.java:55) [classes/:?]
+	at by.training.coffee.shop.controller.Controller.destroy(Controller.java:48) [classes/:?]
+	at org.apache.catalina.core.StandardWrapper.unload(StandardWrapper.java:1291) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapper.stopInternal(StandardWrapper.java:1592) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5384) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1400) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1389) [catalina.jar:9.0.24]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.24]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) [?:?]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:976) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1400) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1389) [catalina.jar:9.0.24]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.24]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) [?:?]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:976) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:473) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:994) [catalina.jar:9.0.24]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) [catalina.jar:9.0.24]
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:706) [catalina.jar:9.0.24]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:668) [catalina.jar:9.0.24]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:344) [bootstrap.jar:9.0.24]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475) [bootstrap.jar:9.0.24]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:150) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:841) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
+	at java.net.Socket.connect(Socket.java:603) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:150) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:841) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	... 40 more
+2020-05-09 00:41:43.245 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-09 00:41:43.246 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
