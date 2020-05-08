@@ -1,0 +1,9 @@
+2020-05-09 00:33:47.669 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-09 00:33:47.690 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-09 00:33:48.218 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-09 00:33:49.729 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-09 00:33:52.053 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-09 00:33:52.054 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-09 00:33:52.073 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-09 00:33:53.231 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-09 00:33:53.231 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in get method

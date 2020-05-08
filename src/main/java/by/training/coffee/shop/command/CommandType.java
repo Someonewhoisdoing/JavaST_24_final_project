@@ -6,8 +6,8 @@ import by.training.coffee.shop.command.implementation.menu.MenuItemInformationDi
 import by.training.coffee.shop.command.implementation.user.ToBasketPageCommand;
 import by.training.coffee.shop.command.implementation.user.ToPersonalInformationPageEditorCommand;
 import by.training.coffee.shop.command.implementation.user.UserPersonalInformationEditorCommand;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class CommandType {

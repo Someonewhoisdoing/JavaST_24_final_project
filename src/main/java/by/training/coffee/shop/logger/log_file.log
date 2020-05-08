@@ -1,3 +1,0 @@
-by.training.coffee.shop.dao.exception.DAOException
-	at by.training.coffee.shop.dao.implementation.UserDAOImplementation.findUserByLoginAndPassword(UserDAOImplementation.java:49)
-	at by.training.coffee.shop.Main.main(Main.java:15)

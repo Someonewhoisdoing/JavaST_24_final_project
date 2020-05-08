@@ -5,8 +5,8 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

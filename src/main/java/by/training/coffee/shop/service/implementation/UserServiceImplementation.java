@@ -6,8 +6,8 @@ import by.training.coffee.shop.exception.DAOException;
 import by.training.coffee.shop.pool.JDBCConnection;
 import by.training.coffee.shop.service.ServiceForDAO;
 import by.training.coffee.shop.exception.ServiceException;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 import java.sql.Connection;

@@ -10,8 +10,8 @@ import by.training.coffee.shop.entity.Ingredient;
 import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.MenuItemServiceImplementation;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 

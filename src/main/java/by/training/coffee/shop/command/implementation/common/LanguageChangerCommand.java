@@ -3,8 +3,8 @@ package by.training.coffee.shop.command.implementation.common;
 import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.language.ResourceManager;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 import javax.servlet.http.HttpServletRequest;
