@@ -29,7 +29,10 @@
 <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/home.jsp"><fmt:message key="home"/></a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="${pageContext.request.contextPath}/controller?command=to_menu_page?page=1"><fmt:message key="menu"/></a>
+<form action="controller" method="post">
+<input type="hidden" name="command" value="to_menu_page"/>
+<button type="submit" class="btn btn-link" name="page" value="1"><fmt:message key="menu"/></button>
+</form>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="${pageContext.request.contextPath}/controller?command=to_account_page"><fmt:message key="account"/></a>
