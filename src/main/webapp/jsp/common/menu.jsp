@@ -31,8 +31,11 @@
                             key="home"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/menu.jsp"><fmt:message
-                            key="menu"/></a>
+                    <form action="controller" method="post">
+                        <input type="hidden" name="command" value="to_menu_page"/>
+                        <button type="submit" class="btn btn-link" name="page" value="1"><fmt:message
+                                key="menu"/></button>
+                    </form>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"
@@ -40,9 +43,10 @@
                             key="account"/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"
-                       href="${pageContext.request.contextPath}/controller?command=to_basket_page"><fmt:message
-                            key="basket"/></a>
+                    <form action="controller" method="post">
+                        <input type="hidden" name="command" value="to_basket_page"/>
+                        <button type="submit" class="btn btn-link"><fmt:message key="basket"/></button>
+                    </form>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/login.jsp"><fmt:message
