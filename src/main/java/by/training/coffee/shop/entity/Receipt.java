@@ -1,6 +1,7 @@
 package by.training.coffee.shop.entity;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Receipt extends Entity {
@@ -8,6 +9,8 @@ public class Receipt extends Entity {
     private Date date;
     private Long userId;
     private Long receiptId;
+    //private Long menuItemId;
+    //private List<MenuItem> menuItemList;
 
     public Receipt(Long id, Integer number, Date date, Long userId) {
         super(id);

@@ -1,25 +1,48 @@
 package by.training.coffee.shop.entity;
 
-import java.util.List;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class OrderItem extends Entity {
+    private String name;
+    private BigDecimal price;
     private Long menuItemId;
-    private List<MenuItem> menuItemList;
 
-    public OrderItem(Long id, Long menuItemId, List<MenuItem> menuItemList) {
+    public OrderItem(Long id, String name, BigDecimal price, Long menuItemId) {
         super(id);
+        this.name = name;
+        this.price = price;
         this.menuItemId = menuItemId;
-        this.menuItemList = menuItemList;
     }
 
-    public OrderItem(Long menuItemId, List<MenuItem> menuItemList) {
+    public OrderItem(String name, BigDecimal price, Long menuItemId) {
+        this.name = name;
+        this.price = price;
         this.menuItemId = menuItemId;
-        this.menuItemList = menuItemList;
     }
 
     public OrderItem() {
         //empty constructor
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        if (price != null) {
+            this.price = price;
+        }
     }
 
     public Long getMenuItemId() {
@@ -32,16 +55,6 @@ public class OrderItem extends Entity {
         }
     }
 
-    public List<MenuItem> getMenuItemList() {
-        return menuItemList;
-    }
-
-    public void setMenuItemList(List<MenuItem> menuItemList) {
-        if (menuItemList != null) {
-            this.menuItemList = menuItemList;
-        }
-    }
-
     @Override
     public boolean equals(Object object) {
         if (this == object) {
@@ -51,20 +64,22 @@ public class OrderItem extends Entity {
             return false;
         }
         OrderItem orderItem = (OrderItem) object;
-        return Objects.equals(menuItemId, orderItem.menuItemId) &&
-                Objects.equals(menuItemList, orderItem.menuItemList);
+        return Objects.equals(name, orderItem.name)
+                && Objects.equals(price, orderItem.price)
+                && Objects.equals(menuItemId, orderItem.menuItemId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(menuItemId, menuItemList);
+        return Objects.hash(name, price, menuItemId);
     }
 
     @Override
     public String toString() {
         return "OrderItem: "
                 + super.toString()
-                + ", menuItemId=" + menuItemId
-                + ", menuItemList=" + menuItemList;
+                + ", name=" + name
+                + ", price=" + price
+                + ", menuItemId=" + menuItemId;
     }
 }
