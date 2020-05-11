@@ -89,3 +89,901 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 40 more
 2020-05-09 00:41:43.245 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
 2020-05-09 00:41:43.246 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 07:43:48.316 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 07:43:48.331 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 07:43:48.848 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:43:50.623 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:43:50.822 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:43:50.878 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:44:53.703 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:44:58.053 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:44:58.055 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:44:58.070 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:44:58.976 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:44:58.977 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:45:00.916 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:45:00.917 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:45:00.918 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:45:00.921 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:45:00.922 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:47:15.271 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 07:47:15.271 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 07:47:15.271 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 07:47:15.302 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 07:47:16.178 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 07:47:16.178 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 07:47:16.178 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 07:47:16.178 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 07:47:47.064 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 07:47:47.084 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 07:47:47.728 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:47:49.384 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:48:01.659 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:48:01.660 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:48:01.674 [http-nio-8080-exec-5] INFO  shop.command.implementation.common.ToAccountPageCommand - role is null
+2020-05-10 07:48:01.674 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:48:02.370 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:48:02.370 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:48:07.406 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:48:07.407 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:48:07.428 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 07:48:07.431 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 07:48:07.431 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 07:48:07.451 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 07:48:08.200 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 07:48:08.205 [http-nio-8080-exec-9] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-05-10 07:48:08.284 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:48:08.642 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:48:08.643 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 07:48:10.362 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:48:12.685 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:48:12.685 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:48:12.689 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:48:12.691 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:48:12.692 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:54:45.425 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 07:54:45.425 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 07:54:45.426 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 07:54:45.426 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 07:54:45.487 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 07:54:45.488 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 07:54:45.490 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 07:54:45.491 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 07:56:48.173 [RMI TCP Connection(5)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 07:56:48.201 [RMI TCP Connection(5)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 07:56:48.621 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:56:51.065 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:57:02.132 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:57:02.133 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:57:02.147 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:57:02.698 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:57:02.698 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:57:04.288 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:57:04.289 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:57:04.289 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:57:04.294 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:57:04.294 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:58:37.211 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:58:37.212 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:58:37.212 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:58:37.225 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:58:37.225 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:58:38.063 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:58:38.063 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:58:38.064 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:58:38.066 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:58:38.066 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 07:58:39.099 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 07:58:39.100 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 07:58:39.100 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 07:58:39.102 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 07:58:39.102 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:03:57.622 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 08:03:57.624 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 08:03:57.625 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 08:03:57.644 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 08:03:58.786 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 08:03:58.789 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 08:03:58.792 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 08:03:58.793 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 08:04:26.550 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 08:04:26.577 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 08:04:27.118 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:29.131 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:33.613 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:33.614 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:04:33.641 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 08:04:35.519 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 08:04:35.520 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:04:37.303 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:37.304 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:04:37.304 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 08:04:37.307 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 08:04:37.308 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:04:41.773 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:41.774 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:04:41.774 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 08:04:41.785 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 08:04:41.785 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:04:42.303 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:42.303 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:04:42.304 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 08:04:42.305 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 08:04:42.306 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:04:42.923 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:04:42.923 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:04:42.924 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 08:04:42.926 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 08:04:42.926 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 08:05:51.111 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 08:05:51.118 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 08:05:51.119 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 08:05:51.149 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 08:05:52.288 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 08:05:52.291 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 08:05:52.296 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 08:05:52.297 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 08:06:32.911 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 08:06:32.934 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 08:06:33.299 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:06:36.324 [http-nio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:06:39.768 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 08:06:39.769 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 08:20:46.208 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 08:20:46.212 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 08:20:46.212 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 08:20:46.232 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 08:20:46.964 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 08:20:46.964 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 08:20:46.964 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 08:20:46.968 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:12:29.774 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:12:29.790 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:12:30.337 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:32.101 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:34.208 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:34.209 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:34.223 [http-nio-8080-exec-5] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:12:34.228 [http-nio-8080-exec-5] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - pag is null in MenuItemInformationDisplayCommand
+2020-05-10 12:12:34.239 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:12:34.241 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:12:34.242 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:12:34.253 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:12:35.441 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:12:35.490 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:12:35.521 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:12:35.522 [http-nio-8080-exec-5] ERROR coffee.shop.service.implementation.MenuItemServiceImplementation - null
+by.training.coffee.shop.exception.DAOException: null
+	at by.training.coffee.shop.dao.implementation.MenuItemDAOImplementation.findAllMenuItemsInfo(MenuItemDAOImplementation.java:66) ~[classes/:?]
+	at by.training.coffee.shop.service.implementation.MenuItemServiceImplementation.findAllMenuItemsInfo(MenuItemServiceImplementation.java:33) [classes/:?]
+	at by.training.coffee.shop.command.implementation.menu.MenuItemInformationDisplayCommand.execute(MenuItemInformationDisplayCommand.java:45) [classes/:?]
+	at by.training.coffee.shop.controller.Controller.process(Controller.java:60) [classes/:?]
+	at by.training.coffee.shop.controller.Controller.doGet(Controller.java:26) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [servlet-api.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [servlet-api.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-websocket.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at by.training.coffee.shop.controller.filter.ControllerFilter.doFilter(ControllerFilter.java:63) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at by.training.coffee.shop.controller.filter.EncodingFilter.doFilter(EncodingFilter.java:43) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71) [log4j-web-2.13.2.jar:2.13.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [catalina.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.24]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [catalina.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-coyote.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-coyote.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-coyote.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+2020-05-10 12:12:35.578 [http-nio-8080-exec-5] ERROR shop.command.implementation.menu.MenuItemInformationDisplayCommand - null
+by.training.coffee.shop.exception.ServiceException: null
+	at by.training.coffee.shop.service.implementation.MenuItemServiceImplementation.findAllMenuItemsInfo(MenuItemServiceImplementation.java:39) ~[classes/:?]
+	at by.training.coffee.shop.command.implementation.menu.MenuItemInformationDisplayCommand.execute(MenuItemInformationDisplayCommand.java:45) [classes/:?]
+	at by.training.coffee.shop.controller.Controller.process(Controller.java:60) [classes/:?]
+	at by.training.coffee.shop.controller.Controller.doGet(Controller.java:26) [classes/:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [servlet-api.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [servlet-api.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-websocket.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at by.training.coffee.shop.controller.filter.ControllerFilter.doFilter(ControllerFilter.java:63) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at by.training.coffee.shop.controller.filter.EncodingFilter.doFilter(EncodingFilter.java:43) [classes/:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71) [log4j-web-2.13.2.jar:2.13.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [catalina.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.24]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678) [catalina.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [catalina.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-coyote.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-coyote.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-coyote.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+2020-05-10 12:12:35.617 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:37.363 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:37.364 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:40.427 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:40.429 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:40.434 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:40.446 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:40.446 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:41.758 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:41.759 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:41.760 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:41.762 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:41.762 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:41.925 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:41.925 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:41.925 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:41.927 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:41.929 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:42.501 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:42.502 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:42.502 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:42.504 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:42.504 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:42.619 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:42.619 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:42.620 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:42.622 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:42.622 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:42.759 [http-nio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:42.759 [http-nio-8080-exec-2] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:42.760 [http-nio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:42.763 [http-nio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:42.763 [http-nio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:42.955 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:42.955 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:42.957 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:42.959 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:42.959 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:43.489 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:43.489 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:43.489 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:43.491 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:43.492 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:43.624 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:43.625 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:43.625 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:43.626 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:43.627 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:43.762 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:43.763 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:43.763 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:43.764 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:43.765 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:43.873 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:43.873 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:43.874 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:43.877 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:43.877 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:44.009 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:44.009 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:44.009 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:44.012 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:44.012 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:44.544 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:12:44.544 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:12:44.544 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:12:44.559 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:12:44.559 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:12:45.462 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:13:05.406 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:13:05.407 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:13:05.407 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:13:05.408 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:13:05.482 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:13:05.483 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:13:05.486 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:13:05.486 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:23:38.532 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:23:38.548 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:23:39.095 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:23:42.384 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:23:49.428 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:23:49.429 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:23:49.441 [http-nio-8080-exec-5] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:23:49.446 [http-nio-8080-exec-5] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:23:49.447 [http-nio-8080-exec-5] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:23:49.455 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:23:49.458 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:23:49.458 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:23:49.478 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:23:50.237 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:23:50.268 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:23:50.316 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:23:50.321 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:23:50.321 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:23:50.322 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:23:50.322 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:23:50.323 [http-nio-8080-exec-5] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:23:50.323 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:23:50.981 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:23:50.981 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:23:51.026 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:24:03.774 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:24:03.776 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:24:03.782 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:24:03.794 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:24:03.794 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in get method
+2020-05-10 12:25:43.245 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:25:43.245 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:25:43.245 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:25:43.245 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:25:43.339 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:25:43.339 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:25:43.355 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:25:43.355 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:26:17.964 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:26:17.995 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:26:18.182 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:26:19.751 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:26:21.681 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:26:21.682 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:26:21.694 [http-nio-8080-exec-4] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:26:21.699 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:26:21.699 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:26:21.709 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:26:21.712 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:26:21.712 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:26:21.727 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:26:22.772 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:26:22.831 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:26:22.864 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:26:22.871 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:26:22.872 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:26:22.872 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:26:22.873 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:26:22.873 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:26:22.873 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:26:23.994 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:26:23.994 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:30:11.861 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:30:11.861 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:30:11.862 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:30:11.862 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:30:11.927 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:30:11.930 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:30:11.931 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:30:11.932 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:35:58.729 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:35:58.750 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:35:59.156 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:01.038 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:02.869 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:02.869 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:36:02.885 [http-nio-8080-exec-5] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:36:02.889 [http-nio-8080-exec-5] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:36:02.890 [http-nio-8080-exec-5] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:36:02.900 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:36:02.903 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:36:02.903 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:36:02.913 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:36:03.879 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:36:03.922 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:36:03.955 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:36:03.961 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:03.962 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:03.962 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:03.963 [http-nio-8080-exec-5] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:36:03.963 [http-nio-8080-exec-5] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:36:03.963 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:36:05.178 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:36:05.178 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:36:08.155 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:08.156 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:36:08.156 [http-nio-8080-exec-6] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:36:08.157 [http-nio-8080-exec-6] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:36:08.157 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:36:08.157 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:36:08.158 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:36:08.158 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:36:08.273 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:36:08.274 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:36:08.277 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:36:08.278 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:08.278 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:08.278 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:08.278 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:36:08.279 [http-nio-8080-exec-6] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:36:08.281 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:36:08.303 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:36:08.303 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:36:11.311 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:11.312 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:36:11.312 [http-nio-8080-exec-8] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:36:11.313 [http-nio-8080-exec-8] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:36:11.313 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:36:11.313 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:36:11.313 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:36:11.314 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:36:11.366 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:36:11.366 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:36:11.368 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:36:11.368 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:11.369 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:11.369 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:36:11.369 [http-nio-8080-exec-8] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:36:11.369 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:36:11.372 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:36:11.372 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:36:14.315 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:36:14.315 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:36:14.318 [http-nio-8080-exec-9] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:36:14.318 [http-nio-8080-exec-9] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:36:14.318 [http-nio-8080-exec-9] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:36:14.319 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:36:14.319 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:36:14.319 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:36:14.319 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:36:14.367 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:36:14.368 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:36:14.370 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:36:14.370 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:14.370 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:14.370 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:36:14.371 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:36:14.371 [http-nio-8080-exec-9] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:36:14.371 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:36:14.385 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:36:14.385 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:37:43.251 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:37:43.251 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:37:43.251 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:37:43.251 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:37:43.298 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:37:43.298 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:37:43.298 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:37:43.298 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:38:05.141 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:38:05.156 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:38:05.453 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:38:07.040 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:38:10.471 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:38:10.471 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:38:10.491 [http-nio-8080-exec-4] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:38:10.501 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:38:10.501 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:38:10.514 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:38:10.520 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:38:10.521 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:38:10.534 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:38:11.643 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:38:11.686 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:38:11.725 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:38:11.733 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:38:11.734 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:38:11.737 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:38:11.738 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:38:11.738 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:38:11.740 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:38:12.602 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:38:12.602 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:38:35.769 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:38:35.769 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:38:35.769 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:38:35.769 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:38:35.881 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:38:35.881 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:38:35.881 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:38:35.881 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:41:23.636 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:41:23.659 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:41:24.003 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:41:25.773 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:41:29.310 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:41:29.310 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:41:29.324 [http-nio-8080-exec-4] INFO  training.coffee.shop.command.CommandType - TO_MENU_PAGE_COMMAND was chosen
+2020-05-10 12:41:29.332 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page was gotten
+2020-05-10 12:41:29.332 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:41:29.353 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:41:29.360 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:41:29.360 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:41:29.372 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:41:30.405 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:41:30.460 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - preparedstatement in findAllMenuItemsInfo is not null
+2020-05-10 12:41:30.496 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - resultset in findAllMenuItemsInfo is not null
+2020-05-10 12:41:30.503 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:41:30.504 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:41:30.504 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - menuitem is not null in findAllMenuItemsInfo
+2020-05-10 12:41:30.505 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:41:30.505 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:41:30.506 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:41:31.417 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:41:31.417 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:07.118 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:07.118 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:07.118 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:07.118 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:07.180 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:07.180 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 12:46:07.180 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 12:46:07.180 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-10 12:46:32.478 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-10 12:46:32.494 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-10 12:46:32.791 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:34.588 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:40.922 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:40.923 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:40.941 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:40.941 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:46:40.954 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:40.956 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:40.957 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:40.980 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:41.952 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:42.052 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:42.053 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:42.053 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:42.889 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:42.889 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:47.539 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:47.539 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:47.540 [http-nio-8080-exec-6] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:47.540 [http-nio-8080-exec-6] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:46:47.542 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:47.542 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:47.543 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:47.543 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:47.610 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:47.612 [http-nio-8080-exec-6] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:47.613 [http-nio-8080-exec-6] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:47.613 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:47.623 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:47.623 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:50.219 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:50.220 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:50.221 [http-nio-8080-exec-7] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:50.221 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:50.222 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:50.223 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:50.223 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:50.305 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:50.310 [http-nio-8080-exec-7] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:50.310 [http-nio-8080-exec-7] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:50.311 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:50.314 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:50.315 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:52.640 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:52.641 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:52.642 [http-nio-8080-exec-8] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:52.644 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:52.645 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:52.645 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:52.645 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:52.697 [http-nio-8080-exec-8] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:52.700 [http-nio-8080-exec-8] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:52.700 [http-nio-8080-exec-8] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:52.700 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:52.714 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:52.714 [http-nio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:54.901 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:54.901 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:54.902 [http-nio-8080-exec-9] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:54.902 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:54.902 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:54.903 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:54.904 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:54.955 [http-nio-8080-exec-9] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:54.959 [http-nio-8080-exec-9] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:54.959 [http-nio-8080-exec-9] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:54.959 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:54.962 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:54.962 [http-nio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:46:57.384 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:46:57.385 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:46:57.385 [http-nio-8080-exec-10] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-10 12:46:57.386 [http-nio-8080-exec-10] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-10 12:46:57.386 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 12:46:57.389 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 12:46:57.389 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 12:46:57.389 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 12:46:57.429 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 12:46:57.433 [http-nio-8080-exec-10] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-10 12:46:57.433 [http-nio-8080-exec-10] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-10 12:46:57.434 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:46:57.443 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-10 12:46:57.443 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:48:16.828 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:48:16.829 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-10 12:48:16.835 [http-nio-8080-exec-3] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-05-10 12:48:16.858 [http-nio-8080-exec-3] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-05-10 12:48:16.858 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-10 12:48:16.858 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-05-10 12:48:16.858 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-10 12:48:16.862 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 12:48:24.149 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-10 13:46:24.673 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-10 13:46:24.673 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-10 13:46:24.673 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-10 13:46:24.673 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-10 13:46:24.736 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-10 13:46:24.736 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-10 13:46:24.736 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-10 13:46:24.736 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-11 18:14:48.921 [RMI TCP Connection(5)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 18:14:48.945 [RMI TCP Connection(5)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 18:14:49.123 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:14:53.479 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:14:53.542 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:14:53.586 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:14:59.827 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:14:59.829 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:14:59.856 [http-nio-8080-exec-7] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 18:14:59.856 [http-nio-8080-exec-7] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 18:14:59.871 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 18:14:59.877 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 18:14:59.877 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 18:14:59.917 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 18:15:01.321 [http-nio-8080-exec-7] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 18:15:01.450 [http-nio-8080-exec-7] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 18:15:01.451 [http-nio-8080-exec-7] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 18:15:01.451 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:15:02.637 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:15:02.637 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:15:02.800 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:15:06.570 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:15:06.571 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:15:06.578 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:15:06.796 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:15:06.797 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:15:10.474 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:15:10.475 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:15:10.476 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:15:10.477 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:15:10.478 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:15:17.205 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:15:17.206 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:15:17.213 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:15:17.222 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:15:17.222 [http-nio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:19:43.645 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 18:19:43.664 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 18:19:44.270 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:19:46.049 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:19:49.239 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:19:49.240 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:19:49.260 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 18:19:49.261 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 18:19:49.277 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 18:19:49.279 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 18:19:49.280 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 18:19:49.299 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 18:19:50.467 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 18:19:50.569 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 18:19:50.569 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 18:19:50.570 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:19:51.874 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:19:51.874 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:39:12.856 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 18:39:12.856 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 18:39:12.856 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 18:39:12.857 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 18:39:12.923 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 18:39:12.926 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-11 18:39:12.928 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-11 18:39:12.928 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-11 18:39:38.253 [RMI TCP Connection(4)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 18:39:38.273 [RMI TCP Connection(4)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 18:39:38.544 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:39:40.356 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:39:44.550 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:39:44.551 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:39:44.576 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 18:39:44.577 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 18:39:44.596 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 18:39:44.605 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 18:39:44.613 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 18:39:44.646 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 18:39:45.805 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 18:39:45.889 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 18:39:45.889 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 18:39:45.890 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:39:46.901 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:39:46.902 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:39:49.262 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:39:49.263 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:39:49.268 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:39:49.273 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:39:49.274 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:39:54.277 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 18:39:54.282 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 18:39:54.290 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 18:39:54.853 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 18:39:54.853 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 18:46:11.212 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 18:46:11.213 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 18:46:11.213 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 18:46:11.214 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 18:46:11.299 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 18:46:11.300 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-11 18:46:11.302 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-11 18:46:11.302 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-11 19:07:02.210 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 19:07:02.231 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 19:07:02.785 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:07:04.466 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:07:10.227 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:07:10.227 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:07:10.249 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 19:07:10.250 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 19:07:10.266 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:07:10.269 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:07:10.270 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:07:10.299 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:07:11.556 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:07:11.644 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 19:07:11.645 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 19:07:11.645 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:07:12.433 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:07:12.434 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:07:20.928 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:07:20.928 [http-nio-8080-exec-6] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:07:20.934 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:07:20.935 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:07:20.935 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:07:20.935 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:07:21.009 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:07:21.013 [http-nio-8080-exec-6] INFO  shop.command.implementation.user.MenuItemToBasketAddingCommand - menuItemToBasket found by ID
+2020-05-11 19:07:21.013 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:07:21.013 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:07:21.072 [http-nio-8080-exec-6] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:07:21.075 [http-nio-8080-exec-6] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - connection closed
+2020-05-11 19:07:21.076 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:07:21.090 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:07:21.090 [http-nio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:10:13.075 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:10:13.075 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:10:13.075 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:10:13.076 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:10:13.147 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:10:13.149 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-11 19:10:13.151 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-11 19:10:13.152 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-11 19:11:15.960 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 19:11:15.981 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 19:11:16.503 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:18.286 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:21.942 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:21.943 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:11:21.988 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 19:11:21.988 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 19:11:22.013 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:11:22.017 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:11:22.021 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:11:22.049 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:11:23.292 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:11:23.401 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 19:11:23.402 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 19:11:23.402 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:11:25.050 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:11:25.050 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:11:28.030 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:28.030 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:11:28.040 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:11:28.040 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:11:28.041 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:11:28.041 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:11:28.130 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:11:28.133 [http-nio-8080-exec-5] INFO  shop.command.implementation.user.MenuItemToBasketAddingCommand - menuItemToBasket found by ID
+2020-05-11 19:11:28.134 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:11:28.134 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:11:28.214 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:11:28.216 [http-nio-8080-exec-5] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - connection closed
+2020-05-11 19:11:28.216 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:11:28.231 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:11:28.232 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:11:31.579 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:31.580 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:11:31.588 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:11:32.049 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:11:32.049 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:11:41.960 [http-nio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:43.907 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:43.909 [http-nio-8080-exec-10] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:11:43.909 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:11:43.910 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:11:43.910 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:11:43.911 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:11:43.970 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:11:43.974 [http-nio-8080-exec-10] INFO  shop.command.implementation.user.MenuItemToBasketAddingCommand - menuItemToBasket found by ID
+2020-05-11 19:11:43.974 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:11:43.974 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:11:44.040 [http-nio-8080-exec-10] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:11:44.041 [http-nio-8080-exec-10] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - connection closed
+2020-05-11 19:11:44.041 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:11:44.044 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:11:44.045 [http-nio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:11:45.742 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:11:45.742 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 19:11:45.743 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 19:11:45.758 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 19:11:45.758 [http-nio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 19:11:50.149 [http-nio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 19:27:00.018 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 19:27:00.019 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 19:27:00.019 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 19:27:00.019 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 19:27:00.078 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 19:27:00.079 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-11 19:27:00.081 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-11 19:27:00.082 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
+2020-05-11 23:30:32.363 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.ControllerFilter - filter is initialised
+2020-05-11 23:30:32.385 [RMI TCP Connection(3)-127.0.0.1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-05-11 23:30:32.553 [http-nio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:30:34.434 [http-nio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:30:38.151 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:30:38.151 [http-nio-8080-exec-4] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 23:30:38.176 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-05-11 23:30:38.177 [http-nio-8080-exec-4] INFO  shop.command.implementation.menu.MenuItemInformationDisplayCommand - page == 1
+2020-05-11 23:30:38.191 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 23:30:38.195 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 23:30:38.195 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 23:30:38.214 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 23:30:39.387 [http-nio-8080-exec-4] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 23:30:39.486 [http-nio-8080-exec-4] INFO  coffee.shop.dao.implementation.MenuItemDAOImplementation - prepared statement in findAllMenuItemsInfo(...) closed
+2020-05-11 23:30:39.486 [http-nio-8080-exec-4] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - menu items is not null
+2020-05-11 23:30:39.486 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 23:30:40.274 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 23:30:40.275 [http-nio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 23:30:43.590 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:30:43.590 [http-nio-8080-exec-5] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 23:30:43.597 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 23:30:43.597 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 23:30:43.598 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 23:30:43.599 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 23:30:43.679 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 23:30:43.681 [http-nio-8080-exec-5] INFO  shop.command.implementation.user.MenuItemToBasketAddingCommand - menuItemToBasket found by ID
+2020-05-11 23:30:43.681 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 23:30:43.682 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 23:30:43.744 [http-nio-8080-exec-5] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 23:30:43.745 [http-nio-8080-exec-5] INFO  coffee.shop.service.implementation.MenuItemServiceImplementation - connection closed
+2020-05-11 23:30:43.746 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 23:30:43.753 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 23:30:43.754 [http-nio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 23:30:50.694 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:30:50.695 [http-nio-8080-exec-7] INFO  coffee.shop.controller.filter.ControllerFilter - session is not null
+2020-05-11 23:30:50.703 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-05-11 23:30:51.122 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-05-11 23:30:51.122 [http-nio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-05-11 23:30:53.906 [http-nio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-05-11 23:36:23.839 [main] INFO  training.coffee.shop.pool.JDBCConnection - blocking
+2020-05-11 23:36:23.839 [main] INFO  training.coffee.shop.pool.JDBCConnection - unblocking
+2020-05-11 23:36:23.839 [main] INFO  training.coffee.shop.pool.ConnectionProperties - properties added
+2020-05-11 23:36:23.839 [main] INFO  training.coffee.shop.pool.JDBCConnection - driver is registered
+2020-05-11 23:36:23.886 [main] INFO  training.coffee.shop.pool.JDBCConnection - connection is established
+2020-05-11 23:36:23.887 [main] INFO  training.coffee.shop.controller.Controller - connection closed
+2020-05-11 23:36:23.889 [main] INFO  coffee.shop.controller.filter.ControllerFilter - resources of filter are released
+2020-05-11 23:36:23.889 [main] INFO  coffee.shop.controller.filter.EncodingFilter - resources of filter are released
