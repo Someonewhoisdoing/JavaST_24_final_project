@@ -7,6 +7,7 @@ public class Receipt extends Entity {
     private Integer number;
     private Date date;
     private Long userId;
+    private Long receiptId;
 
     public Receipt(Long id, Integer number, Date date, Long userId) {
         super(id);

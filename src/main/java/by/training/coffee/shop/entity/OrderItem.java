@@ -1,20 +1,21 @@
 package by.training.coffee.shop.entity;
 
+import java.util.List;
 import java.util.Objects;
 
 public class OrderItem extends Entity {
     private Long menuItemId;
-    private Long receiptId;
+    private List<MenuItem> menuItemList;
 
-    public OrderItem(Long id, Long menuItemId, Long receiptId) {
+    public OrderItem(Long id, Long menuItemId, List<MenuItem> menuItemList) {
         super(id);
         this.menuItemId = menuItemId;
-        this.receiptId = receiptId;
+        this.menuItemList = menuItemList;
     }
 
-    public OrderItem(Long menuItemId, Long receiptId) {
+    public OrderItem(Long menuItemId, List<MenuItem> menuItemList) {
         this.menuItemId = menuItemId;
-        this.receiptId = receiptId;
+        this.menuItemList = menuItemList;
     }
 
     public OrderItem() {
@@ -31,13 +32,13 @@ public class OrderItem extends Entity {
         }
     }
 
-    public Long getReceiptId() {
-        return receiptId;
+    public List<MenuItem> getMenuItemList() {
+        return menuItemList;
     }
 
-    public void setReceiptId(Long receiptId) {
-        if (receiptId != null) {
-            this.receiptId = receiptId;
+    public void setMenuItemList(List<MenuItem> menuItemList) {
+        if (menuItemList != null) {
+            this.menuItemList = menuItemList;
         }
     }
 
@@ -50,13 +51,13 @@ public class OrderItem extends Entity {
             return false;
         }
         OrderItem orderItem = (OrderItem) object;
-        return Objects.equals(menuItemId, orderItem.menuItemId)
-                && Objects.equals(receiptId, orderItem.receiptId);
+        return Objects.equals(menuItemId, orderItem.menuItemId) &&
+                Objects.equals(menuItemList, orderItem.menuItemList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(menuItemId, receiptId);
+        return Objects.hash(menuItemId, menuItemList);
     }
 
     @Override
@@ -64,6 +65,6 @@ public class OrderItem extends Entity {
         return "OrderItem: "
                 + super.toString()
                 + ", menuItemId=" + menuItemId
-                + ", receiptId=" + receiptId;
+                + ", menuItemList=" + menuItemList;
     }
 }
