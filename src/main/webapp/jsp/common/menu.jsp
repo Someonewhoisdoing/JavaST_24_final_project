@@ -63,7 +63,7 @@
     <div class="container style='margin-top:30px'">
         <div class="row p-3 mt-3">
 
-            <c:forEach items="${requestScope.menuItemsPlusInfo}" var="item">
+            <c:forEach items="${sessionScope.menuItemsPlusInfo}" var="item">
                 <div class="col-sm-4">
                     <div class="card border-0">
                         <img class="rounded w-75 h-75" src="<c:url value="/static/image/cup.jpg"/>"
@@ -79,8 +79,8 @@
 
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="id" value="${item.id}"/>
-                                <input type="hidden" name="command" value="order"/>
-                                <input type="submit" class="btn btn-danger btn-lg" value="Order">
+                                <input type="hidden" name="command" value="add_menu_item_to_basket"/>
+                                <input type="submit" class="btn btn-danger btn-lg" value="Add to basket">
                             </form>
 
                         </div>

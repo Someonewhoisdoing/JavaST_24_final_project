@@ -7,8 +7,10 @@ import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.MenuItemServiceImplementation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class MenuItemInformationDisplayCommand implements Command {
@@ -16,12 +18,13 @@ public class MenuItemInformationDisplayCommand implements Command {
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession httpSession = request.getSession();
         String pageString = request.getParameter("page");
         int page = 0;
 
         if (pageString != null) {
             page = Integer.parseInt(pageString);
-            logger.info("page was gotten");
+            logger.info("number of page in MenuItemInformationDisplayCommand was gotten");
         }
 
         final int total = 3;
@@ -39,7 +42,7 @@ public class MenuItemInformationDisplayCommand implements Command {
             List<MenuItem> menuItemsPlusInfo = menuItemServiceImplementation
                     .findAllMenuItemsInfo(page, total);
             if (menuItemsPlusInfo != null) {
-                request.setAttribute("menuItemsPlusInfo", menuItemsPlusInfo);
+                httpSession.setAttribute("menuItemsPlusInfo", menuItemsPlusInfo);
             }
         } catch (ServiceException e) {
             logger.error(e.getMessage(), e);

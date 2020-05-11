@@ -3,6 +3,7 @@ package by.training.coffee.shop.command;
 import by.training.coffee.shop.command.implementation.administrator.*;
 import by.training.coffee.shop.command.implementation.common.*;
 import by.training.coffee.shop.command.implementation.menu.MenuItemInformationDisplayCommand;
+import by.training.coffee.shop.command.implementation.user.MenuItemToBasketAddingCommand;
 import by.training.coffee.shop.command.implementation.user.ToBasketPageCommand;
 import by.training.coffee.shop.command.implementation.user.ToPersonalInformationPageEditorCommand;
 import by.training.coffee.shop.command.implementation.user.UserPersonalInformationEditorCommand;
@@ -31,6 +32,7 @@ public class CommandType {
     private final static String TO_EDIT_USER_INFO_PAGE_COMMAND = "to_edit_user_info_page";
     private final static String EDIT_USER_INFO_COMMAND = "edit_user";
     private final static String TO_BASKET_PAGE_COMMAND = "to_basket_page";
+    private final static String ADD_MENU_ITEM_TO_BASKET_COMMAND = "add_menu_item_to_basket";
 
     public Command getCommand(String command) {
         switch (command) {
@@ -64,6 +66,8 @@ public class CommandType {
                 return new ToAddMenuItemPageCommand();
             case MENU_ITEM_ADDING_COMMAND:
                 return new MenuItemAddingCommand();
+            case ADD_MENU_ITEM_TO_BASKET_COMMAND:
+                return new MenuItemToBasketAddingCommand();
         }
         return new MenuPageReturnerCommand();
     }

@@ -7,7 +7,6 @@ import by.training.coffee.shop.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.crypto.spec.PSource;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
     private final static Logger logger = LogManager.getLogger(MenuItemDAOImplementation.class);
@@ -27,7 +27,8 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
         final String SQL_SELECT_ALL_MENU_ITEMS = "SELECT coffeeshop.menu_item.id, coffeeshop.menu_item.name,"
                 + " coffeeshop.menu_item.weight, coffeeshop.menu_item.cost, coffeeshop.ingredient.name_list "
                 + "FROM coffeeshop.menu_item "
-                + "INNER JOIN coffeeshop.ingredient ON coffeeshop.menu_item.ingredient_id=coffeeshop.ingredient.id "
+                + "INNER JOIN coffeeshop.ingredient "
+                + "ON coffeeshop.menu_item.ingredient_id = coffeeshop.ingredient.id "
                 + "LIMIT " + (start - 1) + ", " + total + ";";
 
         List<MenuItem> menuItems = new ArrayList<>();
@@ -35,8 +36,8 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(SQL_SELECT_ALL_MENU_ITEMS);
-            System.out.println(preparedStatement);
-            ResultSet resultSet = preparedStatement.executeQuery();
+
+            ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
 
             while (resultSet.next()) {
 
@@ -55,6 +56,7 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
+                    logger.info("prepared statement in findAllMenuItemsInfo(...) closed");
                 } catch (SQLException e) {
                     logger.error(e.getMessage());
                 }

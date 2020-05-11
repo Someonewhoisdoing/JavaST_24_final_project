@@ -31,6 +31,9 @@ public class MenuItemServiceImplementation implements ServiceForDAO<MenuItem> {
         List<MenuItem> menuItems;
         try {
             menuItems = menuItemDAOImplementation.findAllMenuItemsInfo(start, total);
+            if (menuItems != null) {
+                logger.info("menu items is not null");
+            }
         } catch (DAOException e) {
             logger.error(e.getMessage(), e);
             throw new ServiceException();
