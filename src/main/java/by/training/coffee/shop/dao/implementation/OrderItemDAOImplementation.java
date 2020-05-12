@@ -1,7 +1,6 @@
 package by.training.coffee.shop.dao.implementation;
 
 import by.training.coffee.shop.dao.AbstractDAO;
-import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.entity.OrderItem;
 import by.training.coffee.shop.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
@@ -17,7 +16,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
-
     private final static Logger logger = LogManager.getLogger(OrderItemDAOImplementation.class);
 
     public OrderItemDAOImplementation(Connection connection) {
@@ -27,16 +25,17 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
     @Override
     public boolean create(OrderItem entity) throws DAOException {
         final String SQL_CREATE_ORDER_ITEM = "INSERT INTO coffeeshop.order_item"
-                + "(name, price, menu_item_id) VALUES(?,?,?);";
+                + " (name, price, menu_item_id) VALUES(?,?,?);";
 
         PreparedStatement preparedStatement = null;
         boolean isCreated;
 
         try {
             preparedStatement = connection.prepareStatement(SQL_CREATE_ORDER_ITEM);
+
             preparedStatement.setString(1, entity.getName());
-            preparedStatement.setString(2, entity.getPrice().toString());
-            preparedStatement.setString(3, entity.getMenuItemId().toString());
+            preparedStatement.setBigDecimal(2, entity.getPrice());
+            preparedStatement.setLong(3, entity.getMenuItemId());
 
             isCreated = true;
         } catch (SQLException e) {
@@ -54,12 +53,17 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
     }
 
     public List<OrderItem> findAllOrderItemsInfo() throws DAOException {
+//        final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT coffeeshop.order_item.id,"
+//                + " coffeeshop.menu_item.name,"
+//                + " coffeeshop.menu_item.cost"
+//                + " FROM coffeeshop.order_item"
+//                + " INNER JOIN coffeeshop.menu_item"
+//                + " ON coffeeshop.order_item.menu_item_id = coffeeshop.menu_item.id;";
+
         final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT coffeeshop.order_item.id,"
-                + " coffeeshop.menu_item.name,"
-                + " coffeeshop.menu_item.cost"
-                + " FROM coffeeshop.order_item"
-                + " INNER JOIN coffeeshop.menu_item"
-                + " ON coffeeshop.order_item.menu_item_id = coffeeshop.menu_item.id;";
+                + " coffeeshop.order_item.name,"
+                + " coffeeshop.order_item.price,"
+                + " FROM coffeeshop.order_item;";
 
         List<OrderItem> orderItems = new ArrayList<>();
 
@@ -70,8 +74,8 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
             ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
 
             while (resultSet.next()) {
-
                 OrderItem orderItem = new OrderItem();
+
                 orderItem.setId(resultSet.getLong("id"));
                 orderItem.setName(resultSet.getString("name"));
                 orderItem.setPrice(resultSet.getBigDecimal("price"));

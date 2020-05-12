@@ -69,21 +69,17 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Weight</th>
-                    <th>Cost</th>
-                    <th>Ingredients</th>
+                    <th>Price</th>
                     <th>Action</th>
                 </tr>
                 </thead>
 
-                <c:forEach items="${sessionScope.menuItemListInBasket}" var="item">
+                <c:forEach items="${sessionScope.orderItemListForBasket}" var="item">
                     <tbody>
                     <tr>
                         <td><c:out value="${item.id}"/></td>
                         <td><c:out value="${item.name}"/></td>
-                        <td><c:out value="${item.weight}"/></td>
-                        <td><c:out value="${item.cost}"/></td>
-                        <td><c:out value="${item.ingredientName}"/></td>
+                        <td><c:out value="${item.price}"/></td>
                         <td>
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="id" value="${item.id}"/>

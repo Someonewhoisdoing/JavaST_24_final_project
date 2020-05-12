@@ -79,7 +79,7 @@
 
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="id" value="${item.id}"/>
-                                <input type="hidden" name="command" value="add_menu_item_to_basket"/>
+                                <input type="hidden" name="command" value="add_order_item_to_basket"/>
                                 <input type="submit" class="btn btn-danger btn-lg" value="Add to basket">
                             </form>
 

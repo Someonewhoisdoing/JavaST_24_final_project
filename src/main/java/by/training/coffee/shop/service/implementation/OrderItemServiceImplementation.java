@@ -59,4 +59,9 @@ public class OrderItemServiceImplementation implements ServiceForDAO<OrderItem> 
         }
         return isCreated;
     }
+
+    public void closeConnection() throws ServiceException {
+        jdbcConnection.closeConnection();
+        logger.info("connection in OrderItemServiceImplementation closed");
+    }
 }

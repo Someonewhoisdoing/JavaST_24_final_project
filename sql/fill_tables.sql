@@ -39,8 +39,7 @@ values(1, '2020-04-02', 2);
 INSERT INTO RECEIPT(number, date, user_id)
 values(2, '2020-04-02', 3);
 
-INSERT INTO ORDER_ITEM(name, price, menu_item_id)
-values('Americano', 2, 1);
+INSERT INTO coffeeshop.order_item (name, price, menu_item_id) VALUES(?, ?, ?);
 
 -- SELECT
 -- *
