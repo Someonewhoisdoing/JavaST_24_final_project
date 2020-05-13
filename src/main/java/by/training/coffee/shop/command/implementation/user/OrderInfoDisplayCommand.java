@@ -38,6 +38,6 @@ public class OrderInfoDisplayCommand implements Command {
                 logger.error(e.getMessage(), e);
             }
         }
-        return new Page(Page.ORDER_INFO_PAGE, true);
+        return new Page(Page.ORDER_INFO_PAGE, false);
     }
 }
