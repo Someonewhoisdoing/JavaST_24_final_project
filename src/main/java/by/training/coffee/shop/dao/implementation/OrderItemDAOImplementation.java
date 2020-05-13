@@ -22,22 +22,18 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
         super(connection);
     }
 
-    @Override
-    public boolean create(OrderItem entity) throws DAOException {
-        final String SQL_CREATE_ORDER_ITEM = "INSERT INTO coffeeshop.order_item"
-                + " (name, price, menu_item_id) VALUES(?,?,?);";
+    public boolean deleteOrderItemFromBasket(OrderItem entity) throws DAOException {
+        final String SQL_DELETE_ORDER_ITEM = "DELETE FROM coffeeshop.order_item WHERE id=?;";
 
         PreparedStatement preparedStatement = null;
-        boolean isCreated;
+        boolean isDeleted;
 
         try {
-            preparedStatement = connection.prepareStatement(SQL_CREATE_ORDER_ITEM);
+            preparedStatement = connection.prepareStatement(SQL_DELETE_ORDER_ITEM);
 
-            preparedStatement.setString(1, entity.getName());
-            preparedStatement.setBigDecimal(2, entity.getPrice());
-            preparedStatement.setLong(3, entity.getMenuItemId());
+            preparedStatement.setLong(1, entity.getId());
 
-            isCreated = true;
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DAOException();
         } finally {
@@ -49,7 +45,7 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
                 }
             }
         }
-        return isCreated;
+        return isDeleted;
     }
 
     public List<OrderItem> findAllOrderItemsInfo() throws DAOException {
@@ -89,31 +85,33 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
         return orderItems;
     }
 
+    @Override
+    public boolean create(OrderItem entity) throws DAOException {
+        final String SQL_CREATE_ORDER_ITEM = "INSERT INTO coffeeshop.order_item"
+                + " (name, price, menu_item_id) VALUES(?,?,?);";
 
-//    public boolean updateOrder(OrderItem entity) throws DAOException {
-//        final String SQL_UPDATE_ORDER_ITEM = "UPDATE coffeeshop.order_item SET "
-//                + "menu_item_id=?, receipt_id=? WHERE id=?;";
-//
-//        PreparedStatement preparedStatement = null;
-//        boolean isUpdated;
-//        try {
-//            preparedStatement = connection.prepareStatement(SQL_UPDATE_ORDER_ITEM);
-//            preparedStatement.setString(1, entity.getMenuItemId().toString());
-//            // preparedStatement.setString(2, entity.getReceiptId().toString());
-//            preparedStatement.setString(3, entity.getId().toString());
-//            preparedStatement.executeUpdate();
-//            isUpdated = true;
-//        } catch (SQLException e) {
-//            throw new DAOException();
-//        } finally {
-//            if (preparedStatement != null) {
-//                try {
-//                    preparedStatement.close();
-//                } catch (SQLException e) {
-//                    logger.error(e.getMessage());
-//                }
-//            }
-//        }
-//        return isUpdated;
-//    }
+        PreparedStatement preparedStatement = null;
+        boolean isCreated;
+
+        try {
+            preparedStatement = connection.prepareStatement(SQL_CREATE_ORDER_ITEM);
+
+            preparedStatement.setString(1, entity.getName());
+            preparedStatement.setBigDecimal(2, entity.getPrice());
+            preparedStatement.setLong(3, entity.getMenuItemId());
+
+            isCreated = true;
+        } catch (SQLException e) {
+            throw new DAOException();
+        } finally {
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    logger.error(e.getMessage());
+                }
+            }
+        }
+        return isCreated;
+    }
 }

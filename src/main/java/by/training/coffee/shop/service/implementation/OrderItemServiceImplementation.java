@@ -27,6 +27,24 @@ public class OrderItemServiceImplementation implements ServiceForDAO<OrderItem> 
         orderItemDAOImplementation = new OrderItemDAOImplementation(connection);
     }
 
+    public boolean deleteOrderItemFromBasket(OrderItem entity) throws ServiceException {
+        boolean isDeleted = false;
+        try {
+            connection.setAutoCommit(false);
+            isDeleted = orderItemDAOImplementation.deleteOrderItemFromBasket(entity);
+            connection.commit();
+            return isDeleted;
+        } catch (SQLException | DAOException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                logger.error(ex.getMessage(), ex);
+                throw new ServiceException();
+            }
+        }
+        return isDeleted;
+    }
+
     public List<OrderItem> findAllOrderItemsInfo() throws ServiceException {
         List<OrderItem> orderItems;
         try {
