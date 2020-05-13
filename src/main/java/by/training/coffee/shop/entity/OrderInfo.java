@@ -6,21 +6,19 @@ import java.util.List;
 import java.util.Objects;
 
 public class OrderInfo extends Entity {
-    private Integer number;
     private Date date;
     private String userName;
     private String addressDelivery;
-    private List<OrderItem> orderItems;
+    private List<String> orderItems;
     private BigDecimal finalCost;
     private Long userId;
     private Long addressId;
     private Long orderItemId;
 
-    public OrderInfo(Long id, Integer number, Date date, String userName,
-                     String addressDelivery, List<OrderItem> orderItems,
+    public OrderInfo(Long id, Date date, String userName,
+                     String addressDelivery, List<String> orderItems,
                      BigDecimal finalCost, Long userId, Long addressId, Long orderItemId) {
         super(id);
-        this.number = number;
         this.date = date;
         this.userName = userName;
         this.addressDelivery = addressDelivery;
@@ -31,10 +29,9 @@ public class OrderInfo extends Entity {
         this.orderItemId = orderItemId;
     }
 
-    public OrderInfo(Long id, Integer number, Date date, String userName,
-                     String addressDelivery, List<OrderItem> orderItems, BigDecimal finalCost) {
+    public OrderInfo(Long id, Date date, String userName,
+                     String addressDelivery, List<String> orderItems, BigDecimal finalCost) {
         super(id);
-        this.number = number;
         this.date = date;
         this.userName = userName;
         this.addressDelivery = addressDelivery;
@@ -42,9 +39,8 @@ public class OrderInfo extends Entity {
         this.finalCost = finalCost;
     }
 
-    public OrderInfo(Integer number, Date date, String userName, String addressDelivery,
-                     List<OrderItem> orderItems, BigDecimal finalCost) {
-        this.number = number;
+    public OrderInfo(Date date, String userName, String addressDelivery,
+                     List<String> orderItems, BigDecimal finalCost) {
         this.date = date;
         this.userName = userName;
         this.addressDelivery = addressDelivery;
@@ -54,16 +50,6 @@ public class OrderInfo extends Entity {
 
     public OrderInfo() {
         //empty constructor
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        if (number != null) {
-            this.number = number;
-        }
     }
 
     public Date getDate() {
@@ -96,11 +82,11 @@ public class OrderInfo extends Entity {
         }
     }
 
-    public List<OrderItem> getOrderItems() {
+    public List<String> getOrderItems() {
         return orderItems;
     }
 
-    public void setOrderItems(List<OrderItem> orderItems) {
+    public void setOrderItems(List<String> orderItems) {
         if (orderItems != null) {
             this.orderItems = orderItems;
         }
@@ -155,8 +141,7 @@ public class OrderInfo extends Entity {
             return false;
         }
         OrderInfo orderInfo = (OrderInfo) object;
-        return Objects.equals(number, orderInfo.number)
-                && Objects.equals(date, orderInfo.date)
+        return Objects.equals(date, orderInfo.date)
                 && Objects.equals(userName, orderInfo.userName)
                 && Objects.equals(addressDelivery, orderInfo.addressDelivery)
                 && Objects.equals(orderItems, orderInfo.orderItems)
@@ -168,7 +153,7 @@ public class OrderInfo extends Entity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(number, date, userName, addressDelivery,
+        return Objects.hash(date, userName, addressDelivery,
                 orderItems, finalCost, userId, addressId, orderItemId);
     }
 
@@ -176,7 +161,6 @@ public class OrderInfo extends Entity {
     public String toString() {
         return "OrderInfo: "
                 + super.toString()
-                + ", number=" + number
                 + ", date=" + date
                 + ", userName=" + userName
                 + ", addressDelivery=" + addressDelivery
