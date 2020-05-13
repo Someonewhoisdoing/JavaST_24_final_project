@@ -42,4 +42,9 @@ public class OrderInfoServiceImplementation implements ServiceForDAO<OrderInfo> 
     public boolean create(OrderInfo entity) throws DAOException, ServiceException {
         return false;
     }
+
+    public void closeConnection() throws ServiceException {
+        jdbcConnection.closeConnection();
+        logger.info("connection in OrderItemServiceImplementation closed");
+    }
 }

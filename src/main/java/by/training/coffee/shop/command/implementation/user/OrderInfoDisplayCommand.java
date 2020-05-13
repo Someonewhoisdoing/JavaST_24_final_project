@@ -27,9 +27,16 @@ public class OrderInfoDisplayCommand implements Command {
             if (orderInfoList != null) {
                 httpSession.setAttribute("orderInfoList", orderInfoList);
 
+                logger.info("orderInfoList is not null and added to session in OrderInfoDisplayCommand");
             }
         } catch (ServiceException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        } finally {
+            try {
+                orderInfoServiceImplementation.closeConnection();
+            } catch (ServiceException e) {
+                logger.error(e.getMessage(), e);
+            }
         }
         return new Page(Page.ORDER_INFO_PAGE, true);
     }
