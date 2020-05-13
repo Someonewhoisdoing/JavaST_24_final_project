@@ -3,10 +3,7 @@ package by.training.coffee.shop.command;
 import by.training.coffee.shop.command.implementation.administrator.*;
 import by.training.coffee.shop.command.implementation.common.*;
 import by.training.coffee.shop.command.implementation.menu.MenuItemInformationDisplayCommand;
-import by.training.coffee.shop.command.implementation.user.OrderItemToBasketAddingCommand;
-import by.training.coffee.shop.command.implementation.user.ToBasketPageCommand;
-import by.training.coffee.shop.command.implementation.user.ToPersonalInformationPageEditorCommand;
-import by.training.coffee.shop.command.implementation.user.UserPersonalInformationEditorCommand;
+import by.training.coffee.shop.command.implementation.user.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,6 +30,7 @@ public class CommandType {
     private final static String EDIT_USER_INFO_COMMAND = "edit_user";
     private final static String TO_BASKET_PAGE_COMMAND = "to_basket_page";
     private final static String ADD_ORDER_ITEM_TO_BASKET = "add_order_item_to_basket";
+    private final static String MAKE_ORDER_AND_SHOW_ORDER_INFO = "make_order";
 
     public Command getCommand(String command) {
         switch (command) {
@@ -68,6 +66,8 @@ public class CommandType {
                 return new MenuItemAddingCommand();
             case ADD_ORDER_ITEM_TO_BASKET:
                 return new OrderItemToBasketAddingCommand();
+            case MAKE_ORDER_AND_SHOW_ORDER_INFO:
+                return new OrderMakerCommand();
         }
         return new MenuPageReturnerCommand();
     }

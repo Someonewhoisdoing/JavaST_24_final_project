@@ -1,7 +1,7 @@
 package by.training.coffee.shop.dao.implementation;
 
 import by.training.coffee.shop.dao.AbstractDAO;
-import by.training.coffee.shop.entity.Receipt;
+import by.training.coffee.shop.entity.OrderInfo;
 import by.training.coffee.shop.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,16 +13,16 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-public class ReceiptDAOImplementation extends AbstractDAO<Receipt> {
-    private final static Logger logger = LogManager.getLogger(ReceiptDAOImplementation.class);
+public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
+    private final static Logger logger = LogManager.getLogger(OrderInfoDAOImplementation.class);
 
 
-    public ReceiptDAOImplementation(Connection connection) {
+    public OrderInfoDAOImplementation(Connection connection) {
         super(connection);
     }
 
     @Override
-    public boolean create(Receipt entity) throws DAOException {
+    public boolean create(OrderInfo entity) throws DAOException {
         final String SQL_CREATE_RECEIPT = "INSERT INTO coffeeshop.receipt(number, date, user_id) "
                 + "VALUES(?, ?, ?);";
         PreparedStatement preparedStatement = null;
@@ -49,7 +49,7 @@ public class ReceiptDAOImplementation extends AbstractDAO<Receipt> {
         return isCreated;
     }
 
-    public boolean updateReceipt(Receipt entity) throws DAOException {
+    public boolean updateReceipt(OrderInfo entity) throws DAOException {
         throw new DAOException();
     }
 }

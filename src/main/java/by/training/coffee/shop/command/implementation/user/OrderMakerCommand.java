@@ -9,6 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 public class OrderMakerCommand implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
-        return null;
+        return new Page(Page.ORDER_INFO_PAGE, false);
     }
 }

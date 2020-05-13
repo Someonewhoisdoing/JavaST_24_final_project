@@ -63,19 +63,6 @@ name VARCHAR(100) NOT NULL,
 CONSTRAINT pk_ingredient PRIMARY KEY(id)
 );
 ------------------------------------------------------------------------------------------------------------------------
---receipt
-CREATE TABLE IF NOT EXISTS receipt(
-id INTEGER NOT NULL AUTO_INCREMENT,
-number INTEGER NOT NULL,
-date DATE NOT NULL,
-user_id INTEGER,
-CONSTRAINT pk_receipt PRIMARY KEY(id),
-CONSTRAINT fk_receipt_user FOREIGN KEY (user_id)
-REFERENCES user(id)
-ON UPDATE CASCADE
-ON DELETE CASCADE
-);
-------------------------------------------------------------------------------------------------------------------------
 --order
 CREATE TABLE IF NOT EXISTS order_item(
 id INTEGER NOT NULL AUTO_INCREMENT,
@@ -85,6 +72,29 @@ menu_item_id INTEGER NOT NULL,
 CONSTRAINT pk_order PRIMARY KEY(id),
 CONSTRAINT fk_order_menu_item FOREIGN KEY (menu_item_id)
 REFERENCES menu_item(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+);
+------------------------------------------------------------------------------------------------------------------------
+--order_info
+CREATE TABLE IF NOT EXISTS order_info(
+id INTEGER NOT NULL AUTO_INCREMENT,
+number INTEGER NOT NULL,
+date DATE NOT NULL,
+user_id INTEGER NOT NULL,
+address_id INTEGER NOT NULL,
+order_item_id INTEGER NOT NULL,
+CONSTRAINT pk_order_info PRIMARY KEY(id),
+CONSTRAINT fk_order_info_user FOREIGN KEY (user_id)
+REFERENCES user(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE,
+CONSTRAINT fk_order_info_address FOREIGN KEY (address_id)
+REFERENCES address(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE,
+CONSTRAINT fk_order_info_order_item FOREIGN KEY (order_item_id)
+REFERENCES order_item(id)
 ON UPDATE CASCADE
 ON DELETE CASCADE
 );
