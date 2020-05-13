@@ -63,7 +63,7 @@
 
     <div class="container">
         <form action="controller" method="post">
-            <input type="hidden" name="command" value="make_order"/>
+            <input type="hidden" name="command" value="make_order_and_show_order_info"/>
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>

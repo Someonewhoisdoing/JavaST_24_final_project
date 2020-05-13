@@ -45,12 +45,14 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
                 orderInfo.setUserName(resultSet.getString("name"));
                 orderInfo.setAddressDelivery(resultSet.getString("street") + " " + resultSet.getString("house") + " " + resultSet.getString("flat"));
                 List<String> orderInfos = new ArrayList<>();
-                BigDecimal finalPrice = null;
+                BigDecimal finalPrice = new BigDecimal("0");
+
+                resultSet.previous();
+
                 while (resultSet.next()) {
-                    for (int i = resultSet.findColumn("coffee"); i <= resultSet.findColumn("price"); i++) {
-                        orderInfos.add(resultSet.getString("coffee"));
-                        finalPrice = resultSet.getBigDecimal("price");
-                    }
+                    orderInfos.add(resultSet.getString("coffee"));
+                    finalPrice = finalPrice.add(resultSet.getBigDecimal("price"));
+
                     orderInfo.setOrderItems(orderInfos);
                     orderInfo.setFinalCost(finalPrice);
                 }

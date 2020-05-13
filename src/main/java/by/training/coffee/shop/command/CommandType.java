@@ -30,7 +30,7 @@ public class CommandType {
     private final static String EDIT_USER_INFO_COMMAND = "edit_user";
     private final static String TO_BASKET_PAGE_COMMAND = "to_basket_page";
     private final static String ADD_ORDER_ITEM_TO_BASKET = "add_order_item_to_basket";
-    private final static String MAKE_ORDER_AND_SHOW_ORDER_INFO = "make_order";
+    private final static String MAKE_ORDER_AND_SHOW_ORDER_INFO = "make_order_and_show_order_info";
 
     public Command getCommand(String command) {
         switch (command) {
@@ -67,7 +67,7 @@ public class CommandType {
             case ADD_ORDER_ITEM_TO_BASKET:
                 return new OrderItemToBasketAddingCommand();
             case MAKE_ORDER_AND_SHOW_ORDER_INFO:
-                return new OrderMakerCommand();
+                return new OrderInfoDisplayCommand();
         }
         return new MenuPageReturnerCommand();
     }
