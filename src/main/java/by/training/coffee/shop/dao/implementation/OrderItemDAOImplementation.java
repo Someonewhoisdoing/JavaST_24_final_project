@@ -53,16 +53,8 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
     }
 
     public List<OrderItem> findAllOrderItemsInfo() throws DAOException {
-//        final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT coffeeshop.order_item.id,"
-//                + " coffeeshop.menu_item.name,"
-//                + " coffeeshop.menu_item.cost"
-//                + " FROM coffeeshop.order_item"
-//                + " INNER JOIN coffeeshop.menu_item"
-//                + " ON coffeeshop.order_item.menu_item_id = coffeeshop.menu_item.id;";
-
         final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT coffeeshop.order_item.id,"
-                + " coffeeshop.order_item.name,"
-                + " coffeeshop.order_item.price,"
+                + " coffeeshop.order_item.name, coffeeshop.order_item.price"
                 + " FROM coffeeshop.order_item;";
 
         List<OrderItem> orderItems = new ArrayList<>();

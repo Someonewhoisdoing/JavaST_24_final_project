@@ -74,7 +74,7 @@
                 </tr>
                 </thead>
 
-                <c:forEach items="${sessionScope.orderItemListForBasket}" var="item">
+                <c:forEach items="${sessionScope.orderItemList}" var="item">
                     <tbody>
                     <tr>
                         <td><c:out value="${item.id}"/></td>
@@ -83,7 +83,7 @@
                         <td>
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="id" value="${item.id}"/>
-                                <input type="hidden" name="command" value="delete_menu_item"/>
+                                <input type="hidden" name="command" value="delete_order_item"/>
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>

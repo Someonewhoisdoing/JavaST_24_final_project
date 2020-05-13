@@ -32,7 +32,7 @@ public class OrderItemServiceImplementation implements ServiceForDAO<OrderItem> 
         try {
             orderItems = orderItemDAOImplementation.findAllOrderItemsInfo();
             if (orderItems != null) {
-                logger.info("order items is not null");
+                logger.info("order items in OrderItemServiceImplementation is not null");
             }
         } catch (DAOException e) {
             logger.error(e.getMessage(), e);

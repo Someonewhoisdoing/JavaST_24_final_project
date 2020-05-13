@@ -15,6 +15,12 @@ public class OrderItem extends Entity {
         this.menuItemId = menuItemId;
     }
 
+    public OrderItem(Long id, String name, BigDecimal price) {
+        super(id);
+        this.name = name;
+        this.price = price;
+    }
+
     public OrderItem(String name, BigDecimal price, Long menuItemId) {
         this.name = name;
         this.price = price;

@@ -69,17 +69,17 @@
                         <img class="rounded w-75 h-75" src="<c:url value="/static/image/cup.jpg"/>"
                              alt="Coffee paper cup image"/>
                         <div class="card-body">
-                            <h4 class="card-title">${item.id}</h4>
-                            <h4 class="card-title">${item.name}</h4>
-                            <h4 class="card-title">${item.weight}</h4>
-                            <h4 class="card-title">${item.cost}</h4>
-                            <hr class="my-4">
-                            <p class="card-text">${item.ingredientName}</p>
-                            <hr class="my-4">
-
                             <form action="${pageContext.request.contextPath}/controller" method="post">
-                                <input type="hidden" name="id" value="${item.id}"/>
                                 <input type="hidden" name="command" value="add_order_item_to_basket"/>
+                                <h4 class="card-title">${item.id}</h4>
+                                <h4 class="card-title">${item.name}</h4>
+                                <h4 class="card-title">${item.weight}</h4>
+                                <h4 class="card-title">${item.cost}</h4>
+                                <hr class="my-4">
+                                <p class="card-text">${item.ingredientName}</p>
+                                <hr class="my-4">
+
+                                <input type="hidden" name="id" value="${item.id}"/>
                                 <input type="submit" class="btn btn-danger btn-lg" value="Add to basket">
                             </form>
 
