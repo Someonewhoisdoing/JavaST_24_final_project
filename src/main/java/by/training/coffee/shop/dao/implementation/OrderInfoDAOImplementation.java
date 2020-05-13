@@ -27,7 +27,18 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
     }
 
     public List<OrderInfo> showOrderInfo() throws DAOException {
-        final String SQL_SHOW_ORDER_INFO = "SELECT coffeeshop.order_info.id, coffeeshop.order_info.date, coffeeshop.user.name, coffeeshop.address.street, coffeeshop.address.house, coffeeshop.address.flat, coffeeshop.order_item.name AS coffee, coffeeshop.order_item.price FROM(((coffeeshop.order_info INNER JOIN coffeeshop.user ON coffeeshop.order_info.user_id = coffeeshop.user.id) INNER JOIN coffeeshop.address ON coffeeshop.order_info.address_id = coffeeshop.address.id) RIGHT JOIN coffeeshop.order_item ON coffeeshop.order_info.order_item_id = coffeeshop.order_item.id);";
+        final String SQL_SHOW_ORDER_INFO = "SELECT coffeeshop.order_info.id, "
+                + "coffeeshop.order_info.date, coffeeshop.user.name, "
+                + "coffeeshop.address.street, coffeeshop.address.house, "
+                + "coffeeshop.address.flat, coffeeshop.order_item.name AS coffee,"
+                + " coffeeshop.order_item.price "
+                + "FROM(((coffeeshop.order_info "
+                + "INNER JOIN coffeeshop.user "
+                + "ON coffeeshop.order_info.user_id = coffeeshop.user.id)"
+                + " INNER JOIN coffeeshop.address "
+                + "ON coffeeshop.order_info.address_id = coffeeshop.address.id) "
+                + "RIGHT JOIN coffeeshop.order_item "
+                + "ON coffeeshop.order_info.order_item_id = coffeeshop.order_item.id);";
 
         List<OrderInfo> orderInfoList = new ArrayList<>();
 
