@@ -31,6 +31,7 @@ public class CommandType {
     private final static String TO_BASKET_PAGE_COMMAND = "to_basket_page";
     private final static String ADD_ORDER_ITEM_TO_BASKET = "add_order_item_to_basket";
     private final static String MAKE_ORDER_AND_SHOW_ORDER_INFO = "make_order_and_show_order_info";
+    private final static String DELETE_ORDER_ITEM_FROM_BASKET = "delete_order_item_from_basket";
 
     public Command getCommand(String command) {
         switch (command) {
@@ -68,6 +69,8 @@ public class CommandType {
                 return new OrderItemToBasketAddingCommand();
             case MAKE_ORDER_AND_SHOW_ORDER_INFO:
                 return new OrderInfoDisplayCommand();
+            case DELETE_ORDER_ITEM_FROM_BASKET:
+                return new OrderItemFromBasketDeleting();
         }
         return new MenuPageReturnerCommand();
     }

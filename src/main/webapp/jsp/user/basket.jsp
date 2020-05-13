@@ -82,8 +82,8 @@
                         <td><c:out value="${item.price}"/></td>
                         <td>
                             <form action="${pageContext.request.contextPath}/controller" method="post">
+                                <input type="hidden" name="command" value="delete_order_item_from_basket"/>
                                 <input type="hidden" name="id" value="${item.id}"/>
-                                <input type="hidden" name="command" value="delete_order_item"/>
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>

@@ -62,39 +62,39 @@
     </div>
 
     <div class="container">
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-            <tr>
-                <th>Id (Number)</th>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>List of drinks</th>
-                <th>Final price</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-
-            <c:forEach items="${sessionScope.orderInfoList}" var="item">
-                <tbody>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
                 <tr>
-                    <td><c:out value="${item.id}"/></td>
-                    <td><c:out value="${item.date}"/></td>
-                    <td><c:out value="${item.userName}"/></td>
-                    <td><c:out value="${item.addressDelivery}"/></td>
-                    <td><c:out value="${item.orderItems}"/></td>
-                    <td><c:out value="${item.finalCost}"/></td>
-                    <td>
-                            <%--                            <form action="${pageContext.request.contextPath}/controller" method="post">--%>
-                            <%--                                <input type="hidden" name="id" value="${item.id}"/>--%>
-                            <%--                                <input type="hidden" name="command" value="delete_order_item"/>--%>
-                            <%--                                <button type="submit" class="btn btn-danger">Delete</button>--%>
-                            <%--                            </form>--%>
-                    </td>
+                    <th>Id (Number)</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>List of drinks</th>
+                    <th>Final price</th>
+                    <th>Action</th>
                 </tr>
-                </tbody>
-            </c:forEach>
-        </table>
+                </thead>
+
+                <c:forEach items="${sessionScope.orderInfoList}" var="item">
+                    <tbody>
+                    <tr>
+                        <td><c:out value="${item.id}"/></td>
+                        <td><c:out value="${item.date}"/></td>
+                        <td><c:out value="${item.userName}"/></td>
+                        <td><c:out value="${item.addressDelivery}"/></td>
+                        <td><c:out value="${item.orderItems}"/></td>
+                        <td><c:out value="${item.finalCost}"/></td>
+                        <td>
+<%--                            <form action="${pageContext.request.contextPath}/controller" method="post">--%>
+<%--                                <input type="hidden" name="id" value="${item.id}"/>--%>
+<%--                                <input type="hidden" name="command" value="delete_order_item"/>--%>
+<%--                                <button type="submit" class="btn btn-danger">Delete</button>--%>
+<%--                            </form>--%>
+                        </td>
+                    </tr>
+                    </tbody>
+                </c:forEach>
+            </table>
     </div>
 
     </body>

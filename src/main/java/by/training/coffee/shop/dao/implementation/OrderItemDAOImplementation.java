@@ -33,7 +33,8 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
 
             preparedStatement.setLong(1, entity.getId());
 
-            isDeleted = true;
+            isDeleted = preparedStatement.executeUpdate() > 0;
+
         } catch (SQLException e) {
             throw new DAOException();
         } finally {
@@ -100,7 +101,7 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
             preparedStatement.setBigDecimal(2, entity.getPrice());
             preparedStatement.setLong(3, entity.getMenuItemId());
 
-            isCreated = true;
+            isCreated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new DAOException();
         } finally {
