@@ -57,9 +57,44 @@ public class UserServiceImplementationTest {
     }
 
     @Test
-    public void findUserByLoginAndPassword() {
+    public void findUserByLoginAndPasswordExpectedAndActualAreEquals() throws ServiceException {
+        String login = "admin";
+        String password = "666666";
 
+        User expected = userServiceImplementation.findUserByLoginAndPassword(login, password);
+
+        User actual = new User(1L, "admin", "666666", "Alex", "Cold", "+375339991317", 1);
+
+        Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void findUserByLoginAndPasswordNotNullExpected() throws ServiceException {
+        String login = "admin";
+        String password = "666666";
+
+        User expected = userServiceImplementation.findUserByLoginAndPassword(login, password);
+
+        Assert.assertNotNull(expected);
+    }
+
+    @Test
+    public void findUserByLoginAndPasswordThrowsExceptionIfWrongLogin() {
+        boolean thrown = false;
+
+        //login should be "admin"
+        String login = "a";
+        String password = "666666";
+
+        try {
+            userServiceImplementation.findUserByLoginAndPassword(login, password);
+        } catch (ServiceException e) {
+            thrown = true;
+        }
+
+        Assert.assertTrue(thrown);
+    }
+
 
     @Test
     public void findAllUsers() {
