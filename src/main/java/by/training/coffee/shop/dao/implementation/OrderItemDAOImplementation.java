@@ -23,7 +23,7 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
     }
 
     public boolean deleteOrderItemFromBasket(OrderItem entity) throws DAOException {
-        final String SQL_DELETE_ORDER_ITEM = "DELETE FROM coffeeshop.order_item WHERE id=?;";
+        final String SQL_DELETE_ORDER_ITEM = "DELETE FROM order_item WHERE id=?;";
 
         PreparedStatement preparedStatement = null;
         boolean isDeleted;
@@ -50,9 +50,9 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
     }
 
     public List<OrderItem> findAllOrderItemsInfo() throws DAOException {
-        final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT coffeeshop.order_item.id,"
-                + " coffeeshop.order_item.name, coffeeshop.order_item.price"
-                + " FROM coffeeshop.order_item;";
+        final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT order_item.id,"
+                + " order_item.name, order_item.price"
+                + " FROM order_item;";
 
         List<OrderItem> orderItems = new ArrayList<>();
 
@@ -88,7 +88,7 @@ public class OrderItemDAOImplementation extends AbstractDAO<OrderItem> {
 
     @Override
     public boolean create(OrderItem entity) throws DAOException {
-        final String SQL_CREATE_ORDER_ITEM = "INSERT INTO coffeeshop.order_item"
+        final String SQL_CREATE_ORDER_ITEM = "INSERT INTO order_item"
                 + " (name, price, menu_item_id) VALUES(?,?,?);";
 
         PreparedStatement preparedStatement = null;

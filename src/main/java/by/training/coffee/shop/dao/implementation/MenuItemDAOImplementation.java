@@ -24,11 +24,11 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
     }
 
     public List<MenuItem> findAllMenuItemsInfo(int start, int total) throws DAOException {
-        final String SQL_SELECT_ALL_MENU_ITEMS = "SELECT coffeeshop.menu_item.id, coffeeshop.menu_item.name,"
-                + " coffeeshop.menu_item.weight, coffeeshop.menu_item.cost, coffeeshop.ingredient.name_list "
-                + "FROM coffeeshop.menu_item "
-                + "INNER JOIN coffeeshop.ingredient "
-                + "ON coffeeshop.menu_item.ingredient_id = coffeeshop.ingredient.id "
+        final String SQL_SELECT_ALL_MENU_ITEMS = "SELECT menu_item.id, menu_item.name,"
+                + " menu_item.weight, menu_item.cost, ingredient.name_list "
+                + "FROM menu_item "
+                + "INNER JOIN ingredient "
+                + "ON menu_item.ingredient_id = ingredient.id "
                 + "LIMIT " + (start - 1) + ", " + total + ";";
 
         List<MenuItem> menuItems = new ArrayList<>();
@@ -66,11 +66,12 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
     }
 
     public MenuItem findMenuItemById(Long id) throws DAOException {
-        final String SQL_FIND_MENU_ITEM = "SELECT coffeeshop.menu_item.id, coffeeshop.menu_item.name,"
-                + " coffeeshop.menu_item.weight, coffeeshop.menu_item.cost, coffeeshop.ingredient.name_list "
-                + "FROM coffeeshop.menu_item "
-                + "INNER JOIN coffeeshop.ingredient ON coffeeshop.menu_item.ingredient_id=coffeeshop.ingredient.id "
-                + "WHERE coffeeshop.menu_item.id=?;";
+        final String SQL_FIND_MENU_ITEM = "SELECT menu_item.id, menu_item.name,"
+                + " menu_item.weight, menu_item.cost, ingredient.name_list "
+                + "FROM menu_item "
+                + "INNER JOIN ingredient "
+                + "ON menu_item.ingredient_id=ingredient.id "
+                + "WHERE menu_item.id=?;";
 
         MenuItem menuItem = new MenuItem();
 
@@ -108,10 +109,10 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
     }
 
     public boolean updateMenuItemAndIngredientInfo(MenuItem menuItem, Ingredient ingredient) throws DAOException {
-        final String SQL_UPDATE_MENU_ITEM = "UPDATE coffeeshop.menu_item, coffeeshop.ingredient "
-                + "SET coffeeshop.menu_item.name=?, coffeeshop.menu_item.weight=?, coffeeshop.menu_item.cost=?, "
-                + "coffeeshop.ingredient.name_list=? WHERE coffeeshop.menu_item.ingredient_id=coffeeshop.ingredient.id "
-                + "AND coffeeshop.menu_item.id=?;";
+        final String SQL_UPDATE_MENU_ITEM = "UPDATE menu_item, ingredient "
+                + "SET menu_item.name=?, menu_item.weight=?, menu_item.cost=?, "
+                + "ingredient.name_list=? WHERE menu_item.ingredient_id=ingredient.id "
+                + "AND menu_item.id=?;";
 
         PreparedStatement preparedStatement = null;
         boolean isUpdated;
@@ -143,7 +144,7 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
 
     @Override
     public boolean create(MenuItem entity) throws DAOException {
-        final String SQL_CREATE_MENU_ITEM = "INSERT INTO coffeeshop.menu_item(name, weight, cost, ingredient_id) "
+        final String SQL_CREATE_MENU_ITEM = "INSERT INTO menu_item(name, weight, cost, ingredient_id) "
                 + "VALUES(?, ?, ?, ?);";
 
         PreparedStatement preparedStatement = null;
@@ -157,9 +158,7 @@ public class MenuItemDAOImplementation extends AbstractDAO<MenuItem> {
             preparedStatement.setString(3, entity.getCost().toString());
             preparedStatement.setString(4, entity.getIngredientId().toString());
 
-            preparedStatement.executeUpdate();
-
-            isCreated = true;
+            isCreated = preparedStatement.executeUpdate() > 0;;
 
         } catch (SQLException e) {
             throw new DAOException();

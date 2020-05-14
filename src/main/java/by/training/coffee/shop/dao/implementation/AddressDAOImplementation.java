@@ -20,7 +20,7 @@ public class AddressDAOImplementation extends AbstractDAO<Address> {
 
     @Override
     public boolean create(Address entity) throws DAOException {
-        final String SQL_CREATE_ADDRESS = "INSERT INTO coffeeshop.address(city, street, house, flat, user_id) "
+        final String SQL_CREATE_ADDRESS = "INSERT INTO address(city, street, house, flat, user_id) "
                 + "VALUES(?, ?, ?, ?, ?);";
 
         PreparedStatement preparedStatement = null;
@@ -49,7 +49,7 @@ public class AddressDAOImplementation extends AbstractDAO<Address> {
     }
 
     public boolean updateAddress(Address entity) throws DAOException {
-        final String SQL_UPDATE_ADDRESS = "UPDATE coffeeshop.address SET city=?, street=?, house=?, "
+        final String SQL_UPDATE_ADDRESS = "UPDATE address SET city=?, street=?, house=?, "
                 + "flat=?, user_id=? WHERE id=?;";
 
         PreparedStatement preparedStatement = null;

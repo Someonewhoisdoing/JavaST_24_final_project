@@ -37,6 +37,6 @@ public class OrderItemFromBasketDeleting implements Command {
         } catch (ServiceException e) {
             logger.error(e.getMessage(), e);
         }
-        return new Page(Page.BASKET_PAGE, true);
+        return new Page(Page.BASKET_PAGE, false);
     }
 }

@@ -28,6 +28,7 @@ public class LoginCommand implements Command {
                 logger.info("login and password received");
 
                 User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, password);
+
                 httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
 
                 if (userByLoginAndPassword != null) {
@@ -41,7 +42,6 @@ public class LoginCommand implements Command {
         } catch (ServiceException e) {
             logger.error(e.getMessage(), e);
         }
-        //error page??
         return new Page(Page.LOGIN_PAGE_PATH, false);
     }
 }

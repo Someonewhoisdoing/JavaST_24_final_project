@@ -59,7 +59,7 @@ ON DELETE CASCADE
 --ingredient
 CREATE TABLE IF NOT EXISTS ingredient(
 id INTEGER NOT NULL AUTO_INCREMENT,
-name VARCHAR(100) NOT NULL,
+name_list VARCHAR(100) NOT NULL,
 CONSTRAINT pk_ingredient PRIMARY KEY(id)
 );
 ------------------------------------------------------------------------------------------------------------------------

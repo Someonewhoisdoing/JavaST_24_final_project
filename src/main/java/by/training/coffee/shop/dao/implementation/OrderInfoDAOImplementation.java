@@ -27,18 +27,18 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
     }
 
     public List<OrderInfo> showOrderInfo() throws DAOException {
-        final String SQL_SHOW_ORDER_INFO = "SELECT coffeeshop.order_info.id, "
-                + "coffeeshop.order_info.date, coffeeshop.user.name, "
-                + "coffeeshop.address.street, coffeeshop.address.house, "
-                + "coffeeshop.address.flat, coffeeshop.order_item.name AS coffee,"
-                + " coffeeshop.order_item.price "
-                + "FROM(((coffeeshop.order_info "
-                + "INNER JOIN coffeeshop.user "
-                + "ON coffeeshop.order_info.user_id = coffeeshop.user.id)"
-                + " INNER JOIN coffeeshop.address "
-                + "ON coffeeshop.order_info.address_id = coffeeshop.address.id) "
-                + "RIGHT JOIN coffeeshop.order_item "
-                + "ON coffeeshop.order_info.order_item_id = coffeeshop.order_item.id);";
+        final String SQL_SHOW_ORDER_INFO = "SELECT order_info.id, "
+                + "order_info.date, user.name, "
+                + "address.street, address.house, "
+                + "address.flat, order_item.name AS coffee,"
+                + " order_item.price "
+                + "FROM(((order_info "
+                + "INNER JOIN user "
+                + "ON order_info.user_id = user.id)"
+                + " INNER JOIN address "
+                + "ON order_info.address_id = address.id) "
+                + "RIGHT JOIN order_item "
+                + "ON order_info.order_item_id = order_item.id);";
 
         List<OrderInfo> orderInfoList = new ArrayList<>();
 
@@ -89,7 +89,7 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
 
     @Override
     public boolean create(OrderInfo entity) throws DAOException {
-        final String SQL_CREATE_ORDER_INFO = "INSERT INTO coffeeshop.order_info(date, user_id,"
+        final String SQL_CREATE_ORDER_INFO = "INSERT INTO order_info(date, user_id,"
                 + " address_id, order_item_id) VALUES(?, ?, ?, ?);";
 
         PreparedStatement preparedStatement = null;
@@ -102,9 +102,7 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
             preparedStatement.setLong(3, entity.getAddressId());
             preparedStatement.setLong(4, entity.getOrderItemId());
 
-            preparedStatement.executeUpdate();
-
-            isCreated = true;
+            isCreated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new DAOException();
         } finally {

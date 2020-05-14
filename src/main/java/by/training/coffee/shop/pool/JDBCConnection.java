@@ -19,6 +19,7 @@ public class JDBCConnection {
     private Properties properties = new Properties();
 
     private JDBCConnection() {
+        //empty constructor
     }
 
     private static JDBCConnection instance = null;

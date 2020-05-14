@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class MenuItemsListDisplayCommand implements Command {
@@ -18,6 +19,8 @@ public class MenuItemsListDisplayCommand implements Command {
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession httpSession = request.getSession();
+
         String pageString = request.getParameter("page");
         int page = 0;
         final int total = 4;
@@ -39,7 +42,7 @@ public class MenuItemsListDisplayCommand implements Command {
         try {
             List<MenuItem> menuItemList = menuItemServiceImplementation.findAllMenuItemsInfo(page, total);
             if (menuItemList != null) {
-                request.setAttribute("menuItemList", menuItemList);
+                httpSession.setAttribute("menuItemList", menuItemList);
             } else {
                 logger.info("menuItemList == null");
             }

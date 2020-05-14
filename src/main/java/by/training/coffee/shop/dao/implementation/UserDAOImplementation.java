@@ -24,7 +24,7 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
     public User findUserByLoginAndPassword(String login, String password) throws DAOException {
         final String SQL_SELECT_USER_BY_LOGIN = "SELECT id, name, surname, phone, "
-                + "role FROM coffeeshop.user WHERE login = ? and password = ?;";
+                + "role FROM user WHERE login = ? and password = ?;";
 
         User user = new User();
         PreparedStatement preparedStatement = null;
@@ -65,7 +65,7 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
     public List<User> findAllUsers() throws DAOException {
         final String SQL_SELECT_ALL_USERS = "SELECT id, login, password, name, surname, phone, "
-                + "role FROM coffeeshop.user;";
+                + "role FROM user;";
 
         List<User> users = new ArrayList<>();
         Statement statement = null;
@@ -102,13 +102,15 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
     public User findUserById(Long id) throws DAOException {
         final String SQL_SELECT_USER_BY_ID = "SELECT login, password, name, surname, phone, "
-                + "role FROM coffeeshop.user WHERE id = ?;";
+                + "role FROM user WHERE id = ?;";
+
         User user = new User();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet;
 
         try {
             preparedStatement = connection.prepareStatement(SQL_SELECT_USER_BY_ID);
+
             preparedStatement.setLong(1, id);
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
@@ -137,20 +139,21 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
     @Override
     public boolean create(User entity) throws DAOException {
-        final String SQL_CREATE_USER = "INSERT INTO coffeeshop.user (login, password, name, "
+        final String SQL_CREATE_USER = "INSERT INTO user (login, password, name, "
                 + "surname, phone, role) + VALUES(?, ?, ?, ?, ?, ?);";
         PreparedStatement preparedStatement = null;
         boolean isCreated;
         try {
             preparedStatement = connection.prepareStatement(SQL_CREATE_USER);
+
             preparedStatement.setString(1, entity.getLogin());
             preparedStatement.setString(2, entity.getPassword());
             preparedStatement.setString(3, entity.getName());
             preparedStatement.setString(4, entity.getSurname());
             preparedStatement.setString(5, entity.getPhone());
             preparedStatement.setString(6, entity.getRole().toString());
-            preparedStatement.executeUpdate();
-            isCreated = true;
+
+            isCreated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new DAOException();
         } finally {
@@ -166,7 +169,7 @@ public class UserDAOImplementation extends AbstractDAO<User> {
     }
 
     public boolean updateUser(User entity) throws DAOException {
-        final String SQL_UPDATE_USER = "UPDATE coffeeshop.user SET login=?, password=?,"
+        final String SQL_UPDATE_USER = "UPDATE user SET login=?, password=?,"
                 + " name=?, surname=?, phone=? WHERE id=?;";
 
         PreparedStatement preparedStatement = null;
@@ -174,14 +177,15 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
         try {
             preparedStatement = connection.prepareStatement(SQL_UPDATE_USER);
+
             preparedStatement.setString(1, entity.getLogin());
             preparedStatement.setString(2, entity.getPassword());
             preparedStatement.setString(3, entity.getName());
             preparedStatement.setString(4, entity.getSurname());
             preparedStatement.setString(5, entity.getPhone());
             preparedStatement.setString(6, entity.getId().toString());
-            preparedStatement.executeUpdate();
-            isUpdated = true;
+
+            isUpdated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new DAOException();
         } finally {
