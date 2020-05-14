@@ -7,6 +7,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserServiceImplementationTest {
 
     private UserServiceImplementation userServiceImplementation;
@@ -97,8 +100,43 @@ public class UserServiceImplementationTest {
 
 
     @Test
-    public void findAllUsers() {
+    public void findAllUsersExpectedAndActualAreEquals() throws ServiceException {
+        List<User> userListExpected = new ArrayList<>();
+        userListExpected.add(new User(1L, "admin", "666666", "Alex", "Cold", "+375339991317", 1));
+        userListExpected.add(new User(2L, "savage", "12345", "Max", "Wrong", "+375299998877", 2));
+
+        List<User> userListActual = userServiceImplementation.findAllUsers();
+
+        boolean actual = (userListActual.contains(userListExpected.get(0)) && userListActual.contains(userListExpected.get(1)));
+
+        Assert.assertTrue(actual);
     }
+
+    @Test
+    public void findAllUsersNotNullExpected() throws ServiceException {
+        List<User> expected = userServiceImplementation.findAllUsers();
+
+        Assert.assertNotNull(expected);
+    }
+
+    @Test
+    public void findAllUsersReturnsFalseIfWrongUserInExpectedList() throws ServiceException {
+        List<User> userListExpected = new ArrayList<>();
+
+        //login should be "admin"
+        String login = "a";
+
+        userListExpected.add(new User(1L, login, "666666", "Alex", "Cold", "+375339991317", 1));
+        userListExpected.add(new User(2L, "savage", "12345", "Max", "Wrong", "+375299998877", 2));
+
+        List<User> userListActual = userServiceImplementation.findAllUsers();
+
+        boolean actual = (userListActual.contains(userListExpected.get(0)) && userListActual.contains(userListExpected.get(1)));
+
+        Assert.assertFalse(actual);
+    }
+
+
 
     @Test
     public void create() {
