@@ -5,9 +5,9 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
+import by.training.coffee.shop.validator.UserDataValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,12 +24,17 @@ public class UserPersonalInformationEditorCommand implements Command {
         UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
 
         if (currentUser != null) {
-            currentUser.setId(currentUser.getId());
-            currentUser.setLogin(request.getParameter("login"));
-            currentUser.setPassword(request.getParameter("password"));
-            currentUser.setName(request.getParameter("name"));
-            currentUser.setSurname(request.getParameter("surname"));
-            currentUser.setPhone(request.getParameter("phone"));
+            UserDataValidator userDataValidator = new UserDataValidator();
+            boolean isValid = userDataValidator.checkData(currentUser.getLogin(), currentUser.getPassword(), currentUser.getName(), currentUser.getSurname(), currentUser.getPhone());
+
+            if (isValid) {
+                currentUser.setId(currentUser.getId());
+                currentUser.setLogin(request.getParameter("login"));
+                currentUser.setPassword(request.getParameter("password"));
+                currentUser.setName(request.getParameter("name"));
+                currentUser.setSurname(request.getParameter("surname"));
+                currentUser.setPhone(request.getParameter("phone"));
+            }
         }
         try {
             boolean isUserUpdated = userServiceImplementation.updateUser(currentUser);
