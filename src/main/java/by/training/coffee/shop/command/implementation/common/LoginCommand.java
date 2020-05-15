@@ -5,6 +5,7 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
+import by.training.coffee.shop.validator.LoginPasswordValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,13 +19,17 @@ public class LoginCommand implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession httpSession = request.getSession();
+
         String login = request.getParameter("login");
         String password = request.getParameter("password");
 
         UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
 
+        LoginPasswordValidator loginPasswordValidator = new LoginPasswordValidator();
+        boolean isValid = loginPasswordValidator.checkData(login, password);
+
         try {
-            if ((login != null) && (password != null)) {
+            if (isValid) {
                 logger.info("login and password received");
 
                 User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, password);
