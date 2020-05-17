@@ -25,7 +25,7 @@ public class OrderItemServiceImplementationTest {
     }
 
     @Test
-    public void deleteOrderItemFromBasket() throws ServiceException {
+    public void deleteOrderItemFromBasketReturnsTrue() throws ServiceException {
         final Long id = 2L;
         final String name = "Macchiato";
         final BigDecimal price = new BigDecimal(3);
@@ -51,7 +51,7 @@ public class OrderItemServiceImplementationTest {
     }
 
     @Test
-    public void createExpectedAndActualAreEquals() throws ServiceException {
+    public void createActualIsTrue() throws ServiceException {
         final String name = "Macchiato";
         final BigDecimal price = new BigDecimal(3);
         final Long menuItemId = 7L;
