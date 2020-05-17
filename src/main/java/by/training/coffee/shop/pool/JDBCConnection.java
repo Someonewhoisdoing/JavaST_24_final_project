@@ -35,7 +35,6 @@ public class JDBCConnection {
             instance = new JDBCConnection();
         }
         return instance;
-
     }
 
     public Connection getConnection() {
