@@ -102,7 +102,6 @@ public class MenuItemServiceImplementationTest {
         Assert.assertTrue(thrown);
     }
 
-
     @Test
     public void create() {
     }
