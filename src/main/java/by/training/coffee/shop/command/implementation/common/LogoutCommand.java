@@ -15,12 +15,9 @@ public class LogoutCommand implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession httpSession = request.getSession();
-//        User user = (User) httpSession.getAttribute("userByLoginAndPassword");
-//        if(user != null){
-//            user.setLogin(null);
-//            user.setPassword(null);
-//        }
         httpSession.invalidate();
+
+        logger.info("LogoutCommand - session was invalidated");
 
         return new Page(Page.HOME_PAGE_PATH, true);
     }

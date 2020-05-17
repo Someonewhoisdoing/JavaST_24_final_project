@@ -28,9 +28,9 @@ public class UserServiceImplementationTest {
     public void findUserByIdExpectedAndActualAreEquals() throws ServiceException {
         Long id = 1L;
 
-        User expected = userServiceImplementation.findUserById(id);
+        User expected = new User(1L, "admin", "666666", "Alex", "Cold", "+375339991317", 1);
 
-        User actual = new User(1L, "admin", "666666", "Alex", "Cold", "+375339991317", 1);
+        User actual = userServiceImplementation.findUserById(id);
 
         Assert.assertEquals(expected, actual);
     }
@@ -155,13 +155,10 @@ public class UserServiceImplementationTest {
         user.setName("Lora");
         user.setSurname("Ford");
         user.setPhone("+375299998899");
+        user.setRole(2);
 
         boolean isUpdated = userServiceImplementation.updateUser(user);
 
         Assert.assertTrue(isUpdated);
-    }
-
-    @Test
-    public void closeConnection() {
     }
 }

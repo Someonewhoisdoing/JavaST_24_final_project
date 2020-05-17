@@ -9,12 +9,12 @@ public class ConnectionProperties {
     private final static Logger logger = LogManager.getLogger(ConnectionProperties.class);
 
     public void putProperties(Properties properties) {
-
         properties.put("user", "olya");
         properties.put("password", "66613777");
         properties.put("autoReconnect", "true");
         properties.put("characterEncoding", "UTF-8");
         properties.put("useUnicode", "true");
-        logger.info("properties added");
+
+        logger.info("ConnectionProperties: properties added");
     }
 }

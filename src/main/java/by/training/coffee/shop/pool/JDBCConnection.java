@@ -1,6 +1,5 @@
 package by.training.coffee.shop.pool;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,15 +7,22 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class JDBCConnection {
     private final static Logger logger = LogManager.getLogger(JDBCConnection.class);
-    //private static ReentrantLock reentrantLock = new ReentrantLock();
+
+    private final static Lock connectionLock = new ReentrantLock();
+
+//    private List<Connection> connectionPool;
+//    private List<Connection> usedConnections = new ArrayList<>();
+//    private static int INITIAL_POOL_SIZE = 10;
 
     private final static String URL = "jdbc:mysql://localhost:3306/coffeeshop";
-    private ConnectionProperties connectionProperties = new ConnectionProperties();
-    private Properties properties = new Properties();
+    private final ConnectionProperties connectionProperties = new ConnectionProperties();
+    private final Properties properties = new Properties();
 
     private JDBCConnection() {
         //empty constructor
@@ -25,28 +31,24 @@ public class JDBCConnection {
     private static JDBCConnection instance = null;
 
     public static JDBCConnection getInstance() {
-        //reentrantLock.lock();
-        logger.info("blocking");
-        try {
-            if (instance == null)
-                instance = new JDBCConnection();
-        } finally {
-            //reentrantLock.unlock();
-            logger.info("unblocking");
+        if (instance == null) {
+            instance = new JDBCConnection();
         }
         return instance;
+
     }
 
     public Connection getConnection() {
-        connectionProperties.putProperties(properties);
         Connection connection = null;
         try {
-            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-            logger.info("driver is registered");
+            putProperties();
+            registerDriver();
             connection = DriverManager.getConnection(URL, properties);
-            logger.info("connection is established");
+            connectionLock.lock();
         } catch (SQLException e) {
             logger.error(e.getMessage(), e);
+        }finally {
+            connectionLock.unlock();
         }
         return connection;
     }
@@ -57,5 +59,13 @@ public class JDBCConnection {
         } catch (SQLException e) {
             logger.error(e.getMessage(), e);
         }
+    }
+
+    private void putProperties() throws SQLException {
+        connectionProperties.putProperties(properties);
+    }
+
+    private void registerDriver() throws SQLException {
+        DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
     }
 }
