@@ -137,13 +137,28 @@ public class UserServiceImplementationTest {
     }
 
 
-
     @Test
     public void create() {
     }
 
     @Test
-    public void updateUser() {
+    public void updateUserReturnsTrue() throws ServiceException {
+        /*user in the table from the beginning:
+         *new User(3L, "node", "123", "Lola", "Ford", "+375299998899", 2);
+         */
+        Long id = 3L;
+
+        User user = userServiceImplementation.findUserById(id);
+
+        user.setLogin("myNewLogin");
+        user.setPassword("321");
+        user.setName("Lora");
+        user.setSurname("Ford");
+        user.setPhone("+375299998899");
+
+        boolean isUpdated = userServiceImplementation.updateUser(user);
+
+        Assert.assertTrue(isUpdated);
     }
 
     @Test

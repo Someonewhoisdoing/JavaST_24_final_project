@@ -12,10 +12,10 @@ public class CommandType {
     private static final Logger logger = LogManager.getLogger(CommandType.class);
     //common
     private final static String LANGUAGE_CHANGER_COMMAND = "change_language";
-    private final static String REGISTRATION_COMMAND = "registration";
     private final static String LOGIN_COMMAND = "login";
     private final static String LOGOUT_COMMAND = "logout";
     private final static String TO_MENU_PAGE_RETURNER_COMMAND = "back_to_menu_page";
+    private final static String TO_HOME_PAGE_RETURNER_COMMAND = "back_to_home_page";
     private final static String TO_ACCOUNT_PAGE_COMMAND = "to_account_page";
     private final static String TO_MENU_PAGE_COMMAND = "to_menu_page";
     //admin
@@ -37,8 +37,6 @@ public class CommandType {
         switch (command) {
             case LANGUAGE_CHANGER_COMMAND:
                 return new LanguageChangerCommand();
-            case REGISTRATION_COMMAND:
-                return new RegistrationCommand();
             case LOGIN_COMMAND:
                 return new LoginCommand();
             case LOGOUT_COMMAND:
@@ -71,7 +69,9 @@ public class CommandType {
                 return new OrderInfoDisplayCommand();
             case DELETE_ORDER_ITEM_FROM_BASKET:
                 return new OrderItemFromBasketDeleting();
+            case TO_HOME_PAGE_RETURNER_COMMAND:
+                return new HomePageReturnerCommand();
         }
-        return new MenuPageReturnerCommand();
+        return new HomePageReturnerCommand();
     }
 }

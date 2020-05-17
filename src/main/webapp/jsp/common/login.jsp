@@ -6,7 +6,7 @@
 <fmt:bundle basename="property.text" prefix="label.">
 
     <head>
-        <title>Login page</title>
+        <title><fmt:message key="login_key"/></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -14,57 +14,65 @@
     </head>
 
     <body class="coffee_shop_picture">
+
     <div class="container-fluid bg-white text-dark text-right">
-        <a href="${pageContext.servletContext.contextPath}/controller?command=change_language">ru</a> | <a
-            href="${pageContext.servletContext.contextPath}/controller?command=change_language">en</a>
+        <form action="${pageContext.servletContext.contextPath}/controller" method="post">
+            <input type="hidden" name="command" value="change_language"/>
+            <button type="submit" class="btn btn-link" name="locale" value="en_EN">en</button>
+            |
+            <button type="submit" class="btn btn-link" name="locale" value="ru_RU">ru</button>
+        </form>
     </div>
 
-    <div class="container p-3 text-dark">
-        <nav class="navbar navbar-expand-sm  bg-dark navbar-dark">
-            <a class="navbar-brand" href="#"><fmt:message key='logo'/></a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.servletContext.contextPath}/jsp/common/home.jsp"><fmt:message
-                            key="home"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.servletContext.contextPath}/jsp/common/menu.jsp"><fmt:message
-                            key="menu"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="${pageContext.servletContext.contextPath}/controller?command=to_account_page"><fmt:message
-                            key="account"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="${pageContext.servletContext.contextPath}/controller?command=to_basket_page"><fmt:message
-                            key="basket"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.servletContext.contextPath}/jsp/common/login.jsp"><fmt:message
-                            key="login"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.servletContext.contextPath}/controller?command=logout"><fmt:message
-                            key="logout"/></a>
-                </li>
-            </ul>
-        </nav>
+    <div class="container p-3">
+        <div class="btn-group">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="back_to_home_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message
+                        key="home_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_menu_page"/>
+                <button type="submit" class="btn btn-link" name="page" value="1"><fmt:message
+                        key="menu_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_account_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="account_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_basket_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="login"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="logout"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="logout_key"/></button>
+            </form>
+        </div>
     </div>
 
     <div class="container p-3">
         <form action="${pageContext.servletContext.contextPath}/controller" method="post">
             <input type="hidden" name="command" value="login"/>
             <div class="form-group">
-                <input type="text" class="form-control" name="login" value="" placeholder="Enter Login" pattern="([a-zA-Z0-9_]+){4,10}" required>
+                <input type="text" class="form-control" name="login" value="" placeholder="<fmt:message key='enter_login_key'/>"
+                       pattern="([a-zA-Z0-9_]+){4,10}" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" value="" placeholder="Enter Password"
+                <input type="password" class="form-control" name="password" value="" placeholder="<fmt:message key='enter_password_key'/>"
                        pattern="([a-zA-Z0-9_]+){3,10}" required>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-dark" value="Enter">
+                <input type="submit" class="btn btn-primary" value="<fmt:message key='enter_key'/>">
             </div>
         </form>
     </div>

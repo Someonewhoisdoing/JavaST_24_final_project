@@ -6,7 +6,7 @@
 <fmt:bundle basename="property.text" prefix="label.">
 
     <head>
-        <title>List of menu items page</title>
+        <title><fmt:message key="list_of_menu_items_key"/></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -14,8 +14,9 @@
     </head>
 
     <body>
+
     <div class="container-fluid bg-white text-dark text-right">
-        <form action="controller" method="post">
+        <form action="${pageContext.servletContext.contextPath}/controller" method="post">
             <input type="hidden" name="command" value="change_language"/>
             <button type="submit" class="btn btn-link" name="locale" value="en_EN">en</button>
             |
@@ -23,53 +24,60 @@
         </form>
     </div>
 
-    <div class="container p-3 text-dark">
-        <nav class="navbar navbar-expand-sm  bg-dark navbar-dark">
-            <a class="navbar-brand" href="#"><fmt:message key='logo'/></a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/home.jsp"><fmt:message
-                            key="home"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/menu.jsp"><fmt:message
-                            key="menu"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="${pageContext.request.contextPath}/controller?command=to_account_page"><fmt:message
-                            key="account"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/jsp/common/login.jsp"><fmt:message
-                            key="login"/></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/controller?command=logout"><fmt:message
-                            key="logout"/></a>
-                </li>
-            </ul>
-        </nav>
+    <div class="container p-3">
+        <div class="btn-group">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="back_to_home_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message
+                        key="home_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_menu_page"/>
+                <button type="submit" class="btn btn-link" name="page" value="1"><fmt:message
+                        key="menu_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_account_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="account_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="to_basket_page"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="login"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
+            </form>
+
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="logout"/>
+                <button type="submit" class="btn btn-link"><fmt:message key="logout_key"/></button>
+            </form>
+        </div>
     </div>
 
     <div class="container p-3">
-        <h3>List of all menu items:</h3>
+        <h3><fmt:message key="list_of_menu_items_key"/></h3>
     </div>
 
     <div class="container">
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Weight</th>
-                <th>Cost</th>
-                <th>Ingredients</th>
-                <th>Action</th>
+                <th><fmt:message key="id_key"/></th>
+                <th><fmt:message key="title_key"/></th>
+                <th><fmt:message key="weight_key"/></th>
+                <th><fmt:message key="cost_key"/></th>
+                <th><fmt:message key="ingredients_key"/></th>
+                <th><fmt:message key="action_key"/></th>
             </tr>
             </thead>
 
-            <c:forEach items="${requestScope.menuItemList}" var="item">
+            <c:forEach items="${sessionScope.menuItemList}" var="item">
                 <tbody>
                 <tr>
                     <td><c:out value="${item.id}"/></td>
@@ -81,12 +89,12 @@
                         <form action="${pageContext.request.contextPath}/controller" method="post">
                             <input type="hidden" name="id" value="${item.id}"/>
                             <input type="hidden" name="command" value="to_add_menu_item_page"/>
-                            <button type="submit" class="btn btn-danger">Add</button>
+                            <button type="submit" class="btn btn-primary"><fmt:message key="add_key"/></button>
                         </form>
                         <form action="${pageContext.request.contextPath}/controller" method="post">
                             <input type="hidden" name="id" value="${item.id}"/>
                             <input type="hidden" name="command" value="to_edit_menu_item_page"/>
-                            <button type="submit" class="btn btn-danger">Edit</button>
+                            <button type="submit" class="btn btn-primary"><fmt:message key="edit_key"/></button>
                         </form>
                     </td>
                 </tr>
@@ -96,9 +104,20 @@
     </div>
 
     <div class="container">
-        <a href="${pageContext.request.contextPath}/controller?command=menu_items_list?page=1">1</a>
-        <a href="${pageContext.request.contextPath}/controller?command=menu_items_list?page=2">2</a>
-        <a href="${pageContext.request.contextPath}/controller?command=menu_items_list?page=3">3</a>
+        <div class="btn-group btn-group-lg">
+            <form action="controller" method="post">
+                <input type="hidden" name="command" value="to_menu_page"/>
+                <button type="submit" class="btn btn-link p-3" name="page" value="1">1</button>
+            </form>
+            <form action="controller" method="post">
+                <input type="hidden" name="command" value="to_menu_page"/>
+                <button type="submit" class="btn btn-link p-3" name="page" value="2">2</button>
+            </form>
+            <form action="controller" method="post">
+                <input type="hidden" name="command" value="to_menu_page"/>
+                <button type="submit" class="btn btn-link p-3" name="page" value="3">3</button>
+            </form>
+        </div>
     </div>
 
     </body>

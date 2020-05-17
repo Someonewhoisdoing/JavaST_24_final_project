@@ -40,6 +40,6 @@ public class LanguageChangerCommand implements Command {
         ResourceManager resourceManager = ResourceManager.INSTANCE;
         resourceManager.changeResource(locale);
 
-        return new Page(Page.HOME_PAGE_PATH, true);
+        return new Page("", true);
     }
 }

@@ -14,7 +14,7 @@ public class Page {
     public static final String ADMINISTRATOR_TO_ADD_MENU_ITEM_PAGE_PATH = "/jsp/administrator/add_menu_item.jsp";
     //user
     public static final String USER_PERSONAL_PAGE_PATH = "/jsp/user/user_personal_page.jsp";
-    public static final String EDIT_USER_PERSONAL_INFO_PAGE = "/jsp/common/edit_personal_information.jsp";
+    public static final String EDIT_USER_PERSONAL_INFO_PAGE = "/jsp/user/edit_personal_information.jsp";
     public static final String ORDER_INFO_PAGE = "/jsp/user/order_information.jsp";
     public static final String BASKET_PAGE = "/jsp/user/basket.jsp";
 

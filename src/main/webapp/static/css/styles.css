@@ -3,20 +3,6 @@ background-image: url(../image/start_page.jpg);
 background-color: LightGrey;
 }
 
-ul {
-  float: left;
-}
-
-li a {
-  color: black;
-  text-transform: uppercase;
-}
-
-li a:hover {
-  color: red;
-  text-decoration: none;
-}
-
 .coffee_shop_h1{
 text-transform: uppercase;
 font-size: 30px;
