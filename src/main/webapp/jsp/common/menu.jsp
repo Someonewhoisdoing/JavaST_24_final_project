@@ -14,14 +14,6 @@
     </head>
 
     <body>
-    <div class="container-fluid bg-white text-dark text-right">
-        <form action="${pageContext.servletContext.contextPath}/controller" method="post">
-            <input type="hidden" name="command" value="change_language"/>
-            <button type="submit" class="btn btn-link" name="locale" value="en_EN">en</button>
-            |
-            <button type="submit" class="btn btn-link" name="locale" value="ru_RU">ru</button>
-        </form>
-    </div>
 
     <div class="container p-3">
         <div class="btn-group">
@@ -91,7 +83,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container p-3">
         <div class="btn-group btn-group-lg">
             <form action="controller" method="post">
                 <input type="hidden" name="command" value="to_menu_page"/>
@@ -108,7 +100,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container p-3">
         <owntag:footer/>
     </div>
 
