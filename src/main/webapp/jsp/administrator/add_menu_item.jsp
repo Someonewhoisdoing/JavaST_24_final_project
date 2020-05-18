@@ -64,7 +64,7 @@
                     <th><fmt:message key="title_key"/></th>
                     <th><fmt:message key="weight_key"/></th>
                     <th><fmt:message key="cost_key"/></th>
-                    <th><fmt:message key="ingredient_id_key"/>IngredientId</th>
+                    <th><fmt:message key="ingredient_id_key"/></th>
                     <th><fmt:message key="action_key"/></th>
                 </tr>
                 </thead>

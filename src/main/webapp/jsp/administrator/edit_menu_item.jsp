@@ -61,12 +61,12 @@
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Weight</th>
-                    <th>Cost</th>
-                    <th>Ingredients</th>
-                    <th>Action</th>
+                    <th><fmt:message key="id_key"/></th>
+                    <th><fmt:message key="title_key"/></th>
+                    <th><fmt:message key="weight_key"/></th>
+                    <th><fmt:message key="cost_key"/></th>
+                    <th><fmt:message key="ingredients_key"/></th>
+                    <th><fmt:message key="action_key"/></th>
                 </tr>
                 </thead>
 
@@ -79,7 +79,7 @@
                     <td><input type="text" name="ingredientName" value="" pattern="([a-zA-Z\\s]+){1,20}" required/></td>
                     <td>
                         <input type="hidden" name="id" value="${request.getParameter("menuItemById.getId()")}"/>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
                     </td>
                 </tr>
                 </tbody>
