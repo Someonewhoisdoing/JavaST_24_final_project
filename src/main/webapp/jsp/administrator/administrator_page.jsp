@@ -66,7 +66,8 @@
             <div class="col-sm-12">
                 <form action="${pageContext.request.contextPath}/controller" method="post">
                     <input type="hidden" name="command" value="users_list"/>
-                    <button type="submit" class="btn btn-primary btn-block"><fmt:message key="show_all_users_key"/></button>
+                    <button type="submit" class="btn btn-primary btn-block"><fmt:message
+                            key="show_all_users_key"/></button>
                 </form>
             </div>
 
@@ -74,17 +75,18 @@
                 <form action="${pageContext.request.contextPath}/controller" method="post">
                     <input type="hidden" name="page" value="${1}"/>
                     <input type="hidden" name="command" value="menu_items_list"/>
-                    <button type="submit" class="btn btn-primary btn-block"><fmt:message key="show_all_menu_items_key"/></button>
+                    <button type="submit" class="btn btn-primary btn-block"><fmt:message
+                            key="show_all_menu_items_key"/></button>
                 </form>
             </div>
 
         </div>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
 
 </fmt:bundle>

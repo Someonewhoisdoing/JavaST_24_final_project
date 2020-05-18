@@ -39,7 +39,7 @@ public class OrderInfoServiceImplementation implements ServiceForDAO<OrderInfo> 
     }
 
     @Override
-    public boolean create(OrderInfo entity) throws DAOException, ServiceException {
+    public boolean create(OrderInfo entity) {
         return false;
     }
 

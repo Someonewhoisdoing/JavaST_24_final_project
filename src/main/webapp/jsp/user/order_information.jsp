@@ -65,39 +65,31 @@
     </div>
 
     <div class="container">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                <tr>
-                    <th><fmt:message key="id_key"/></th>
-                    <th><fmt:message key="date_key"/></th>
-                    <th><fmt:message key="name_key"/></th>
-                    <th><fmt:message key="address_key"/></th>
-                    <th><fmt:message key="list_of_drinks_key"/></th>
-                    <th><fmt:message key="final_price_key"/></th>
-                    <th><fmt:message key="action_key"/></th>
-                </tr>
-                </thead>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th><fmt:message key="id_key"/></th>
+                <th><fmt:message key="date_key"/></th>
+                <th><fmt:message key="name_key"/></th>
+                <th><fmt:message key="address_key"/></th>
+                <th><fmt:message key="list_of_drinks_key"/></th>
+                <th><fmt:message key="final_price_key"/></th>
+            </tr>
+            </thead>
 
-                <c:forEach items="${sessionScope.orderInfoList}" var="item">
-                    <tbody>
-                    <tr>
-                        <td><c:out value="${item.id}"/></td>
-                        <td><c:out value="${item.date}"/></td>
-                        <td><c:out value="${item.userName}"/></td>
-                        <td><c:out value="${item.addressDelivery}"/></td>
-                        <td><c:out value="${item.orderItems}"/></td>
-                        <td><c:out value="${item.finalCost}"/></td>
-                        <td>
-<%--                            <form action="${pageContext.request.contextPath}/controller" method="post">--%>
-<%--                                <input type="hidden" name="id" value="${item.id}"/>--%>
-<%--                                <input type="hidden" name="command" value="delete_order_item"/>--%>
-<%--                                <button type="submit" class="btn btn-danger">Delete</button>--%>
-<%--                            </form>--%>
-                        </td>
-                    </tr>
-                    </tbody>
-                </c:forEach>
-            </table>
+            <c:forEach items="${sessionScope.orderInfoList}" var="item">
+                <tbody>
+                <tr>
+                    <td><c:out value="${item.id}"/></td>
+                    <td><c:out value="${item.date}"/></td>
+                    <td><c:out value="${item.userName}"/></td>
+                    <td><c:out value="${item.addressDelivery}"/></td>
+                    <td><c:out value="${item.orderItems}"/></td>
+                    <td><c:out value="${item.finalCost}"/></td>
+                </tr>
+                </tbody>
+            </c:forEach>
+        </table>
     </div>
 
     <div class="container">

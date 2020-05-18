@@ -120,10 +120,11 @@
         </div>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
+
 
 </fmt:bundle>

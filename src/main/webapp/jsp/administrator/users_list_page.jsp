@@ -6,7 +6,7 @@
 <fmt:bundle basename="property.text" prefix="label.">
 
     <head>
-        <title>List of users page</title>
+        <title><fmt:message key="list_of_all_users_key"/></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -61,20 +61,19 @@
     </div>
 
     <div class="container p-3">
-        <h3>List of all users:</h3>
+        <h3><fmt:message key="list_of_all_users_key"/></h3>
     </div>
 
     <div class="container">
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
-                <th>Id</th>
-                <th>Login</th>
-                <th>Password</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Phone</th>
-                <th>Action</th>
+                <th><fmt:message key="id_key"/></th>
+                <th><fmt:message key="login_key"/></th>
+                <th><fmt:message key="password_key"/></th>
+                <th><fmt:message key="name_key"/></th>
+                <th><fmt:message key="lastname_key"/></th>
+                <th><fmt:message key="phone_key"/></th>
             </tr>
             </thead>
 
@@ -88,13 +87,6 @@
                         <td><c:out value="${user.name}"/></td>
                         <td><c:out value="${user.surname}"/></td>
                         <td><c:out value="${user.phone}"/></td>
-                        <td>
-                            <form action="${pageContext.request.contextPath}/controller" method="post">
-                                <input type="hidden" name="id" value="${user.id}"/>
-                                <input type="hidden" name="command" value="block_user"/>
-                                <button type="submit" class="btn btn-primary">Block</button>
-                            </form>
-                        </td>
                     </tr>
                     </tbody>
                 </c:if>
@@ -102,10 +94,11 @@
         </table>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
+
 
 </fmt:bundle>

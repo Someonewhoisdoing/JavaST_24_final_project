@@ -64,11 +64,13 @@
         <form action="${pageContext.servletContext.contextPath}/controller" method="post">
             <input type="hidden" name="command" value="login"/>
             <div class="form-group">
-                <input type="text" class="form-control" name="login" value="" placeholder="<fmt:message key='enter_login_key'/>"
+                <input type="text" class="form-control" name="login" value=""
+                       placeholder="<fmt:message key='enter_login_key'/>"
                        pattern="([a-zA-Z0-9_]+){4,10}" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" value="" placeholder="<fmt:message key='enter_password_key'/>"
+                <input type="password" class="form-control" name="password" value=""
+                       placeholder="<fmt:message key='enter_password_key'/>"
                        pattern="([a-zA-Z0-9_]+){3,10}" required>
             </div>
             <div class="form-group">
@@ -77,11 +79,12 @@
         </form>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
+
 
 </fmt:bundle>
 

@@ -81,11 +81,11 @@
 
                 <tbody>
                 <tr>
-                    <td><input type="text" name="id" value="" required/></td>
-                    <td><input type="text" name="name" value="" required/></td>
-                    <td><input type="text" name="weight" value="" required/></td>
-                    <td><input type="text" name="cost" value="" required/></td>
-                    <td><input type="text" name="ingredientName" value="" required/></td>
+                    <td><input type="text" name="id" value="" pattern="([0-9]+){1,3}" required/></td>
+                    <td><input type="text" name="name" value="" pattern="([a-zA-Z]+){1,20}" required/></td>
+                    <td><input type="text" name="weight" value="" pattern="([0-9]+){1,3}" required/></td>
+                    <td><input type="text" name="cost" value="" pattern="([0-9]+){1,3}" required/></td>
+                    <td><input type="text" name="ingredientName" value="" pattern="([a-zA-Z\\s]+){1,20}" required/></td>
                     <td>
                         <input type="hidden" name="id" value="${request.getParameter("menuItemById.getId()")}"/>
                         <button type="submit" class="btn btn-primary">Save</button>
@@ -93,12 +93,13 @@
                 </tr>
                 </tbody>
             </table>
+        </form>
     </div>
-
-    </body>
 
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
 
 </fmt:bundle>

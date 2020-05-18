@@ -80,10 +80,10 @@
 
                 <tbody>
                 <tr>
-                    <td><input type="text" name="name" value="" required/></td>
-                    <td><input type="text" name="weight" value="" required/></td>
-                    <td><input type="text" name="cost" value="" required/></td>
-                    <td><input type="text" name="ingredientId" value="" required/></td>
+                    <td><input type="text" name="name" value="" pattern="([a-zA-Z]+){1,20}" required/></td>
+                    <td><input type="text" name="weight" value="" pattern="([0-9]+){1,4}" required/></td>
+                    <td><input type="text" name="cost" value="" pattern="([0-9]+){1,5}" required/></td>
+                    <td><input type="text" name="ingredientId" value="" pattern="([0-9]+){1,3}" required/></td>
                     <td>
                         <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
                     </td>
@@ -93,10 +93,10 @@
         </form>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
 
 </fmt:bundle>

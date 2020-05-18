@@ -61,9 +61,6 @@
     </div>
 
     <div class="container">
-        <h2>Edit personal information of the user</h2>
-        <p>You can change login, password, name, surname, phone</p>
-
         <form action="controller" method="post">
             <input type="hidden" name="command" value="edit_user"/>
 
@@ -97,10 +94,11 @@
         </form>
     </div>
 
-    </body>
-
     <div class="container">
         <owntag:footer/>
     </div>
+
+    </body>
+
 
 </fmt:bundle>
