@@ -103,24 +103,24 @@
         </table>
     </div>
 
-    <div class="container">
+    <div class="container p-3">
         <div class="btn-group btn-group-lg">
             <form action="controller" method="post">
-                <input type="hidden" name="command" value="to_menu_page"/>
+                <input type="hidden" name="command" value="menu_items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="1">1</button>
             </form>
             <form action="controller" method="post">
-                <input type="hidden" name="command" value="to_menu_page"/>
+                <input type="hidden" name="command" value="menu_items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="2">2</button>
             </form>
             <form action="controller" method="post">
-                <input type="hidden" name="command" value="to_menu_page"/>
+                <input type="hidden" name="command" value="menu_items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="3">3</button>
             </form>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container p-3">
         <owntag:footer/>
     </div>
 
