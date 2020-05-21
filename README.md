@@ -21,10 +21,9 @@ CoffeeShop project (Проект CoffeeShop)
 - просмотр, редактирование, удаление информации
 - выход из системы
 
-а) Юзер login: savage password: $2a$12$6PUFlB9UwKHKGEZ795YEaObjOGdJU47dRpleQBrgN6smQBJluyn.6
-б) Администратор login: admin password: 666666
-
 Юзер:
+- login: savage 
+- password: $2a$12$6PUFlB9UwKHKGEZ795YEaObjOGdJU47dRpleQBrgN6smQBJluyn.6
 - просмотр личной информации
 - редактирование личной информации
 - добавление пунктов меню в корзину
@@ -32,6 +31,8 @@ CoffeeShop project (Проект CoffeeShop)
 - совершение заказа
 
 Администратор:
+- login: admin 
+- password: 666666
 - просмотр пунктов меню
 - добавление новых пунктов меню
 - редактирование существующих пунктов меню
