@@ -19,7 +19,7 @@ CoffeeShop project (Проект CoffeeShop)
 - аунтентификация пользователя
 - выход из системы
 
-а) Юзер login: savage password: 12345
+а) Юзер login: savage password: $2a$12$6PUFlB9UwKHKGEZ795YEaObjOGdJU47dRpleQBrgN6smQBJluyn.6
 б) Администратор login: admin password: 666666
 
 Юзер:
@@ -41,6 +41,8 @@ CoffeeShop project (Проект CoffeeShop)
 - собственный тег (footer.tag)
 - потокобезопасный пул
 - cессия
+- валидация данных для пользователя (LoginValidator.java, UserDataValidator.java, login.jsp, edit_personal_information.jsp)
+- bcrypt для хэширования паролей (util package, UserPersonalInformationEditorCommand.java)
 
 
 
