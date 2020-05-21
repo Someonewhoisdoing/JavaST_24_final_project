@@ -3,7 +3,7 @@ CoffeeShop project (Проект CoffeeShop)
 
 Приложение написано на языке программирования Java c использованием шаблонов Layered architecture и MVC и следующих технологий:
 - JDBC
-- Servlet
+- Servlet (Controller запросов и ответов)
 - JSP
 
 Шаблоны проектирования, используемые в приложении:
