@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
@@ -47,17 +48,20 @@ public class ControllerFilter implements Filter {
                          FilterChain filterChain) throws IOException, ServletException {
         if (isActive) {
             HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+            HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
             String uri = httpServletRequest.getPathInfo();
 
-            HttpSession httpSession = httpServletRequest.getSession();
+            HttpSession httpSession = httpServletRequest.getSession(false);
 
             if ((httpSession == null)
                     && (uri.contains("home.jsp")
                     || (uri.contains("home.jsp") && uri.contains("menu.jsp")))) {
                 logger.info("session is null");
 
-                RequestDispatcher requestDispatcher = servletRequest.getServletContext().getRequestDispatcher(Page.LOGIN_PAGE_PATH);
-                requestDispatcher.forward(servletRequest, servletResponse);
+                //RequestDispatcher requestDispatcher = servletRequest.getServletContext().getRequestDispatcher(Page.LOGIN_PAGE_PATH);
+                //requestDispatcher.forward(servletRequest, servletResponse);
+
+                httpServletResponse.sendRedirect(Page.LOGIN_PAGE_PATH);
             } else {
                 logger.info("session is not null");
                 filterChain.doFilter(servletRequest, servletResponse);

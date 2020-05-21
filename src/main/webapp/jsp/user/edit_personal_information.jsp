@@ -68,15 +68,20 @@
                 <tbody>
                 <tr>
                     <td><input type="text" name="login" default="${request.getParameter("login")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.login}" required/></td>
+                               placeholder="${sessionScope.userByLoginAndPassword.login}"
+                               pattern="([a-zA-Z0-9_]+){4,10}" required/></td>
                     <td><input type="text" name="password" default="${request.getParameter("password")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.password}" required/></td>
+                               placeholder="${sessionScope.userByLoginAndPassword.password}"
+                               required/></td>
                     <td><input type="text" name="name" default="${request.getParameter("name")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.name}" required/></td>
+                               placeholder="${sessionScope.userByLoginAndPassword.name}" pattern="([a-zA-Z]+){1,20}"
+                               required/></td>
                     <td><input type="text" name="surname" default="${request.getParameter("surname")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.surname}" required/></td>
+                               placeholder="${sessionScope.userByLoginAndPassword.surname}" pattern="([a-zA-Z]+){1,20}"
+                               required/></td>
                     <td><input type="text" name="phone" default="${request.getParameter("phone")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.phone}" required/></td>
+                               placeholder="${sessionScope.userByLoginAndPassword.phone}" pattern="([\\+0-9]){13}"
+                               required/></td>
                 </tr>
                 </tbody>
             </table>

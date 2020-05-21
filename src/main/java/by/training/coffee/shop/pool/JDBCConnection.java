@@ -20,7 +20,7 @@ public class JDBCConnection {
 //    private List<Connection> usedConnections = new ArrayList<>();
 //    private static int INITIAL_POOL_SIZE = 10;
 
-    private final static String URL = "jdbc:mysql://localhost:3306/testdb";
+    private final static String URL = "jdbc:mysql://localhost:3306/coffeeshop";
     private final ConnectionProperties connectionProperties = new ConnectionProperties();
     private final Properties properties = new Properties();
 
@@ -60,7 +60,7 @@ public class JDBCConnection {
         }
     }
 
-    private void putProperties() throws SQLException {
+    private void putProperties() {
         connectionProperties.putProperties(properties);
     }
 

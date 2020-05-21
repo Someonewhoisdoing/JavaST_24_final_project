@@ -5,7 +5,7 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
-import by.training.coffee.shop.validator.LoginPasswordValidator;
+import by.training.coffee.shop.validator.LoginValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,8 +25,8 @@ public class LoginCommand implements Command {
 
         UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
 
-        LoginPasswordValidator loginPasswordValidator = new LoginPasswordValidator();
-        boolean isValid = loginPasswordValidator.checkData(login, password);
+        LoginValidator loginValidator = new LoginValidator();
+        boolean isValid = loginValidator.checkData(login, password);
 
         try {
             if (isValid) {

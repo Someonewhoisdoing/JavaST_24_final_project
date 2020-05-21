@@ -62,7 +62,7 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="password" value=""
                        placeholder="<fmt:message key='enter_password_key'/>"
-                       pattern="([a-zA-Z0-9_]+){3,10}" required>
+                       required>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="<fmt:message key='enter_key'/>">
