@@ -14,10 +14,8 @@ public class LoginValidator {
 //        return isRegexMatches(password, PASSWORD_PATTERN);
 //    }
 
-    public boolean checkData(String login, String password) {
+    public boolean checkData(String login) {
         return isRegexMatches(login, LOGIN_PATTERN);
-
-
     }
 
     private boolean isRegexMatches(String data, String regex) {

@@ -4,7 +4,7 @@ public class Page {
     //common
     public static final String LOGIN_PAGE_PATH = "/jsp/common/login.jsp";
     public static final String MENU_PAGE_PATH = "/jsp/common/menu.jsp";
-    public static final String HOME_PAGE_PATH = "/jsp/common/home.jsp";
+    public static final String HOME_PAGE_PATH = "/";
     public static final String GUEST_PAGE_PATH = "/jsp/common/guest.jsp";
     //administrator
     public static final String ADMINISTRATOR_PAGE_PATH = "/jsp/administrator/administrator_page.jsp";

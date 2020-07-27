@@ -24,7 +24,7 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
     public User findUserByLoginAndPassword(String login, String password) throws DAOException {
         final String SQL_SELECT_USER_BY_LOGIN = "SELECT id, name, surname, phone, "
-                + "role FROM user WHERE login = ? and password = ?;";
+                + "role FROM user WHERE login = ? and password = ?";
 
         User user = new User();
         PreparedStatement preparedStatement = null;

@@ -48,7 +48,7 @@
                 <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>
             </form>
 
-            <form action="${pageContext.request.contextPath}/controller" method="post">
+            <form action="jsp/common/login.jsp" method="post">
                 <input type="hidden" name="command" value="login"/>
                 <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
             </form>

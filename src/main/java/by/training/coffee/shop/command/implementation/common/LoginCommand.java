@@ -5,6 +5,7 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
+import by.training.coffee.shop.util.BCryptPassword;
 import by.training.coffee.shop.validator.LoginValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,14 +26,15 @@ public class LoginCommand implements Command {
 
         UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
 
-        LoginValidator loginValidator = new LoginValidator();
-        boolean isValid = loginValidator.checkData(login, password);
+//        LoginValidator loginValidator = new LoginValidator();
+//        boolean isValid = loginValidator.checkData(login, password);
 
         try {
-            if (isValid) {
+//            if (isValid) {
                 logger.info("login and password received");
-
-                User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, password);
+String encodedPass = BCryptPassword.hashPassword(password);
+            System.out.println(encodedPass);
+                User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, encodedPass);
 
                 httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
 
@@ -43,7 +45,7 @@ public class LoginCommand implements Command {
                         return (new Page(Page.USER_PERSONAL_PAGE_PATH, false));
                     }
                 }
-            }
+//            }
         } catch (ServiceException e) {
             logger.error(e.getMessage(), e);
         }

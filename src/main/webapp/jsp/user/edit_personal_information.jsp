@@ -70,8 +70,7 @@
                     <td><input type="text" name="login" default="${request.getParameter("login")}"
                                placeholder="${sessionScope.userByLoginAndPassword.login}"
                                pattern="([a-zA-Z0-9_]+){4,10}" required/></td>
-                    <td><input type="text" name="password" default="${request.getParameter("password")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.password}"
+                    <td><input type="password" name="password" placeholder="password"
                                required/></td>
                     <td><input type="text" name="name" default="${request.getParameter("name")}"
                                placeholder="${sessionScope.userByLoginAndPassword.name}" pattern="([a-zA-Z]+){1,20}"
