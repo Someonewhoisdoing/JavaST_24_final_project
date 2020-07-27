@@ -5,7 +5,7 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
-import by.training.coffee.shop.util.BCryptPassword;
+import by.training.coffee.shop.util.SHAPassword;
 import by.training.coffee.shop.validator.UserDataValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,7 +33,7 @@ public class UserPersonalInformationEditorCommand implements Command {
                 currentUser.setLogin(request.getParameter("login"));
 
                 String password = request.getParameter("password");
-                String hashedPassword = BCryptPassword.hashPassword(password);
+                String hashedPassword = SHAPassword.hashPassword(password);
                 currentUser.setPassword(hashedPassword);
 
                 currentUser.setName(request.getParameter("name"));

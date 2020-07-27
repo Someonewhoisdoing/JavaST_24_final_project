@@ -59,7 +59,6 @@
                 <thead class="thead-dark">
                 <tr>
                     <th><fmt:message key="login_key"/></th>
-
                     <th><fmt:message key="name_key"/></th>
                     <th><fmt:message key="lastname_key"/></th>
                     <th><fmt:message key="phone_key"/></th>
@@ -68,9 +67,7 @@
                 </thead>
                 <tbody>
                 <tr>
-
                     <td><c:out value="${sessionScope.userByLoginAndPassword.login}"/></td>
-
                     <td><c:out value="${sessionScope.userByLoginAndPassword.name}"/></td>
                     <td><c:out value="${sessionScope.userByLoginAndPassword.surname}"/></td>
                     <td><c:out value="${sessionScope.userByLoginAndPassword.phone}"/></td>

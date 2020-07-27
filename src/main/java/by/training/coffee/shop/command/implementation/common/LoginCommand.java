@@ -5,8 +5,7 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserServiceImplementation;
-import by.training.coffee.shop.util.BCryptPassword;
-import by.training.coffee.shop.validator.LoginValidator;
+import by.training.coffee.shop.util.SHAPassword;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,26 +25,21 @@ public class LoginCommand implements Command {
 
         UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
 
-//        LoginValidator loginValidator = new LoginValidator();
-//        boolean isValid = loginValidator.checkData(login, password);
-
         try {
-//            if (isValid) {
-                logger.info("login and password received");
-String encodedPass = BCryptPassword.hashPassword(password);
+            logger.info("login and password received");
+            String encodedPass = SHAPassword.hashPassword(password);
             System.out.println(encodedPass);
-                User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, encodedPass);
+            User userByLoginAndPassword = userServiceImplementation.findUserByLoginAndPassword(login, encodedPass);
 
-                httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
+            httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
 
-                if (userByLoginAndPassword != null) {
-                    if (userByLoginAndPassword.getRole() == 1) {
-                        return new Page(Page.ADMINISTRATOR_PAGE_PATH, false);
-                    } else if (userByLoginAndPassword.getRole() == 2) {
-                        return (new Page(Page.USER_PERSONAL_PAGE_PATH, false));
-                    }
+            if (userByLoginAndPassword != null) {
+                if (userByLoginAndPassword.getRole() == 1) {
+                    return new Page(Page.ADMINISTRATOR_PAGE_PATH, false);
+                } else if (userByLoginAndPassword.getRole() == 2) {
+                    return (new Page(Page.USER_PERSONAL_PAGE_PATH, false));
                 }
-//            }
+            }
         } catch (ServiceException e) {
             logger.error(e.getMessage(), e);
         }

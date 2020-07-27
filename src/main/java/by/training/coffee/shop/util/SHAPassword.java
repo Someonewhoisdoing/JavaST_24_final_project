@@ -6,14 +6,12 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class BCryptPassword {
-
-    private static final int WORKLOAD = 12;
+public class SHAPassword {
+    private SHAPassword() {
+        //empty constructor
+    }
 
     public static String hashPassword(String initialPassword) {
-//        String salt = BCrypt.gensalt(WORKLOAD);
-//
-//        return BCrypt.hashpw(initialPassword, salt);
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(initialPassword.getBytes(StandardCharsets.UTF_8));
