@@ -23,7 +23,7 @@ CoffeeShop project (Проект CoffeeShop)
 
 Юзер:
 - login: savage 
-- password: $2a$12$6PUFlB9UwKHKGEZ795YEaObjOGdJU47dRpleQBrgN6smQBJluyn.6
+- password: 1234
 - просмотр личной информации
 - редактирование личной информации
 - добавление пунктов меню в корзину
