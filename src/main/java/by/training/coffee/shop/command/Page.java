@@ -2,7 +2,7 @@ package by.training.coffee.shop.command;
 
 public class Page {
     //common
-    public static final String LOGIN_PAGE_PATH = "/jsp/common/login.jsp";
+    public static final String LOGIN_PAGE_PATH = "/";//SHOULD IT BE LIKE THAT???????????????????
     public static final String MENU_PAGE_PATH = "/jsp/common/menu.jsp";
     public static final String HOME_PAGE_PATH = "/";
     public static final String GUEST_PAGE_PATH = "/jsp/common/guest.jsp";
