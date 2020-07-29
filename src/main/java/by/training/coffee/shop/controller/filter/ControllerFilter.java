@@ -1,6 +1,8 @@
 package by.training.coffee.shop.controller.filter;
 
+import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
+import by.training.coffee.shop.entity.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,64 +21,26 @@ import java.io.IOException;
 
 public class ControllerFilter implements Filter {
     private final static Logger logger = LogManager.getLogger(ControllerFilter.class);
-    private FilterConfig filterConfig;
-    private boolean isActive = false;
 
-    /**
-     * Method for initializing filter
-     *
-     * @see Filter#init(FilterConfig)
-     */
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        this.filterConfig = filterConfig;
-        String active = filterConfig.getInitParameter("active");
-
-        if (active != null) {
-            isActive = (active.equalsIgnoreCase("TRUE"));
-            logger.info("filter is initialised");
-        }
     }
 
-    /**
-     * Method to make filtration
-     *
-     * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-     */
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
-                         FilterChain filterChain) throws IOException, ServletException {
-        if (isActive) {
-            HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-            HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
-            String uri = httpServletRequest.getPathInfo();
-
-            HttpSession httpSession = httpServletRequest.getSession(false);
-
-            if ((httpSession == null)
-                    && (uri.contains("home.jsp")
-                    || (uri.contains("home.jsp") && uri.contains("menu.jsp")))) {
-                logger.info("session is null");
-
-                //RequestDispatcher requestDispatcher = servletRequest.getServletContext().getRequestDispatcher(Page.LOGIN_PAGE_PATH);
-                //requestDispatcher.forward(servletRequest, servletResponse);
-
-                httpServletResponse.sendRedirect(Page.LOGIN_PAGE_PATH);
-            } else {
-                logger.info("session is not null");
-                filterChain.doFilter(servletRequest, servletResponse);
-            }
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        HttpServletRequest req = (HttpServletRequest) servletRequest;
+        HttpSession session = req.getSession();
+        User user = (User) session.getAttribute("userByLoginAndPassword");
+        String command = req.getParameter("command");
+        if (user != null || command.equals("login")) {
+            filterChain.doFilter(servletRequest,servletResponse);
+        }else {
+            HttpServletResponse resp = (HttpServletResponse) servletResponse;
+            resp.sendRedirect(req.getContextPath());
         }
     }
 
-    /**
-     * Method to free resources
-     *
-     * @see Filter#destroy()
-     */
     @Override
     public void destroy() {
-        filterConfig = null;
-        logger.info("resources of filter are released");
     }
 }
