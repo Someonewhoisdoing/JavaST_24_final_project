@@ -4,7 +4,7 @@ import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.OrderItem;
 import by.training.coffee.shop.exception.ServiceException;
-import by.training.coffee.shop.service.implementation.OrderItemServiceImplementation;
+import by.training.coffee.shop.service.implementation.ItemService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,26 +17,13 @@ public class ToBasketPageCommand implements Command {
     private final static Logger logger = LogManager.getLogger(ToBasketPageCommand.class);
 
     @Override
-    public Page execute(HttpServletRequest request, HttpServletResponse response) {
+    public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-
-        OrderItemServiceImplementation orderItemServiceImplementation = new OrderItemServiceImplementation();
-        try {
-            List<OrderItem> orderItemList = orderItemServiceImplementation.findAllOrderItemsInfo();
-
-            if (orderItemList != null) {
-                logger.info("orderItemList in ToBasketPageCommand is not null");
-
-                httpSession.setAttribute("orderItemList", orderItemList);
-            }
-        } catch (ServiceException e) {
-            logger.error(e.getMessage(), e);
-        } finally {
-            try {
-                orderItemServiceImplementation.closeConnection();
-            } catch (ServiceException e) {
-                logger.error(e.getMessage(), e);
-            }
+        ItemService itemService = new ItemService();
+        List<OrderItem> orderItemList = itemService.findAllOrderItemsInfo();
+        if (orderItemList != null) {
+            logger.info("orderItemList in ToBasketPageCommand is not null");
+            httpSession.setAttribute("orderItemList", orderItemList);
         }
         return new Page(Page.BASKET_PAGE, false);
     }

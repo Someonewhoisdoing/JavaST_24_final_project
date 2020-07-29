@@ -4,7 +4,7 @@ import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
-import by.training.coffee.shop.service.implementation.UserServiceImplementation;
+import by.training.coffee.shop.service.implementation.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,28 +15,18 @@ import javax.servlet.http.HttpSession;
 
 public class PersonalInformationDisplayCommand implements Command {
     private final static Logger logger = LogManager.getLogger(PersonalInformationDisplayCommand.class);
+
     @Override
-    public Page execute(HttpServletRequest request, HttpServletResponse response) {
+    public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
         User user = null;
-        UserServiceImplementation userServiceImplementation = new UserServiceImplementation();
+        UserService userService = new UserService();
         String id = request.getParameter("id");
-        try {
-            if(id != null) {
-                user = userServiceImplementation.findUserById(Long.parseLong(id));
-                logger.info("user found by ID");
-            }
-            httpSession.setAttribute("currentUser", user);
-        }catch (ServiceException e){
-            logger.error(e.getMessage(), e);
-        }finally {
-            try {
-                userServiceImplementation.closeConnection();
-                logger.info("connection closed");
-            } catch (ServiceException e) {
-                logger.error(e.getMessage(), e);
-            }
+        if (id != null) {
+            user = userService.findUserById(Long.parseLong(id));
+            logger.info("user found by ID");
         }
+        httpSession.setAttribute("currentUser", user);
         return new Page(Page.USER_PERSONAL_PAGE_PATH, true);
     }
 }

@@ -5,8 +5,8 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.entity.OrderItem;
 import by.training.coffee.shop.exception.ServiceException;
-import by.training.coffee.shop.service.implementation.MenuItemServiceImplementation;
-import by.training.coffee.shop.service.implementation.OrderItemServiceImplementation;
+import by.training.coffee.shop.service.implementation.MenuService;
+import by.training.coffee.shop.service.implementation.ItemService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,46 +18,25 @@ public class OrderItemToBasketAddingCommand implements Command {
     private final static Logger logger = LogManager.getLogger(OrderItemToBasketAddingCommand.class);
 
     @Override
-    public Page execute(HttpServletRequest request, HttpServletResponse response) {
+    public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-
-        OrderItemServiceImplementation orderItemServiceImplementation = new OrderItemServiceImplementation();
-
-        MenuItemServiceImplementation menuItemServiceImplementation = new MenuItemServiceImplementation();
-
+        ItemService itemService = new ItemService();
+        MenuService menuService = new MenuService();
         String id = request.getParameter("id");
-
         MenuItem menuItemFromMenuPage;
         OrderItem orderItemToBasket;
-
-        try {
-            if (id != null) {
-                menuItemFromMenuPage = menuItemServiceImplementation.findMenuItemById(Long.parseLong(id));
-
-                if (menuItemFromMenuPage != null) {
-                    orderItemToBasket = new OrderItem();
-
-                    orderItemToBasket.setName(menuItemFromMenuPage.getName());
-                    orderItemToBasket.setPrice(menuItemFromMenuPage.getCost());
-                    orderItemToBasket.setMenuItemId(menuItemFromMenuPage.getId());
-
-                    boolean isOrderItemCreated = orderItemServiceImplementation.create(orderItemToBasket);
-
-                    if (isOrderItemCreated) {
-                        httpSession.setAttribute("orderItemToBasket", orderItemToBasket);
-
-                        logger.info("orderItemToBasket was added to basket");
-                    }
-                }
-            }
-        } catch (ServiceException e) {
-            logger.error(e.getMessage(), e);
+        menuItemFromMenuPage = menuService.findMenuItemById(Long.parseLong(id));
+        if (menuItemFromMenuPage == null) {
+            return new Page(Page.MENU_PAGE_PATH, false);
         }
-        try {
-            menuItemServiceImplementation.closeConnection();
-            orderItemServiceImplementation.closeConnection();
-        } catch (ServiceException e) {
-            logger.error(e.getMessage(), e);
+        orderItemToBasket = new OrderItem();
+        orderItemToBasket.setName(menuItemFromMenuPage.getName());
+        orderItemToBasket.setPrice(menuItemFromMenuPage.getCost());
+        orderItemToBasket.setMenuItemId(menuItemFromMenuPage.getId());
+        boolean isOrderItemCreated = itemService.create(orderItemToBasket);
+        if (isOrderItemCreated) {
+            httpSession.setAttribute("orderItemToBasket", orderItemToBasket);
+            logger.info("orderItemToBasket was added to basket");
         }
         return new Page(Page.MENU_PAGE_PATH, false);
     }

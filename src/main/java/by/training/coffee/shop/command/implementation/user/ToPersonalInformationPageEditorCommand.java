@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 public class ToPersonalInformationPageEditorCommand implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
-
         return new Page(Page.EDIT_USER_PERSONAL_INFO_PAGE, false);
     }
 }

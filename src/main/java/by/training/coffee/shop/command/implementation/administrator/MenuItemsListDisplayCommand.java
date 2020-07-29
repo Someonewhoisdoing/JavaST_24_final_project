@@ -4,7 +4,7 @@ import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.exception.ServiceException;
-import by.training.coffee.shop.service.implementation.MenuItemServiceImplementation;
+import by.training.coffee.shop.service.implementation.MenuService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +18,7 @@ public class MenuItemsListDisplayCommand implements Command {
     private final static Logger logger = LogManager.getLogger(MenuItemsListDisplayCommand.class);
 
     @Override
-    public Page execute(HttpServletRequest request, HttpServletResponse response) {
+    public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
 
         String pageString = request.getParameter("page");
@@ -36,24 +36,12 @@ public class MenuItemsListDisplayCommand implements Command {
             page = page - 1;
             page = page * total + 1;
         }
-
-        MenuItemServiceImplementation menuItemServiceImplementation = new MenuItemServiceImplementation();
-
-        try {
-            List<MenuItem> menuItemList = menuItemServiceImplementation.findAllMenuItemsInfo(page, total);
-            if (menuItemList != null) {
-                httpSession.setAttribute("menuItemList", menuItemList);
-            } else {
-                logger.info("menuItemList == null");
-            }
-        } catch (ServiceException e) {
-            logger.error(e.getMessage(), e);
-        } finally {
-            try {
-                menuItemServiceImplementation.closeConnection();
-            } catch (ServiceException e) {
-                logger.error(e.getMessage(), e);
-            }
+        MenuService menuService = new MenuService();
+        List<MenuItem> menuItemList = menuService.findAllMenuItemsInfo(page, total);
+        if (menuItemList != null) {
+            httpSession.setAttribute("menuItemList", menuItemList);
+        } else {
+            logger.info("menuItemList == null");
         }
         return new Page(Page.ADMINISTRATOR_MENU_ITEMS_PAGE_PATH, false);
     }

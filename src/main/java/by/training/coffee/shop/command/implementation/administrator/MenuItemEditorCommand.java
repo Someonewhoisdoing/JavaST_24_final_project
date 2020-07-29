@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import by.training.coffee.shop.entity.Ingredient;
 import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.exception.ServiceException;
-import by.training.coffee.shop.service.implementation.MenuItemServiceImplementation;
+import by.training.coffee.shop.service.implementation.MenuService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,8 +19,8 @@ public class MenuItemEditorCommand implements Command {
     private final static Logger logger = LogManager.getLogger(MenuItemEditorCommand.class);
 
     @Override
-    public Page execute(HttpServletRequest request, HttpServletResponse response) {
-        MenuItemServiceImplementation menuItemServiceImplementation = new MenuItemServiceImplementation();
+    public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
+        MenuService menuService = new MenuService();
 
         Long id = Long.parseLong(request.getParameter("id"));
         String name = request.getParameter("name");
@@ -37,21 +37,9 @@ public class MenuItemEditorCommand implements Command {
         menuItemUpdated.setCost(cost);
         ingredientUpdated.setName(ingredientName);
         menuItemUpdated.setIngredientName(ingredientUpdated.getName());
-
-        try {
-            menuItemServiceImplementation.updateMenuItemAndIngredientInfo(menuItemUpdated, ingredientUpdated);
-
-            request.setAttribute("menuItemUpdated", menuItemUpdated);
-            request.setAttribute("ingredientUpdated", ingredientUpdated);
-        } catch (ServiceException e) {
-            logger.error(e.getMessage(), e);
-        } finally {
-            try {
-                menuItemServiceImplementation.closeConnection();
-            } catch (ServiceException e) {
-                logger.error(e.getMessage(), e);
-            }
-        }
+        menuService.updateMenuItemAndIngredientInfo(menuItemUpdated, ingredientUpdated);
+        request.setAttribute("menuItemUpdated", menuItemUpdated);
+        request.setAttribute("ingredientUpdated", ingredientUpdated);
 
         return new Page(Page.ADMINISTRATOR_MENU_ITEMS_PAGE_PATH, false);
     }

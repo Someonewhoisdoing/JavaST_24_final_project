@@ -14,7 +14,6 @@ public class HomePageReturnerCommand  implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         logger.info("returned to home page - HomePageReturnerCommand ");
-
         return new Page(Page.HOME_PAGE_PATH, false);
     }
 }
