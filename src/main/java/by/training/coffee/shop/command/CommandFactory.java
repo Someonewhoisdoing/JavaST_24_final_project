@@ -8,8 +8,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class CommandType {
-    private static final Logger logger = LogManager.getLogger(CommandType.class);
+public class CommandFactory {
+    private CommandFactory() {
+    }
+
+    private static final Logger logger = LogManager.getLogger(CommandFactory.class);
     //common
     private final static String LANGUAGE_CHANGER_COMMAND = "change_language";
     private final static String LOGIN_COMMAND = "login";
@@ -33,7 +36,7 @@ public class CommandType {
     private final static String MAKE_ORDER_AND_SHOW_ORDER_INFO = "make_order_and_show_order_info";
     private final static String DELETE_ORDER_ITEM_FROM_BASKET = "delete_order_item_from_basket";
 
-    public Command getCommand(String command) {
+    public static Command getCommand(String command) {
         switch (command) {
             case LANGUAGE_CHANGER_COMMAND:
                 return new LanguageChangerCommand();
