@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
-<%@ taglib prefix="owntag" tagdir="/WEB-INF/tags" %>
 
 <fmt:bundle basename="property.text" prefix="label.">
 
