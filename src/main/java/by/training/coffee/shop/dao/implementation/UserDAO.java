@@ -3,11 +3,7 @@ package by.training.coffee.shop.dao.implementation;
 import by.training.coffee.shop.dao.AbstractDAO;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.DAOException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,24 +11,19 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAOImplementation extends AbstractDAO<User> {
-    private final static Logger logger = LogManager.getLogger(UserDAOImplementation.class);
+public class UserDAO extends AbstractDAO<User> {
 
-    public UserDAOImplementation(Connection connection) {
-        super(connection);
-    }
+    private static final String SQL_SELECT_USER_BY_LOGIN = "SELECT id, name, surname, phone, role FROM user WHERE login = ? and password = ?";
+    private static final String SQL_SELECT_ALL_USERS = "SELECT id, login, password, name, surname, phone, role FROM user";
+    private static final String SQL_SELECT_USER_BY_ID = "SELECT login, password, name, surname, phone, role FROM user WHERE id = ?";
+    private static final String SQL_CREATE_USER = "INSERT INTO user (login, password, name, surname, phone, role) + VALUES(?, ?, ?, ?, ?, ?)";
+    private static final String SQL_UPDATE_USER = "UPDATE user SET login=?, password=?, name=?, surname=?, phone=? WHERE id=?";
 
-    public User findUserByLoginAndPassword(String login, String password) throws DAOException {
-        final String SQL_SELECT_USER_BY_LOGIN = "SELECT id, name, surname, phone, "
-                + "role FROM user WHERE login = ? and password = ?";
-
+    public User findUserByLoginAndPassword(String login, String password, boolean isEndTrans) throws DAOException {
         User user = new User();
-        PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
-        try {
-            preparedStatement = connection.prepareStatement(SQL_SELECT_USER_BY_LOGIN);
-
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_USER_BY_LOGIN)) {
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, password);
 
@@ -47,33 +38,20 @@ public class UserDAOImplementation extends AbstractDAO<User> {
             user.setPhone(resultSet.getString("phone"));
             user.setRole(resultSet.getInt("role"));
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            try {
-                if (preparedStatement != null) {
-                    preparedStatement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                logger.error(e.getMessage());
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return user;
     }
 
-    public List<User> findAllUsers() throws DAOException {
-        final String SQL_SELECT_ALL_USERS = "SELECT id, login, password, name, surname, phone, "
-                + "role FROM user;";
-
+    public List<User> findAllUsers(boolean isEndTrans) throws DAOException {
         List<User> users = new ArrayList<>();
-        Statement statement = null;
-
-        try {
-            statement = connection.createStatement();
+        try (Statement statement = getConnection().createStatement()) {
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL_USERS);
-
             while (resultSet.next()) {
                 User user = new User();
                 user.setId(resultSet.getLong("id"));
@@ -83,38 +61,26 @@ public class UserDAOImplementation extends AbstractDAO<User> {
                 user.setSurname(resultSet.getString("surname"));
                 user.setPhone(resultSet.getString("phone"));
                 user.setRole(resultSet.getInt("role"));
-
                 users.add(user);
             }
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return users;
     }
 
-    public User findUserById(Long id) throws DAOException {
-        final String SQL_SELECT_USER_BY_ID = "SELECT login, password, name, surname, phone, "
-                + "role FROM user WHERE id = ?;";
-
+    public User findUserById(Long id, boolean isEndTrans) throws DAOException {
         User user = new User();
-        PreparedStatement preparedStatement = null;
         ResultSet resultSet;
-
-        try {
-            preparedStatement = connection.prepareStatement(SQL_SELECT_USER_BY_ID);
-
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_USER_BY_ID)) {
             preparedStatement.setLong(1, id);
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
-
             user.setId(id);
             user.setLogin(resultSet.getString("login"));
             user.setPassword(resultSet.getString("password"));
@@ -122,30 +88,21 @@ public class UserDAOImplementation extends AbstractDAO<User> {
             user.setSurname(resultSet.getString("surname"));
             user.setPhone(resultSet.getString("phone"));
             user.setRole(resultSet.getInt("role"));
-
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            try {
-                if (preparedStatement != null) {
-                    preparedStatement.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return user;
     }
 
     @Override
-    public boolean create(User entity) throws DAOException {
-        final String SQL_CREATE_USER = "INSERT INTO user (login, password, name, "
-                + "surname, phone, role) + VALUES(?, ?, ?, ?, ?, ?);";
-        PreparedStatement preparedStatement = null;
+    public boolean create(User entity, boolean isEndTrans) throws DAOException {
         boolean isCreated;
-        try {
-            preparedStatement = connection.prepareStatement(SQL_CREATE_USER);
-
+        try(PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_USER)) {
             preparedStatement.setString(1, entity.getLogin());
             preparedStatement.setString(2, entity.getPassword());
             preparedStatement.setString(3, entity.getName());
@@ -155,29 +112,19 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
             isCreated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return isCreated;
     }
 
-    public boolean updateUser(User entity) throws DAOException {
-        final String SQL_UPDATE_USER = "UPDATE user SET login=?, password=?,"
-                + " name=?, surname=?, phone=? WHERE id=?;";
-
-        PreparedStatement preparedStatement = null;
+    public boolean updateUser(User entity, boolean isEndTrans) throws DAOException {
         boolean isUpdated;
-
-        try {
-            preparedStatement = connection.prepareStatement(SQL_UPDATE_USER);
-
+        try(PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_UPDATE_USER)) {
             preparedStatement.setString(1, entity.getLogin());
             preparedStatement.setString(2, entity.getPassword());
             preparedStatement.setString(3, entity.getName());
@@ -187,15 +134,12 @@ public class UserDAOImplementation extends AbstractDAO<User> {
 
             isUpdated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return isUpdated;
     }

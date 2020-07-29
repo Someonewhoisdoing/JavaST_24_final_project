@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 
 import java.math.BigDecimal;
-import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,36 +17,28 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
-    private final static Logger logger = LogManager.getLogger(OrderInfoDAOImplementation.class);
+public class OrderDAO extends AbstractDAO<OrderInfo> {
+    private final static Logger logger = LogManager.getLogger(OrderDAO.class);
 
+    private static final String SQL_SHOW_ORDER_INFO = "SELECT order_info.id, "
+            + "order_info.date, user.name, "
+            + "address.street, address.house, "
+            + "address.flat, order_item.name AS coffee,"
+            + " order_item.price "
+            + "FROM(((order_info "
+            + "INNER JOIN user "
+            + "ON order_info.user_id = user.id)"
+            + " INNER JOIN address "
+            + "ON order_info.address_id = address.id) "
+            + "RIGHT JOIN order_item "
+            + "ON order_info.order_item_id = order_item.id)";
 
-    public OrderInfoDAOImplementation(Connection connection) {
-        super(connection);
-    }
+    private static final String SQL_CREATE_ORDER_INFO = "INSERT INTO order_info(date, user_id, address_id, order_item_id) VALUES(?, ?, ?, ?)";
 
-    public List<OrderInfo> showOrderInfo() throws DAOException {
-        final String SQL_SHOW_ORDER_INFO = "SELECT order_info.id, "
-                + "order_info.date, user.name, "
-                + "address.street, address.house, "
-                + "address.flat, order_item.name AS coffee,"
-                + " order_item.price "
-                + "FROM(((order_info "
-                + "INNER JOIN user "
-                + "ON order_info.user_id = user.id)"
-                + " INNER JOIN address "
-                + "ON order_info.address_id = address.id) "
-                + "RIGHT JOIN order_item "
-                + "ON order_info.order_item_id = order_item.id);";
-
+    public List<OrderInfo> showOrderInfo(boolean isEndTrans) throws DAOException {
         List<OrderInfo> orderInfoList = new ArrayList<>();
-
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(SQL_SHOW_ORDER_INFO);
-
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SHOW_ORDER_INFO)) {
             ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
-
             while (resultSet.next()) {
                 OrderInfo orderInfo = new OrderInfo();
 
@@ -71,48 +62,37 @@ public class OrderInfoDAOImplementation extends AbstractDAO<OrderInfo> {
                 }
 
                 orderInfoList.add(orderInfo);
+                getConnection().commit();
             }
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                    logger.info("prepared statement in showOrderInfo() closed");
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return orderInfoList;
     }
 
     @Override
-    public boolean create(OrderInfo entity) throws DAOException {
-        final String SQL_CREATE_ORDER_INFO = "INSERT INTO order_info(date, user_id,"
-                + " address_id, order_item_id) VALUES(?, ?, ?, ?);";
-
-        PreparedStatement preparedStatement = null;
-
+    public boolean create(OrderInfo entity, boolean isEndTrans) throws DAOException {
         boolean isCreated;
-        try {
-            preparedStatement = connection.prepareStatement(SQL_CREATE_ORDER_INFO);
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_INFO)) {
             preparedStatement.setDate(1, (Date) entity.getDate());
             preparedStatement.setLong(2, entity.getUserId());
             preparedStatement.setLong(3, entity.getAddressId());
             preparedStatement.setLong(4, entity.getOrderItemId());
 
             isCreated = preparedStatement.executeUpdate() > 0;
+            getConnection().commit();
         } catch (SQLException e) {
+            rollBack();
+            close();
             throw new DAOException();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    logger.error(e.getMessage());
-                }
-            }
+        }
+        if (isEndTrans){
+            endTransaction();
         }
         return isCreated;
     }
