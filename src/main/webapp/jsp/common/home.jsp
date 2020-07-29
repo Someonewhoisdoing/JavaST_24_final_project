@@ -24,41 +24,7 @@
         </form>
     </div>
 
-    <div class="container p-3">
-        <div class="btn-group">
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="back_to_home_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message
-                        key="home_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_menu_page"/>
-                <button type="submit" class="btn btn-link" name="page" value="1"><fmt:message
-                        key="menu_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_account_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="account_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_basket_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>
-            </form>
-
-            <form action="jsp/common/login.jsp" method="post">
-                <input type="hidden" name="command" value="login"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="logout"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="logout_key"/></button>
-            </form>
-        </div>
-    </div>
+     <owntag:menu/>
 
     <div class="container p-3">
         <owntag:footer/>

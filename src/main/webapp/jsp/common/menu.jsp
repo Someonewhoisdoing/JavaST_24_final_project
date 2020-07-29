@@ -15,41 +15,7 @@
 
     <body>
 
-    <div class="container p-3">
-        <div class="btn-group">
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="back_to_home_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message
-                        key="home_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_menu_page"/>
-                <button type="submit" class="btn btn-link" name="page" value="1"><fmt:message
-                        key="menu_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_account_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="account_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="to_basket_page"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="login"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
-            </form>
-
-            <form action="${pageContext.request.contextPath}/controller" method="post">
-                <input type="hidden" name="command" value="logout"/>
-                <button type="submit" class="btn btn-link"><fmt:message key="logout_key"/></button>
-            </form>
-        </div>
-    </div>
+     <owntag:menu/>
 
     <div class="container style='margin-top:30px'">
         <div class="row p-3 mt-3">
@@ -60,6 +26,10 @@
                         <img class="rounded w-75 h-75" src="<c:url value="/static/image/cup.jpg"/>"
                              alt="Coffee paper cup image"/>
                         <div class="card-body">
+
+
+
+
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="command" value="add_order_item_to_basket"/>
                                 <h6 class="card-title"><fmt:message key="id_key"/>: ${item.id}</h6>
@@ -71,9 +41,17 @@
                                 <hr class="my-4">
 
                                 <input type="hidden" name="id" value="${item.id}"/>
+
+<c:if test="${sessionScope.userByLoginAndPassword.role == 2}">
                                 <input type="submit" class="btn btn-primary btn-lg"
                                        value="<fmt:message key='add_to_basket_key'/>">
+</c:if>
                             </form>
+
+
+
+
+
 
                         </div>
                     </div>
