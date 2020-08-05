@@ -3,9 +3,6 @@ package by.training.coffee.shop.dao.implementation;
 import by.training.coffee.shop.dao.AbstractDAO;
 import by.training.coffee.shop.entity.OrderInfo;
 import by.training.coffee.shop.exception.DAOException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -18,21 +15,8 @@ import java.util.Objects;
 
 
 public class OrderDAO extends AbstractDAO<OrderInfo> {
-    private final static Logger logger = LogManager.getLogger(OrderDAO.class);
 
-    private static final String SQL_SHOW_ORDER_INFO = "SELECT order_info.id, "
-            + "order_info.date, user.name, "
-            + "address.street, address.house, "
-            + "address.flat, order_item.name AS coffee,"
-            + " order_item.price "
-            + "FROM(((order_info "
-            + "INNER JOIN user "
-            + "ON order_info.user_id = user.id)"
-            + " INNER JOIN address "
-            + "ON order_info.address_id = address.id) "
-            + "RIGHT JOIN order_item "
-            + "ON order_info.order_item_id = order_item.id)";
-
+    private static final String SQL_SHOW_ORDER_INFO = "";
     private static final String SQL_CREATE_ORDER_INFO = "INSERT INTO order_info(date, user_id, address_id, order_item_id) VALUES(?, ?, ?, ?)";
 
     public List<OrderInfo> showOrderInfo(boolean isEndTrans) throws DAOException {
@@ -45,9 +29,9 @@ public class OrderDAO extends AbstractDAO<OrderInfo> {
                 orderInfo.setId(resultSet.getLong("id"));
                 orderInfo.setDate(resultSet.getDate("date"));
                 orderInfo.setUserName(resultSet.getString("name"));
-                orderInfo.setAddressDelivery(resultSet.getString("street")
-                        + " " + resultSet.getString("house")
-                        + " " + resultSet.getString("flat"));
+                orderInfo.getAddress().setFlat(resultSet.getInt("flat"));
+                orderInfo.getAddress().setHouse(resultSet.getInt("house"));
+                orderInfo.getAddress().setStreet(resultSet.getString("street"));
                 List<String> orderInfos = new ArrayList<>();
                 BigDecimal finalPrice = new BigDecimal("0");
 
@@ -69,19 +53,18 @@ public class OrderDAO extends AbstractDAO<OrderInfo> {
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
+        if (isEndTrans) {
             endTransaction();
         }
         return orderInfoList;
     }
 
-    @Override
-    public boolean create(OrderInfo entity, boolean isEndTrans) throws DAOException {
+    public boolean insert(OrderInfo entity, boolean isEndTrans) throws DAOException {
         boolean isCreated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_INFO)) {
             preparedStatement.setDate(1, (Date) entity.getDate());
             preparedStatement.setLong(2, entity.getUserId());
-            preparedStatement.setLong(3, entity.getAddressId());
+            preparedStatement.setLong(3, entity.getAddress().getId());
             preparedStatement.setLong(4, entity.getOrderItemId());
 
             isCreated = preparedStatement.executeUpdate() > 0;
@@ -91,9 +74,14 @@ public class OrderDAO extends AbstractDAO<OrderInfo> {
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
+        if (isEndTrans) {
             endTransaction();
         }
         return isCreated;
+    }
+
+    @Override
+    protected OrderInfo fetchEntity(ResultSet res) throws SQLException {
+        return null;
     }
 }

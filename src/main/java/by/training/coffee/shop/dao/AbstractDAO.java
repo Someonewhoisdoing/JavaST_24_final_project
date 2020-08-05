@@ -2,12 +2,12 @@ package by.training.coffee.shop.dao;
 
 import by.training.coffee.shop.connection.ConnectionPool;
 import by.training.coffee.shop.entity.Entity;
-import by.training.coffee.shop.exception.DAOException;
 import by.training.coffee.shop.exception.PoolConnectionException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public abstract class AbstractDAO<T extends Entity> {
@@ -15,7 +15,7 @@ public abstract class AbstractDAO<T extends Entity> {
     private static final ConnectionPool pool = new ConnectionPool();
     private static final ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
 
-    public abstract boolean create(T entity, boolean isEndTrans) throws DAOException;
+     protected abstract T fetchEntity (ResultSet res) throws SQLException;
 
     private void startTransaction() {
         try {

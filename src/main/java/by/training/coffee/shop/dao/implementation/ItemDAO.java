@@ -1,7 +1,7 @@
 package by.training.coffee.shop.dao.implementation;
 
 import by.training.coffee.shop.dao.AbstractDAO;
-import by.training.coffee.shop.entity.OrderItem;
+import by.training.coffee.shop.entity.Item;
 import by.training.coffee.shop.exception.DAOException;
 
 import java.sql.PreparedStatement;
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ItemDAO extends AbstractDAO<OrderItem> {
-    private static final String SQL_DELETE_ORDER_ITEM = "DELETE FROM order_item WHERE id=?";
-    final String SQL_SELECT_ALL_ORDER_ITEMS = "SELECT order_item.id, order_item.name, order_item.price FROM order_item";
-    final String SQL_CREATE_ORDER_ITEM = "INSERT INTO order_item (name, price, menu_item_id) VALUES(?,?,?)";
+public class ItemDAO extends AbstractDAO<Item> {
+    private static final String SQL_DELETE_ORDER_ITEM = "DELETE FROM items WHERE id=?";
+    private static final String SQL_SELECT_ALL_ITEMS = "SELECT * FROM items";
+    private static final String SQL_CREATE_ORDER_ITEM = "INSERT INTO items (order_id, name, weight, cost) VALUES(?,?,?,?)";
 
-    public boolean deleteOrderItemFromBasket(OrderItem entity, boolean isEndTrans) throws DAOException {
+    public boolean delete(Item entity, boolean isEndTrans) throws DAOException {
         boolean isDeleted;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_DELETE_ORDER_ITEM)) {
             preparedStatement.setLong(1, entity.getId());
@@ -27,42 +27,58 @@ public class ItemDAO extends AbstractDAO<OrderItem> {
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
+        if (isEndTrans) {
             endTransaction();
         }
         return isDeleted;
     }
 
-    public List<OrderItem> findAllOrderItemsInfo(boolean isEndTrans) throws DAOException {
-        List<OrderItem> orderItems = new ArrayList<>();
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ALL_ORDER_ITEMS)) {
+    public List<Item> selectAllItems(int start, int total, boolean isEndTrans) throws DAOException {
+        String query = SQL_SELECT_ALL_ITEMS + " LIMIT " + (start - 1) + ", " + total;
+        List<Item> items = new ArrayList<>();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(query)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                items.add(fetchEntity(resultSet));
+            }
+            getConnection().commit();
+        } catch (SQLException e) {
+            rollBack();
+            close();
+            throw new DAOException();
+        }
+        if (isEndTrans) {
+            endTransaction();
+        }
+        return items;
+    }
+
+    public List<Item> selectAll(boolean isEndTrans) throws DAOException {
+        List<Item> items = new ArrayList<>();
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ALL_ITEMS)) {
             ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
             getConnection().commit();
             while (resultSet.next()) {
-                OrderItem orderItem = new OrderItem();
-                orderItem.setId(resultSet.getLong("id"));
-                orderItem.setName(resultSet.getString("name"));
-                orderItem.setPrice(resultSet.getBigDecimal("price"));
-                orderItems.add(orderItem);
+                items.add(fetchEntity(resultSet));
             }
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
+        if (isEndTrans) {
             endTransaction();
         }
-        return orderItems;
+        return items;
     }
 
-    @Override
-    public boolean create(OrderItem entity, boolean isEndTrans) throws DAOException {
+    public boolean insert(Item entity, boolean isEndTrans) throws DAOException {
         boolean isCreated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_ITEM)) {
-            preparedStatement.setString(1, entity.getName());
-            preparedStatement.setBigDecimal(2, entity.getPrice());
-            preparedStatement.setLong(3, entity.getMenuItemId());
+            preparedStatement.setInt(1, entity.getOrderId());
+            preparedStatement.setString(2, entity.getName());
+            preparedStatement.setDouble(3, entity.getWeight());
+            preparedStatement.setDouble(4, entity.getCost());
             isCreated = preparedStatement.executeUpdate() > 0;
             getConnection().commit();
         } catch (SQLException e) {
@@ -70,9 +86,20 @@ public class ItemDAO extends AbstractDAO<OrderItem> {
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
+        if (isEndTrans) {
             endTransaction();
         }
         return isCreated;
+    }
+
+    @Override
+    protected Item fetchEntity(ResultSet resultSet) throws SQLException {
+        Item item = new Item();
+        item.setId(resultSet.getLong("id"));
+        item.setOrderId(resultSet.getInt("order_id"));
+        item.setName(resultSet.getString("name"));
+        item.setWeight(resultSet.getDouble("weight"));
+        item.setCost(resultSet.getDouble("cost"));
+        return item;
     }
 }
