@@ -28,7 +28,6 @@ public class LoginCommand implements Command {
         String encodedPass = SHAPassword.hashPassword(password);
 
         User userByLoginAndPassword = userService.selectUserByLoginAndPassword(login, encodedPass);
-
         httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
 
         if (userByLoginAndPassword != null) {

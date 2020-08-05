@@ -17,7 +17,6 @@ public class LogoutCommand implements Command {
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession httpSession = request.getSession();
         httpSession.invalidate();
-
         logger.info("LogoutCommand - session was invalidated");
 
         return new Page(Page.HOME_PAGE_PATH, true);
