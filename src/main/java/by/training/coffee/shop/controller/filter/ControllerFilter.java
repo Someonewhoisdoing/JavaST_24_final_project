@@ -1,15 +1,10 @@
 package by.training.coffee.shop.controller.filter;
 
-import by.training.coffee.shop.command.Command;
-import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -20,10 +15,10 @@ import java.io.IOException;
 
 
 public class ControllerFilter implements Filter {
-    private final static Logger logger = LogManager.getLogger(ControllerFilter.class);
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
+        //empty method
     }
 
     @Override
@@ -33,8 +28,8 @@ public class ControllerFilter implements Filter {
         User user = (User) session.getAttribute("userByLoginAndPassword");
         String command = req.getParameter("command");
         if (user != null || command.equals("login")) {
-            filterChain.doFilter(servletRequest,servletResponse);
-        }else {
+            filterChain.doFilter(servletRequest, servletResponse);
+        } else {
             HttpServletResponse resp = (HttpServletResponse) servletResponse;
             resp.sendRedirect(req.getContextPath());
         }
@@ -42,5 +37,6 @@ public class ControllerFilter implements Filter {
 
     @Override
     public void destroy() {
+        //empty method
     }
 }
