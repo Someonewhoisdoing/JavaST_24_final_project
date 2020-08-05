@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 public class LogoutCommand implements Command {
     private final Logger logger = LogManager.getLogger(LogoutCommand.class);
+
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession httpSession = request.getSession();

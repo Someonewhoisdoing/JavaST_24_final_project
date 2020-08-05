@@ -21,7 +21,7 @@ public class UserService {
         return user;
     }
 
-    public User findUserByLoginAndPassword(String login, String password) throws ServiceException {
+    public User selectUserByLoginAndPassword(String login, String password) throws ServiceException {
         User user;
         try {
             user = userDAO.selectByUserAndPassword(login, password, true);
