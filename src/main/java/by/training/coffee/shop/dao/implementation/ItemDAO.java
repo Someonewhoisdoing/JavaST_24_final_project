@@ -14,7 +14,9 @@ import java.util.Objects;
 public class ItemDAO extends AbstractDAO<Item> {
     private static final String SQL_DELETE_ORDER_ITEM = "DELETE FROM items WHERE id=?";
     private static final String SQL_SELECT_ALL_ITEMS = "SELECT * FROM items";
+    private static final String SQL_SELECT_ITEM_BY_ID = SQL_SELECT_ALL_ITEMS + " WHERE id = ?";
     private static final String SQL_CREATE_ORDER_ITEM = "INSERT INTO items (order_id, name, weight, cost) VALUES(?,?,?,?)";
+    private static final String SQL_UPDATE_ITEM = "UPDATE items SET name=?, weight=?, cost=? WHERE id=?";
 
     public boolean delete(Item entity, boolean isEndTrans) throws DAOException {
         boolean isDeleted;
@@ -31,6 +33,25 @@ public class ItemDAO extends AbstractDAO<Item> {
             endTransaction();
         }
         return isDeleted;
+    }
+
+    public Item selectById(Long id, boolean isEndTrans) throws DAOException {
+        Item item = null;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ITEM_BY_ID)) {
+            preparedStatement.setLong(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+               item = fetchEntity(resultSet);
+            }
+        } catch (SQLException e) {
+            rollBack();
+            close();
+            throw new DAOException();
+        }
+        if (isEndTrans) {
+            endTransaction();
+        }
+        return item;
     }
 
     public List<Item> selectAllItems(int start, int total, boolean isEndTrans) throws DAOException {
@@ -90,6 +111,26 @@ public class ItemDAO extends AbstractDAO<Item> {
             endTransaction();
         }
         return isCreated;
+    }
+
+    public boolean update(Item item, boolean isEndTrans) throws DAOException {
+        boolean isUpdated;
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_UPDATE_ITEM)) {
+            preparedStatement.setString(1, item.getName());
+            preparedStatement.setDouble(2, item.getWeight());
+            preparedStatement.setDouble(3, item.getCost());
+            preparedStatement.executeUpdate();
+            getConnection().commit();
+            isUpdated = true;
+        } catch (SQLException e) {
+            rollBack();
+            close();
+            throw new DAOException();
+        }
+        if (isEndTrans){
+            endTransaction();
+        }
+        return isUpdated;
     }
 
     @Override
