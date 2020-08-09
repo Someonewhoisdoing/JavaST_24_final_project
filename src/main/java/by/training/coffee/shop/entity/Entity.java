@@ -3,14 +3,14 @@ package by.training.coffee.shop.entity;
 import java.io.Serializable;
 
 public abstract class Entity implements Serializable, Cloneable {
-    private Long id;
+    private int id;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
-            this.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
