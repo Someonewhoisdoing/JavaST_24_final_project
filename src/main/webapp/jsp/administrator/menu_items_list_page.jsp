@@ -26,29 +26,25 @@
             <thead class="thead-dark">
             <tr>
                 <th><fmt:message key="id_key"/></th>
+                <th><fmt:message key="order_id_key"/></th>
                 <th><fmt:message key="title_key"/></th>
                 <th><fmt:message key="weight_key"/></th>
                 <th><fmt:message key="cost_key"/></th>
-                <th><fmt:message key="ingredients_key"/></th>
                 <th><fmt:message key="action_key"/></th>
             </tr>
             </thead>
 
-            <c:forEach items="${sessionScope.menuItemList}" var="item">
+            <c:forEach items="${sessionScope.itemList}" var="item">
+            <c:set var="count" value="${pageScope.count+1}"/>
                 <tbody>
                 <tr>
                     <td><c:out value="${item.id}"/></td>
+                    <td><c:out value="${item.orderId}"/></td>
                     <td><c:out value="${item.name}"/></td>
                     <td><c:out value="${item.weight}"/></td>
                     <td><c:out value="${item.cost}"/></td>
-                    <td><c:out value="${item.ingredientName}"/></td>
                     <td>
-                        <form action="${pageContext.request.contextPath}/controller" method="post">
-                            <input type="hidden" name="id" value="${item.id}"/>
-                            <input type="hidden" name="command" value="to_add_menu_item_page"/>
-                            <button type="submit" class="btn btn-primary"><fmt:message key="add_key"/></button>
-                        </form>
-                        <form action="${pageContext.request.contextPath}/controller" method="post">
+                        <form action="${pageContext.request.contextPath}/jsp/administrator/edit_menu_item.jsp?id=${count}&page=${param.page}" method="post">
                             <input type="hidden" name="id" value="${item.id}"/>
                             <input type="hidden" name="command" value="to_edit_menu_item_page"/>
                             <button type="submit" class="btn btn-primary"><fmt:message key="edit_key"/></button>
@@ -62,16 +58,16 @@
 
     <div class="container p-3">
         <div class="btn-group btn-group-lg">
-            <form action="controller" method="post">
-                <input type="hidden" name="command" value="menu_items_list"/>
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="1">1</button>
             </form>
-            <form action="controller" method="post">
-                <input type="hidden" name="command" value="menu_items_list"/>
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="2">2</button>
             </form>
-            <form action="controller" method="post">
-                <input type="hidden" name="command" value="menu_items_list"/>
+            <form action="${pageContext.request.contextPath}/controller" method="post">
+                <input type="hidden" name="command" value="items_list"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="3">3</button>
             </form>
         </div>

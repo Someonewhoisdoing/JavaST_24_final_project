@@ -28,21 +28,19 @@
                 <th><fmt:message key="id_key"/></th>
                 <th><fmt:message key="date_key"/></th>
                 <th><fmt:message key="name_key"/></th>
-                <th><fmt:message key="address_key"/></th>
                 <th><fmt:message key="list_of_drinks_key"/></th>
                 <th><fmt:message key="final_price_key"/></th>
             </tr>
             </thead>
 
-            <c:forEach items="${sessionScope.orderInfoList}" var="item">
+            <c:forEach items="${sessionScope.order.items}" var="item">
                 <tbody>
                 <tr>
                     <td><c:out value="${item.id}"/></td>
-                    <td><c:out value="${item.date}"/></td>
-                    <td><c:out value="${item.userName}"/></td>
-                    <td><c:out value="${item.addressDelivery}"/></td>
-                    <td><c:out value="${item.orderItems}"/></td>
-                    <td><c:out value="${item.finalCost}"/></td>
+                    <td><c:out value="${order.date}"/></td>
+                    <td><c:out value="${item.name}"/></td>
+                    <td><c:out value="${item.weight}"/></td>
+                    <td><c:out value="${item.cost}"/></td>
                 </tr>
                 </tbody>
             </c:forEach>

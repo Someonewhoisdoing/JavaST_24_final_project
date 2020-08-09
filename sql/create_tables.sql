@@ -32,6 +32,11 @@ weight DECIMAL NOT NULL,
 cost DECIMAL NOT NULL
 );
 
+create TABLE IF NOT EXISTS basket_items(
+user_id INTEGER, FOREIGN KEY(user_id) REFERENCES users(id),
+item_id INTEGER, FOREIGN KEY(item_id) REFERENCES items(id),
+CONSTRAINT UC_Person UNIQUE (user_id,item_id)
+);
 
 
 

@@ -20,25 +20,20 @@
     <div class="container style='margin-top:30px'">
         <div class="row p-3 mt-3">
 
-            <c:forEach items="${sessionScope.menuItemsPlusInfo}" var="item">
+            <c:forEach items="${sessionScope.itemsInfo}" var="item">
                 <div class="col-sm-4">
                     <div class="card border-0">
                         <img class="rounded w-75 h-75" src="<c:url value="/static/image/cup.jpg"/>"
                              alt="Coffee paper cup image"/>
                         <div class="card-body">
 
-
-
-
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="command" value="add_order_item_to_basket"/>
                                 <h6 class="card-title"><fmt:message key="id_key"/>: ${item.id}</h6>
+                                <h6 class="card-title"><fmt:message key="order_id_key"/>: ${item.orderId}</h6>
                                 <h6 class="card-title"><fmt:message key="title_key"/>: ${item.name}</h6>
                                 <h6 class="card-title"><fmt:message key="weight_key"/>: ${item.weight}</h6>
                                 <h6 class="card-title"><fmt:message key="cost_key"/>: ${item.cost}</h6>
-                                <hr class="my-4">
-                                <p class="card-text"><fmt:message key="ingredients_key"/>: ${item.ingredientName}</p>
-                                <hr class="my-4">
 
                                 <input type="hidden" name="id" value="${item.id}"/>
 
@@ -47,12 +42,6 @@
                                        value="<fmt:message key='add_to_basket_key'/>">
 </c:if>
                             </form>
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>

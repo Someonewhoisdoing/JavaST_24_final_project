@@ -2,6 +2,7 @@ package by.training.coffee.shop.service.implementation;
 
 import by.training.coffee.shop.dao.implementation.ItemDAO;
 import by.training.coffee.shop.entity.Item;
+import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.DAOException;
 import by.training.coffee.shop.exception.ServiceException;
 
@@ -11,9 +12,9 @@ public class ItemService {
 
     private ItemDAO itemDAO = new ItemDAO();
 
-    public boolean deleteItemFromBasket(Item entity) throws ServiceException {
+    public boolean deleteItemFromBasket(Item item, int id) throws ServiceException {
         try {
-            return itemDAO.delete(entity, true);
+            return itemDAO.deleteFromBasket(item, id, true);
         } catch (DAOException e) {
             throw new ServiceException(e.getMessage(), e);
         }
@@ -27,17 +28,33 @@ public class ItemService {
         }
     }
 
-    public List<Item> findAllOrderItemsInfo() throws ServiceException {
+    public List<Item> selectAllOrderItemsInfo(int id) throws ServiceException {
         try {
-            return itemDAO.selectAll(true);
+            return itemDAO.selectAll(id,true);
         } catch (DAOException e) {
             throw new ServiceException(e.getMessage(), e);
         }
     }
 
-    public boolean create(Item entity) throws ServiceException {
+    public Item findItemById(Long id) throws ServiceException {
         try {
-            return itemDAO.insert(entity, true);
+            return itemDAO.selectById(id, true);
+        } catch (DAOException e) {
+            throw new ServiceException();
+        }
+    }
+
+    public boolean insert(Item item, int id) throws ServiceException {
+        try {
+            return itemDAO.insert(item, id,true);
+        } catch (DAOException e) {
+            throw new ServiceException(e.getMessage(), e);
+        }
+    }
+
+    public boolean update(Item item) throws ServiceException {
+        try {
+            return itemDAO.update(item, true);
         } catch (DAOException e) {
             throw new ServiceException(e.getMessage(), e);
         }

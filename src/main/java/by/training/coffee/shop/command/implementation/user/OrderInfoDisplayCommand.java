@@ -2,7 +2,9 @@ package by.training.coffee.shop.command.implementation.user;
 
 import by.training.coffee.shop.command.Command;
 import by.training.coffee.shop.command.Page;
-import by.training.coffee.shop.entity.OrderInfo;
+import by.training.coffee.shop.entity.Item;
+import by.training.coffee.shop.entity.Order;
+import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.OrderService;
 import org.apache.logging.log4j.LogManager;
@@ -15,14 +17,14 @@ import java.util.List;
 
 public class OrderInfoDisplayCommand implements Command {
     private final static Logger logger = LogManager.getLogger(OrderInfoDisplayCommand.class);
-
+    OrderService orderService = new OrderService();
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-        OrderService orderService = new OrderService();
-        List<OrderInfo> orderInfoList = orderService.showOrderInfo();
-        if (orderInfoList != null) {
-            httpSession.setAttribute("orderInfoList", orderInfoList);
+        User user = (User) httpSession.getAttribute("userByLoginAndPassword");
+        Order order = orderService.order(user);
+        if (order != null) {
+            httpSession.setAttribute("order", order);
             logger.info("orderInfoList is not null and added to session in OrderInfoDisplayCommand");
         }
         return new Page(Page.ORDER_INFO_PAGE, false);

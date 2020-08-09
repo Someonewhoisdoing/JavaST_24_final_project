@@ -12,27 +12,45 @@ import java.util.List;
 import java.util.Objects;
 
 public class ItemDAO extends AbstractDAO<Item> {
-    private static final String SQL_DELETE_ORDER_ITEM = "DELETE FROM items WHERE id=?";
+    private static final String SQL_DELETE_ORDER_ITEM_FROM_BASKET = "DELETE FROM basket_items b WHERE b.user_id=?";
     private static final String SQL_SELECT_ALL_ITEMS = "SELECT * FROM items";
+    private static final String SQL_DELETE_ALL_ITEMS_FROM_BASKET = "delete FROM basket_items bi where bi.user_id = ? and bi.item_id =?";
+    private static final String SQL_SELECT_ALL_ITEMS_FROM_BASKET = "SELECT * FROM basket_items bi inner join items i on bi.item_id = i.id where bi.user_id = ?";
     private static final String SQL_SELECT_ITEM_BY_ID = SQL_SELECT_ALL_ITEMS + " WHERE id = ?";
-    private static final String SQL_CREATE_ORDER_ITEM = "INSERT INTO items (order_id, name, weight, cost) VALUES(?,?,?,?)";
+    private static final String SQL_CREATE_ORDER_ITEM_INTO_BASKET = "INSERT INTO basket_items (user_id, item_id) VALUES(?,?)";
     private static final String SQL_UPDATE_ITEM = "UPDATE items SET name=?, weight=?, cost=? WHERE id=?";
 
-    public boolean delete(Item entity, boolean isEndTrans) throws DAOException {
-        boolean isDeleted;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_DELETE_ORDER_ITEM)) {
-            preparedStatement.setLong(1, entity.getId());
-            isDeleted = preparedStatement.executeUpdate() > 0;
-            getConnection().commit();
+    public boolean deleteFromBasket(Item entity, int id, boolean isEndTrans) throws DAOException {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_DELETE_ALL_ITEMS_FROM_BASKET)) {
+            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(2, Math.toIntExact(entity.getId()));
+            boolean isDeleted = preparedStatement.executeUpdate() > 0;
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isDeleted;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
+    }
+
+    public boolean deleteAllFromBasket(int id, boolean isEndTrans) throws DAOException {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_DELETE_ORDER_ITEM_FROM_BASKET)) {
+            preparedStatement.setInt(1, id);
+            boolean isDeleted = preparedStatement.executeUpdate() > 0;
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isDeleted;
+        } catch (SQLException e) {
+            rollBack();
+            close();
+            throw new DAOException();
         }
-        return isDeleted;
     }
 
     public Item selectById(Long id, boolean isEndTrans) throws DAOException {
@@ -74,32 +92,31 @@ public class ItemDAO extends AbstractDAO<Item> {
         return items;
     }
 
-    public List<Item> selectAll(boolean isEndTrans) throws DAOException {
-        List<Item> items = new ArrayList<>();
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ALL_ITEMS)) {
+    public List<Item> selectAll(int id, boolean isEndTrans) throws DAOException {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ALL_ITEMS_FROM_BASKET)) {
+            preparedStatement.setInt(1,id);
             ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
-            getConnection().commit();
+            List<Item> items = new ArrayList<>();
             while (resultSet.next()) {
                 items.add(fetchEntity(resultSet));
             }
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return items;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return items;
     }
 
-    public boolean insert(Item entity, boolean isEndTrans) throws DAOException {
+    public boolean insert(Item entity, int id, boolean isEndTrans) throws DAOException {
         boolean isCreated;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_ITEM)) {
-            preparedStatement.setInt(1, entity.getOrderId());
-            preparedStatement.setString(2, entity.getName());
-            preparedStatement.setDouble(3, entity.getWeight());
-            preparedStatement.setDouble(4, entity.getCost());
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_ITEM_INTO_BASKET)) {
+            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(2, Math.toIntExact(entity.getId()));
             isCreated = preparedStatement.executeUpdate() > 0;
             getConnection().commit();
         } catch (SQLException e) {
@@ -116,13 +133,16 @@ public class ItemDAO extends AbstractDAO<Item> {
     public boolean update(Item item, boolean isEndTrans) throws DAOException {
         boolean isUpdated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_UPDATE_ITEM)) {
+            System.out.println(item);
             preparedStatement.setString(1, item.getName());
             preparedStatement.setDouble(2, item.getWeight());
             preparedStatement.setDouble(3, item.getCost());
+            preparedStatement.setLong(4,item.getId());
             preparedStatement.executeUpdate();
             getConnection().commit();
             isUpdated = true;
         } catch (SQLException e) {
+            System.out.println(e.getMessage());
             rollBack();
             close();
             throw new DAOException();

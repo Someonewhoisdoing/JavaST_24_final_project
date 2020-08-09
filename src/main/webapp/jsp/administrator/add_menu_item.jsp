@@ -27,20 +27,20 @@
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
+                    <th><fmt:message key="order_id_key"/></th>
                     <th><fmt:message key="title_key"/></th>
                     <th><fmt:message key="weight_key"/></th>
                     <th><fmt:message key="cost_key"/></th>
-                    <th><fmt:message key="ingredient_id_key"/></th>
                     <th><fmt:message key="action_key"/></th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr>
+                    <td><input type="text" name="orderId" value="" pattern="([0-9]+){1,3}" required/></td>
                     <td><input type="text" name="name" value="" pattern="([a-zA-Z]+){1,20}" required/></td>
                     <td><input type="text" name="weight" value="" pattern="([0-9]+){1,4}" required/></td>
                     <td><input type="text" name="cost" value="" pattern="([0-9]+){1,5}" required/></td>
-                    <td><input type="text" name="ingredientId" value="" pattern="([0-9]+){1,3}" required/></td>
                     <td>
                         <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
                     </td>

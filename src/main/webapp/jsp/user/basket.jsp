@@ -33,7 +33,7 @@
                     <tr>
                         <td><c:out value="${item.id}"/></td>
                         <td><c:out value="${item.name}"/></td>
-                        <td><c:out value="${item.price}"/></td>
+                        <td><c:out value="${item.cost}"/></td>
                         <td>
                             <form action="${pageContext.request.contextPath}/controller" method="post">
                                 <input type="hidden" name="command" value="delete_order_item_from_basket"/>

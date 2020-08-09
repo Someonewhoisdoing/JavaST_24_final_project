@@ -18,14 +18,13 @@
       <owntag:menu/>
 
     <div class="container p-3">
-        <form action="controller" method="post">
+        <form action="${pageContext.request.contextPath}/controller" method="post">
             <input type="hidden" name="command" value="edit_user"/>
 
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
                     <th><fmt:message key="login_key"/></th>
-                    <th><fmt:message key="password_key"/></th>
                     <th><fmt:message key="name_key"/></th>
                     <th><fmt:message key="lastname_key"/></th>
                     <th><fmt:message key="phone_key"/></th>
@@ -33,24 +32,22 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="text" name="login" default="${request.getParameter("login")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.login}"
+                    <td><input type="text" name="login"
+                               value="${sessionScope.userByLoginAndPassword.login}"
                                pattern="([a-zA-Z0-9_]+){4,10}" required/></td>
-                    <td><input type="password" name="password" placeholder="password"
-                               required/></td>
                     <td><input type="text" name="name" default="${request.getParameter("name")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.name}" pattern="([a-zA-Z]+){1,20}"
+                               value="${sessionScope.userByLoginAndPassword.name}" pattern="([a-zA-Z]+){1,20}"
                                required/></td>
                     <td><input type="text" name="surname" default="${request.getParameter("surname")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.surname}" pattern="([a-zA-Z]+){1,20}"
+                               value="${sessionScope.userByLoginAndPassword.surname}" pattern="([a-zA-Z]+){1,20}"
                                required/></td>
                     <td><input type="text" name="phone" default="${request.getParameter("phone")}"
-                               placeholder="${sessionScope.userByLoginAndPassword.phone}" pattern="([\\+0-9]){13}"
+                               value="${sessionScope.userByLoginAndPassword.phone}" pattern="([\\+0-9]){13}"
                                required/></td>
                 </tr>
                 </tbody>
             </table>
-            <input type="hidden" name="login" value="${request.getParameter("currentUser.getLogin()")}"/>
+            <input type="hidden" name="login" value="${sessionScope.userByLoginAndPassword.login}"/>
             <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
         </form>
     </div>

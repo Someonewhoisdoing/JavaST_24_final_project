@@ -2,28 +2,22 @@ package by.training.coffee.shop.command;
 
 import by.training.coffee.shop.command.implementation.administrator.*;
 import by.training.coffee.shop.command.implementation.common.*;
-import by.training.coffee.shop.command.implementation.menu.MenuItemInformationDisplayCommand;
+import by.training.coffee.shop.command.implementation.menu.ItemInformationDisplayCommand;
 import by.training.coffee.shop.command.implementation.user.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 
 public class CommandFactory {
     private CommandFactory() {
     }
-
-    private static final Logger logger = LogManager.getLogger(CommandFactory.class);
     //common
     private final static String LANGUAGE_CHANGER_COMMAND = "change_language";
     private final static String LOGIN_COMMAND = "login";
     private final static String LOGOUT_COMMAND = "logout";
-    private final static String TO_MENU_PAGE_RETURNER_COMMAND = "back_to_menu_page";
     private final static String TO_HOME_PAGE_RETURNER_COMMAND = "back_to_home_page";
     private final static String TO_ACCOUNT_PAGE_COMMAND = "to_account_page";
     private final static String TO_MENU_PAGE_COMMAND = "to_menu_page";
     //admin
     private final static String USER_LIST_DISPLAY_COMMAND = "users_list";
-    private final static String MENU_ITEMS_DISPLAY_COMMAND = "menu_items_list";
+    private final static String ITEMS_DISPLAY_COMMAND = "items_list";
     private final static String TO_EDIT_MENU_ITEM_PAGE_COMMAND = "to_edit_menu_item_page";
     private final static String MENU_ITEM_EDITOR_COMMAND = "edit_menu_item";
     private final static String TO_ADD_MENU_ITEM_PAGE_COMMAND = "to_add_menu_item_page";
@@ -53,25 +47,25 @@ public class CommandFactory {
             case TO_BASKET_PAGE_COMMAND:
                 return new ToBasketPageCommand();
             case TO_MENU_PAGE_COMMAND:
-                return new MenuItemInformationDisplayCommand();
+                return new ItemInformationDisplayCommand();
             case USER_LIST_DISPLAY_COMMAND:
                 return new UsersListDisplayCommand();
-            case MENU_ITEMS_DISPLAY_COMMAND:
-                return new MenuItemsListDisplayCommand();
+            case ITEMS_DISPLAY_COMMAND:
+                return new ItemsDisplayCommand();
             case TO_EDIT_MENU_ITEM_PAGE_COMMAND:
-                return new ToEditMenuItemPageCommand();
+                return new ToEditItemPageCommand();
             case MENU_ITEM_EDITOR_COMMAND:
-                return new MenuItemEditorCommand();
+                return new ItemEditorCommand();
             case TO_ADD_MENU_ITEM_PAGE_COMMAND:
                 return new ToAddMenuItemPageCommand();
             case MENU_ITEM_ADDING_COMMAND:
                 return new MenuItemAddingCommand();
             case ADD_ORDER_ITEM_TO_BASKET:
-                return new OrderItemToBasketAddingCommand();
+                return new ItemToBasketAddingCommand();
             case MAKE_ORDER_AND_SHOW_ORDER_INFO:
                 return new OrderInfoDisplayCommand();
             case DELETE_ORDER_ITEM_FROM_BASKET:
-                return new OrderItemFromBasketDeleting();
+                return new ItemFromBasketDeleting();
             case TO_HOME_PAGE_RETURNER_COMMAND:
                 return new HomePageReturnerCommand();
         }

@@ -1,6 +1,5 @@
 package by.training.coffee.shop.service.implementation;
 
-import by.training.coffee.shop.entity.MenuItem;
 import by.training.coffee.shop.exception.ServiceException;
 import org.junit.After;
 import org.junit.Assert;

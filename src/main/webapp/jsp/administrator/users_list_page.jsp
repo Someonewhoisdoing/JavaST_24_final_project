@@ -40,7 +40,7 @@
                     <tr>
                         <td><c:out value="${user.id}"/></td>
                         <td><c:out value="${user.login}"/></td>
-                        <td><c:out value="${user.password}"/></td>
+                        <td><c:out value="******"/></td>
                         <td><c:out value="${user.name}"/></td>
                         <td><c:out value="${user.surname}"/></td>
                         <td><c:out value="${user.phone}"/></td>

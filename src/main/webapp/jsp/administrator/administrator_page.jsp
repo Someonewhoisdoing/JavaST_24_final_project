@@ -31,7 +31,7 @@
             <div class="col-sm-12">
                 <form action="${pageContext.request.contextPath}/controller" method="post">
                     <input type="hidden" name="page" value="${1}"/>
-                    <input type="hidden" name="command" value="menu_items_list"/>
+                    <input type="hidden" name="command" value="items_list"/>
                     <button type="submit" class="btn btn-primary btn-block"><fmt:message
                             key="show_all_menu_items_key"/></button>
                 </form>

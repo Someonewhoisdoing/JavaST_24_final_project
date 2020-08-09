@@ -17,7 +17,7 @@ public class UserDAO extends AbstractDAO<User> {
     private static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users u INNER JOIN address a on u.id = a.user_id ";
     private static final String SQL_SELECT_USER_BY_LOGIN = SQL_SELECT_ALL_USERS + " WHERE login = ? and password = ?";
     private static final String SQL_SELECT_USER_BY_ID = SQL_SELECT_ALL_USERS + " WHERE id = ?";
-    private static final String SQL_UPDATE_USER = "UPDATE users SET login=?, password=?, name=?, surname=?, phone=? WHERE id=?";
+    private static final String SQL_UPDATE_USER = "UPDATE users SET login=?, name=?, surname=?, phone=? WHERE id=?";
 
     public User selectByUserAndPassword(String login, String password, boolean isEndTrans) throws DAOException {
         User user = null;
@@ -29,6 +29,7 @@ public class UserDAO extends AbstractDAO<User> {
                 user = fetchEntity(resultSet);
                 System.out.println(user);
             }
+            getConnection().commit();
         } catch (SQLException e) {
             rollBack();
             close();
@@ -47,6 +48,7 @@ public class UserDAO extends AbstractDAO<User> {
             while (resultSet.next()) {
                 users.add(fetchEntity(resultSet));
             }
+            getConnection().commit();
         } catch (SQLException e) {
             rollBack();
             close();
@@ -66,6 +68,7 @@ public class UserDAO extends AbstractDAO<User> {
             if (resultSet.next()) {
                 user = fetchEntity(resultSet);
             }
+            getConnection().commit();
         } catch (SQLException e) {
             rollBack();
             close();
@@ -81,13 +84,14 @@ public class UserDAO extends AbstractDAO<User> {
         boolean isUpdated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_UPDATE_USER)) {
             preparedStatement.setString(1, entity.getLogin());
-            preparedStatement.setString(2, entity.getPassword());
-            preparedStatement.setString(3, entity.getName());
-            preparedStatement.setString(4, entity.getSurname());
-            preparedStatement.setString(5, entity.getPhone());
-            preparedStatement.setString(6, entity.getId().toString());
+            preparedStatement.setString(2, entity.getName());
+            preparedStatement.setString(3, entity.getSurname());
+            preparedStatement.setString(4, entity.getPhone());
+            preparedStatement.setInt(5, Integer.parseInt(String.valueOf(entity.getId())));
 
             isUpdated = preparedStatement.executeUpdate() > 0;
+            System.out.println(String.valueOf(isUpdated) + entity + "");
+            getConnection().commit();
         } catch (SQLException e) {
             rollBack();
             close();

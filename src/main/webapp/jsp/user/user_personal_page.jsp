@@ -18,7 +18,7 @@
       <owntag:menu/>
 
     <div class="container p-3">
-        <form action="controller" method="post">
+        <form action="${pageContext.request.contextPath}/jsp/user/edit_personal_information.jsp" method="post">
             <input type="hidden" name="command" value="to_edit_user_info_page"/>
 
             <table class="table table-bordered">

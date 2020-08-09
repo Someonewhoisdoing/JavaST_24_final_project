@@ -22,7 +22,7 @@
     </div>
 
     <div class="container">
-        <form action="${pageContext.request.contextPath}/controller" method="post">
+        <form action="${pageContext.request.contextPath}/controller?page=${param.page}" method="post">
             <input type="hidden" name="command" value="edit_menu_item"/>
             <table class="table table-bordered">
                 <thead class="thead-dark">
@@ -31,20 +31,18 @@
                     <th><fmt:message key="title_key"/></th>
                     <th><fmt:message key="weight_key"/></th>
                     <th><fmt:message key="cost_key"/></th>
-                    <th><fmt:message key="ingredients_key"/></th>
                     <th><fmt:message key="action_key"/></th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr>
-                    <td><input type="text" name="id" value="" pattern="([0-9]+){1,3}" required/></td>
-                    <td><input type="text" name="name" value="" pattern="([a-zA-Z]+){1,20}" required/></td>
-                    <td><input type="text" name="weight" value="" pattern="([0-9]+){1,3}" required/></td>
-                    <td><input type="text" name="cost" value="" pattern="([0-9]+){1,3}" required/></td>
-                    <td><input type="text" name="ingredientName" value="" pattern="([a-zA-Z\\s]+){1,20}" required/></td>
+                    <td><input type="text" name="id" value="${sessionScope.itemList[param.id-1].id}" pattern="([0-9]+){1,3}" readonly/></td>
+                    <td><input type="text" name="name" value="${sessionScope.itemList[param.id-1].name}" pattern="([a-zA-Z]+){1,20}" required/></td>
+                    <td><input type="text" name="weight" value="${sessionScope.itemList[param.id-1].weight}" pattern="([0-9\.]+){1,3}" required/></td>
+                    <td><input type="text" name="cost" value="${sessionScope.itemList[param.id-1].cost}" pattern="([0-9\.]+){1,3}" required/></td>
                     <td>
-                        <input type="hidden" name="id" value="${request.getParameter("menuItemById.getId()")}"/>
+                        <input type="hidden" name="id" value="${request.getParameter("itemById.getId()")}"/>
                         <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
                     </td>
                 </tr>

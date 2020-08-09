@@ -60,7 +60,8 @@ public class Item extends Entity {
     @Override
     public String toString() {
         return "Item{" +
-                "name='" + name + '\'' +
+                "id='" + getId() +
+                "name='" + name +
                 ", orderId=" + orderId +
                 ", cost=" + cost +
                 ", weight=" + weight +
