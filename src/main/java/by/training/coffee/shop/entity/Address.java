@@ -42,14 +42,18 @@ public class Address extends Entity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Address address = (Address) o;
-        return Objects.equals(street, address.street) &&
-                Objects.equals(house, address.house) &&
-                Objects.equals(flat, address.flat) &&
-                Objects.equals(userId, address.userId);
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        Address address = (Address) object;
+        return Objects.equals(street, address.street)
+                && Objects.equals(house, address.house)
+                && Objects.equals(flat, address.flat)
+                && Objects.equals(userId, address.userId);
     }
 
     @Override
@@ -60,10 +64,10 @@ public class Address extends Entity {
     @Override
     public String toString() {
         return "Address{" +
-                "street='" + street + '\'' +
-                ", house=" + house +
-                ", flat=" + flat +
-                ", userId=" + userId +
-                '}';
+                "street=" + street
+                + ", house=" + house
+                + ", flat=" + flat
+                + ", userId=" + userId
+                + "}";
     }
 }
