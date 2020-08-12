@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class LoginCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(LoginCommand.class);
+    private static final Logger logger = LogManager.getLogger(LoginCommand.class);
+    private static final UserService userService = new UserService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
@@ -23,17 +24,16 @@ public class LoginCommand implements Command {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
 
-        UserService userService = new UserService();
         logger.info("login and password received");
         String encodedPass = SHAPassword.hashPassword(password);
 
-        User userByLoginAndPassword = userService.selectUserByLoginAndPassword(login, encodedPass);
-        httpSession.setAttribute("userByLoginAndPassword", userByLoginAndPassword);
+        User user = userService.selectUserByLoginAndPassword(login, encodedPass);
+        httpSession.setAttribute("user", user);
 
-        if (userByLoginAndPassword != null) {
-            if (userByLoginAndPassword.getRole() == 1) {
+        if (user != null) {
+            if (user.getRole() == 1) {
                 return new Page(Page.ADMINISTRATOR_PAGE_PATH, false);
-            } else if (userByLoginAndPassword.getRole() == 2) {
+            } else if (user.getRole() == 2) {
                 return (new Page(Page.USER_PERSONAL_PAGE_PATH, false));
             }
         }

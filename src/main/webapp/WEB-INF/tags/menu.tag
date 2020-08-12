@@ -3,8 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <fmt:bundle basename="property.text" prefix="label.">
  <c:choose>
-            <c:when test="${sessionScope.userByLoginAndPassword == null}">
-            <form action="jsp/common/login.jsp" method="post">
+            <c:when test="${sessionScope.user == null}">
+            <form action="${pageContext.request.contextPath}/jsp/common/login.jsp" method="post">
                             <input type="hidden" name="command" value="login"/>
                             <button type="submit" class="btn btn-link"><fmt:message key="login_key"/></button>
                         </form>
@@ -26,7 +26,7 @@
                 <input type="hidden" name="command" value="to_account_page"/>
                 <button type="submit" class="btn btn-link"><fmt:message key="account_key"/></button>
             </form>
-            <c:if test="${sessionScope.userByLoginAndPassword.role == 2}">
+            <c:if test="${sessionScope.user.role == 2}">
              <form action="${pageContext.request.contextPath}/controller" method="post">
                  <input type="hidden" name="command" value="to_basket_page"/>
                  <button type="submit" class="btn btn-link"><fmt:message key="basket_key"/></button>

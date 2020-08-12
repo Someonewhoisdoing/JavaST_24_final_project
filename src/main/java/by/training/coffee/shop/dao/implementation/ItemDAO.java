@@ -23,7 +23,7 @@ public class ItemDAO extends AbstractDAO<Item> {
     public boolean deleteFromBasket(Item entity, int id, boolean isEndTrans) throws DAOException {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_DELETE_ALL_ITEMS_FROM_BASKET)) {
             preparedStatement.setInt(1, id);
-            preparedStatement.setInt(2, Math.toIntExact(entity.getId()));
+            preparedStatement.setInt(2, entity.getId());
             boolean isDeleted = preparedStatement.executeUpdate() > 0;
             if (isEndTrans) {
                 getConnection().commit();
@@ -53,23 +53,24 @@ public class ItemDAO extends AbstractDAO<Item> {
         }
     }
 
-    public Item selectById(Long id, boolean isEndTrans) throws DAOException {
+    public Item selectById(int id, boolean isEndTrans) throws DAOException {
         Item item = null;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ITEM_BY_ID)) {
-            preparedStatement.setLong(1, id);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-               item = fetchEntity(resultSet);
+                item = fetchEntity(resultSet);
             }
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return item;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return item;
     }
 
     public List<Item> selectAllItems(int start, int total, boolean isEndTrans) throws DAOException {
@@ -80,21 +81,21 @@ public class ItemDAO extends AbstractDAO<Item> {
             while (resultSet.next()) {
                 items.add(fetchEntity(resultSet));
             }
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return items;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return items;
     }
 
     public List<Item> selectAll(int id, boolean isEndTrans) throws DAOException {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_ALL_ITEMS_FROM_BASKET)) {
-            preparedStatement.setInt(1,id);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = Objects.requireNonNull(preparedStatement).executeQuery();
             List<Item> items = new ArrayList<>();
             while (resultSet.next()) {
@@ -116,47 +117,46 @@ public class ItemDAO extends AbstractDAO<Item> {
         boolean isCreated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_CREATE_ORDER_ITEM_INTO_BASKET)) {
             preparedStatement.setInt(1, id);
-            preparedStatement.setInt(2, Math.toIntExact(entity.getId()));
+            preparedStatement.setInt(2, entity.getId());
             isCreated = preparedStatement.executeUpdate() > 0;
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isCreated;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return isCreated;
     }
 
     public boolean update(Item item, boolean isEndTrans) throws DAOException {
         boolean isUpdated;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_UPDATE_ITEM)) {
-            System.out.println(item);
             preparedStatement.setString(1, item.getName());
             preparedStatement.setDouble(2, item.getWeight());
             preparedStatement.setDouble(3, item.getCost());
-            preparedStatement.setLong(4,item.getId());
+            preparedStatement.setInt(4, item.getId());
             preparedStatement.executeUpdate();
-            getConnection().commit();
             isUpdated = true;
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isUpdated;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans){
-            endTransaction();
-        }
-        return isUpdated;
     }
 
     @Override
     protected Item fetchEntity(ResultSet resultSet) throws SQLException {
         Item item = new Item();
-        item.setId(resultSet.getLong("id"));
+        item.setId(resultSet.getInt("id"));
         item.setOrderId(resultSet.getInt("order_id"));
         item.setName(resultSet.getString("name"));
         item.setWeight(resultSet.getDouble("weight"));

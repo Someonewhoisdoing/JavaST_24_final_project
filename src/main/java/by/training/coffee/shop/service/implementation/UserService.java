@@ -11,7 +11,7 @@ public class UserService {
     private UserDAO userDAO = new UserDAO();
 
 
-    public User findUserById(Long id) throws ServiceException {
+    public User findUserById(int id) throws ServiceException {
         User user;
         try {
             user = userDAO.selectById(id, true);

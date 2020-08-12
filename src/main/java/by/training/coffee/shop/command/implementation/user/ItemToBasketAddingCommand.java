@@ -14,19 +14,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class ItemToBasketAddingCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(ItemToBasketAddingCommand.class);
+    private static final Logger logger = LogManager.getLogger(ItemToBasketAddingCommand.class);
+    private static final ItemService itemService = new ItemService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-        ItemService itemService = new ItemService();
         String id = request.getParameter("id");
-        User user = (User) httpSession.getAttribute("userByLoginAndPassword");
-        Item item = itemService.findItemById(Long.parseLong(id));
+        User user = (User) httpSession.getAttribute("user");
+        Item item = itemService.findItemById(Integer.parseInt(id));
         if (item == null) {
             return new Page(Page.MENU_PAGE_PATH, false);
         }
-        boolean isOrderItemCreated = itemService.insert(item, Math.toIntExact(user.getId()));
+        boolean isOrderItemCreated = itemService.insert(item, user.getId());
 
         if (isOrderItemCreated) {
             httpSession.setAttribute("orderItemToBasket", item);

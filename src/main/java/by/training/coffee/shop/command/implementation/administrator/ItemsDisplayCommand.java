@@ -15,7 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class ItemsDisplayCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(ItemsDisplayCommand.class);
+    private static final Logger logger = LogManager.getLogger(ItemsDisplayCommand.class);
+    private static final ItemService itemService = new ItemService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
@@ -28,7 +29,6 @@ public class ItemsDisplayCommand implements Command {
             page = page - 1;
             page = page * total + 1;
         }
-        ItemService itemService = new ItemService();
         List<Item> itemList = itemService.selectAllItems(page, total);
         if (itemList != null) {
             httpSession.setAttribute("itemList", itemList);

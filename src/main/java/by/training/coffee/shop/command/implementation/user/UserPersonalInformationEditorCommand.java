@@ -5,7 +5,6 @@ import by.training.coffee.shop.command.Page;
 import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.UserService;
-import by.training.coffee.shop.util.SHAPassword;
 import by.training.coffee.shop.validator.UserDataValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,7 +20,7 @@ public class UserPersonalInformationEditorCommand implements Command {
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-        User currentUser = (User) httpSession.getAttribute("userByLoginAndPassword");
+        User currentUser = (User) httpSession.getAttribute("user");
         String login = request.getParameter("login");
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
@@ -34,7 +33,6 @@ public class UserPersonalInformationEditorCommand implements Command {
         currentUser.setName(name);
         currentUser.setSurname(surname);
         currentUser.setPhone(phone);
-        System.out.println(currentUser);
         boolean isUserUpdated = userService.updateUser(currentUser);
         if (isUserUpdated) {
             httpSession.setAttribute("userUpdated", currentUser);

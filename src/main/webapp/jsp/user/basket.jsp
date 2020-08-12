@@ -46,7 +46,7 @@
                 </c:forEach>
             </table>
 
-            <form action="controller" method="post">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
             <input type="hidden" name="command" value="make_order_and_show_order_info"/>
             <button type="submit" class="btn btn-primary"><fmt:message key="make_order_key"/></button>
             </form>

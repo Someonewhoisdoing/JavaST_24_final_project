@@ -63,8 +63,8 @@ public class Address extends Entity {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "street=" + street
+        return "Address{"
+                + "street=" + street
                 + ", house=" + house
                 + ", flat=" + flat
                 + ", userId=" + userId

@@ -1,13 +1,12 @@
 package by.training.coffee.shop.entity;
 
 
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
 public class Order extends Entity {
-    private String date = LocalDate.now().toString() ;
+    private String date = LocalDate.now().toString();
     private int userId;
     private List<Item> items;
 
@@ -36,16 +35,30 @@ public class Order extends Entity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Order order = (Order) o;
-        return Objects.equals(date, order.date) &&
-                Objects.equals(userId, order.userId);
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        Order order = (Order) object;
+        return Objects.equals(date, order.date)
+                && Objects.equals(userId, order.userId);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(date, userId);
+    }
+
+    @Override
+    public String toString() {
+        return "Order{"
+                + super.getId()
+                + "date=" + date
+                + ", userId=" + userId
+                + ", items=" + items
+                + "}";
     }
 }

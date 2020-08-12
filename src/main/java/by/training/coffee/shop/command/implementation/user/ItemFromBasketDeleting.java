@@ -14,20 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class ItemFromBasketDeleting implements Command {
-    private final static Logger logger = LogManager.getLogger(ItemFromBasketDeleting.class);
-    private final ItemService itemService = new ItemService();
+    private static final Logger logger = LogManager.getLogger(ItemFromBasketDeleting.class);
+    private static final ItemService itemService = new ItemService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-        User user = (User) httpSession.getAttribute("userByLoginAndPassword");
+        User user = (User) httpSession.getAttribute("user");
         String stringId = request.getParameter("id");
         Item item = new Item();
         if (stringId != null) {
-            long id = Long.parseLong(stringId);
+            int id = Integer.parseInt(stringId);
             item.setId(id);
         }
-        boolean isDeleted = itemService.deleteItemFromBasket(item, Math.toIntExact(user.getId()));
+        boolean isDeleted = itemService.deleteItemFromBasket(item, user.getId());
         if (isDeleted) {
             logger.info("order item was deleted from basket");
         }

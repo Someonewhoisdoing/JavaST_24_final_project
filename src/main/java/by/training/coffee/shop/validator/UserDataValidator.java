@@ -8,6 +8,10 @@ public class UserDataValidator {
     private static final String NAME_PATTERN = "[A-Za-zА-Яа-я]+";
     private static final String PHONE_PATTERN = "([\\+0-9]){13}";
 
+    private UserDataValidator(){
+        //empty constructor to hide the implicit one
+    }
+
     public static boolean checkData(String login, String name, String surname, String phone) {
         if (isRegexMatches(login, LOGIN_PATTERN)) {
             return true;

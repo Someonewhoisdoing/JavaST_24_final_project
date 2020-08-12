@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 public class UsersListDisplayCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(UsersListDisplayCommand.class);
+    private static final Logger logger = LogManager.getLogger(UsersListDisplayCommand.class);
+    private static final UserService userService = new UserService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
-        UserService userService = new UserService();
         List<User> users = userService.findAllUsers();
         if (users != null) {
             request.setAttribute("users", users);

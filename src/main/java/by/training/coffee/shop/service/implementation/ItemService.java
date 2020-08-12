@@ -2,7 +2,6 @@ package by.training.coffee.shop.service.implementation;
 
 import by.training.coffee.shop.dao.implementation.ItemDAO;
 import by.training.coffee.shop.entity.Item;
-import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.DAOException;
 import by.training.coffee.shop.exception.ServiceException;
 
@@ -36,7 +35,7 @@ public class ItemService {
         }
     }
 
-    public Item findItemById(Long id) throws ServiceException {
+    public Item findItemById(int id) throws ServiceException {
         try {
             return itemDAO.selectById(id, true);
         } catch (DAOException e) {

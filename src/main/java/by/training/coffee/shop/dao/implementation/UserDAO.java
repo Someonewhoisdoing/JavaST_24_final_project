@@ -29,16 +29,16 @@ public class UserDAO extends AbstractDAO<User> {
                 user = fetchEntity(resultSet);
                 System.out.println(user);
             }
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return user;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return user;
     }
 
     public List<User> selectAll(boolean isEndTrans) throws DAOException {
@@ -48,36 +48,36 @@ public class UserDAO extends AbstractDAO<User> {
             while (resultSet.next()) {
                 users.add(fetchEntity(resultSet));
             }
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return users;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return users;
     }
 
-    public User selectById(Long id, boolean isEndTrans) throws DAOException {
+    public User selectById(int id, boolean isEndTrans) throws DAOException {
         User user = new User();
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(SQL_SELECT_USER_BY_ID)) {
-            preparedStatement.setLong(1, id);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 user = fetchEntity(resultSet);
             }
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return user;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return user;
     }
 
     public boolean update(User entity, boolean isEndTrans) throws DAOException {
@@ -87,26 +87,25 @@ public class UserDAO extends AbstractDAO<User> {
             preparedStatement.setString(2, entity.getName());
             preparedStatement.setString(3, entity.getSurname());
             preparedStatement.setString(4, entity.getPhone());
-            preparedStatement.setInt(5, Integer.parseInt(String.valueOf(entity.getId())));
+            preparedStatement.setInt(5, (entity.getId()));
 
             isUpdated = preparedStatement.executeUpdate() > 0;
-            System.out.println(String.valueOf(isUpdated) + entity + "");
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isUpdated;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return isUpdated;
     }
 
     @Override
     protected User fetchEntity(ResultSet resultSet) throws SQLException {
         User user = new User();
-        user.setId(resultSet.getLong("id"));
+        user.setId(resultSet.getInt("id"));
         user.setLogin(resultSet.getString("login"));
         user.setPassword(resultSet.getString("password"));
         user.setName(resultSet.getString("name"));

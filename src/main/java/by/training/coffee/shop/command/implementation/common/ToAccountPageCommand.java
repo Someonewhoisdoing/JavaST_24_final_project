@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class ToAccountPageCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(ToAccountPageCommand.class);
+    private static final Logger logger = LogManager.getLogger(ToAccountPageCommand.class);
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession httpSession = request.getSession();
 
-        User currentUser = (User) httpSession.getAttribute("userByLoginAndPassword");
+        User currentUser = (User) httpSession.getAttribute("user");
         Integer role = null;
 
         if (currentUser != null) {

@@ -25,7 +25,7 @@ public class ControllerFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpSession session = req.getSession();
-        User user = (User) session.getAttribute("userByLoginAndPassword");
+        User user = (User) session.getAttribute("user");
         String command = req.getParameter("command");
         if (user != null || command.equals("login")) {
             filterChain.doFilter(servletRequest, servletResponse);

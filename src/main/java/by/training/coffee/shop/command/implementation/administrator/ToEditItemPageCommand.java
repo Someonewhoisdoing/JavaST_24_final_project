@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class ToEditItemPageCommand implements Command {
+    private static final ItemService itemService = new ItemService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
-        Long id = Long.parseLong(request.getParameter("id"));
-        ItemService itemService = new ItemService();
+        int id = Integer.parseInt(request.getParameter("id"));
         Item itemById = itemService.findItemById(id);
         if (itemById != null) {
             request.setAttribute("itemById", itemById);

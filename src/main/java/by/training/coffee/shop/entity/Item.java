@@ -42,14 +42,14 @@ public class Item extends Entity {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Item item = (Item) o;
-        return orderId == item.orderId &&
-                Double.compare(item.cost, cost) == 0 &&
-                Double.compare(item.weight, weight) == 0 &&
-                Objects.equals(name, item.name);
+    public boolean equals(Object object) {
+        if (this == object){ return true;}
+        if (object == null || getClass() != object.getClass()) {return false;}
+        Item item = (Item) object;
+        return orderId == item.orderId
+                && Double.compare(item.cost, cost) == 0
+                && Double.compare(item.weight, weight) == 0
+                && Objects.equals(name, item.name);
     }
 
     @Override
@@ -59,12 +59,12 @@ public class Item extends Entity {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "id='" + getId() +
-                "name='" + name +
-                ", orderId=" + orderId +
-                ", cost=" + cost +
-                ", weight=" + weight +
-                '}';
+        return "Item{"
+                + super.getId()
+                + "name=" + name
+                + ", orderId=" + orderId
+                + ", cost=" + cost
+                + ", weight=" + weight
+                + "}";
     }
 }

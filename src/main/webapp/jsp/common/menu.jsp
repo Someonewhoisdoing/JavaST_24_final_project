@@ -37,7 +37,7 @@
 
                                 <input type="hidden" name="id" value="${item.id}"/>
 
-<c:if test="${sessionScope.userByLoginAndPassword.role == 2}">
+<c:if test="${sessionScope.user.role == 2}">
                                 <input type="submit" class="btn btn-primary btn-lg"
                                        value="<fmt:message key='add_to_basket_key'/>">
 </c:if>
@@ -52,15 +52,15 @@
 
     <div class="container p-3">
         <div class="btn-group btn-group-lg">
-            <form action="controller" method="post">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
                 <input type="hidden" name="command" value="to_menu_page"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="1">1</button>
             </form>
-            <form action="controller" method="post">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
                 <input type="hidden" name="command" value="to_menu_page"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="2">2</button>
             </form>
-            <form action="controller" method="post">
+            <form action="${pageContext.request.contextPath}/controller" method="post">
                 <input type="hidden" name="command" value="to_menu_page"/>
                 <button type="submit" class="btn btn-link p-3" name="page" value="3">3</button>
             </form>

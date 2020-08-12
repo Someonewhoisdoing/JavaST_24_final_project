@@ -33,21 +33,21 @@
                 <tbody>
                 <tr>
                     <td><input type="text" name="login"
-                               value="${sessionScope.userByLoginAndPassword.login}"
+                               value="${sessionScope.user.login}"
                                pattern="([a-zA-Z0-9_]+){4,10}" required/></td>
                     <td><input type="text" name="name" default="${request.getParameter("name")}"
-                               value="${sessionScope.userByLoginAndPassword.name}" pattern="([a-zA-Z]+){1,20}"
+                               value="${sessionScope.user.name}" pattern="([a-zA-Z]+){1,20}"
                                required/></td>
                     <td><input type="text" name="surname" default="${request.getParameter("surname")}"
-                               value="${sessionScope.userByLoginAndPassword.surname}" pattern="([a-zA-Z]+){1,20}"
+                               value="${sessionScope.user.surname}" pattern="([a-zA-Z]+){1,20}"
                                required/></td>
                     <td><input type="text" name="phone" default="${request.getParameter("phone")}"
-                               value="${sessionScope.userByLoginAndPassword.phone}" pattern="([\\+0-9]){13}"
+                               value="${sessionScope.user.phone}" pattern="([\\+0-9]){13}"
                                required/></td>
                 </tr>
                 </tbody>
             </table>
-            <input type="hidden" name="login" value="${sessionScope.userByLoginAndPassword.login}"/>
+            <input type="hidden" name="login" value="${sessionScope.user.login}"/>
             <button type="submit" class="btn btn-primary"><fmt:message key="save_key"/></button>
         </form>
     </div>

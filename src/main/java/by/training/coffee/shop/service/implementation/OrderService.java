@@ -8,7 +8,6 @@ import by.training.coffee.shop.entity.User;
 import by.training.coffee.shop.exception.DAOException;
 import by.training.coffee.shop.exception.ServiceException;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderService {
@@ -18,12 +17,12 @@ public class OrderService {
     public Order order(User user) throws ServiceException {
         try {
             Order order = new Order();
-            order.setUserId(Math.toIntExact(user.getId()));
+            order.setUserId(user.getId());
             boolean isOrdered = orderDAO.insert(order,false);
             if (isOrdered){
-                List<Item> items = itemDAO.selectAll(Math.toIntExact(user.getId()), false);
+                List<Item> items = itemDAO.selectAll(user.getId(), false);
                 order.setItems(items);
-                itemDAO.deleteAllFromBasket(Math.toIntExact(user.getId()),true);
+                itemDAO.deleteAllFromBasket(user.getId(),true);
                 return order;
             }
             return null;

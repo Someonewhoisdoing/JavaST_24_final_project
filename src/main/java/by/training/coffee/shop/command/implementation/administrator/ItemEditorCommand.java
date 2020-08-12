@@ -11,10 +11,11 @@ import by.training.coffee.shop.exception.ServiceException;
 import by.training.coffee.shop.service.implementation.ItemService;
 
 public class ItemEditorCommand implements Command {
+    private static final ItemService itemService = new ItemService();
+
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
-        ItemService itemService = new ItemService();
-        Long id = Long.parseLong(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         double weight = Double.parseDouble(request.getParameter("weight"));
         double cost = Double.parseDouble(request.getParameter("cost"));
@@ -26,7 +27,7 @@ public class ItemEditorCommand implements Command {
         item.setCost(cost);
         itemService.update(item);
         request.setAttribute("itemUpdated", item);
-        return new ItemsDisplayCommand().execute(request,response);
-//        return new Page(Page.ADMINISTRATOR_MENU_ITEMS_PAGE_PATH, false);
+
+        return new ItemsDisplayCommand().execute(request, response);
     }
 }

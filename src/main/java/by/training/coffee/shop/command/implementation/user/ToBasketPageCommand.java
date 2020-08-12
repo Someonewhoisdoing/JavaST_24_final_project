@@ -15,14 +15,14 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class ToBasketPageCommand implements Command {
-    private final static Logger logger = LogManager.getLogger(ToBasketPageCommand.class);
+    private static final Logger logger = LogManager.getLogger(ToBasketPageCommand.class);
+    private static final ItemService itemService = new ItemService();
 
     @Override
     public Page execute(HttpServletRequest request, HttpServletResponse response) throws ServiceException {
         HttpSession httpSession = request.getSession();
-        ItemService itemService = new ItemService();
-        User user = (User) httpSession.getAttribute("userByLoginAndPassword");
-        List<Item> itemList = itemService.selectAllOrderItemsInfo(Math.toIntExact(user.getId()));
+        User user = (User) httpSession.getAttribute("user");
+        List<Item> itemList = itemService.selectAllOrderItemsInfo(user.getId());
         if (itemList != null) {
             logger.info("orderItemList in ToBasketPageCommand is not null");
             httpSession.setAttribute("orderItemList", itemList);

@@ -57,13 +57,13 @@ public class CommandFactory {
             case MENU_ITEM_EDITOR_COMMAND:
                 return new ItemEditorCommand();
             case TO_ADD_MENU_ITEM_PAGE_COMMAND:
-                return new ToAddMenuItemPageCommand();
+                return new ToAddItemPageCommand();
             case MENU_ITEM_ADDING_COMMAND:
-                return new MenuItemAddingCommand();
+                return new ItemAddingCommand();
             case ADD_ORDER_ITEM_TO_BASKET:
                 return new ItemToBasketAddingCommand();
             case MAKE_ORDER_AND_SHOW_ORDER_INFO:
-                return new OrderInfoDisplayCommand();
+                return new OrderDisplayCommand();
             case DELETE_ORDER_ITEM_FROM_BASKET:
                 return new ItemFromBasketDeleting();
             case TO_HOME_PAGE_RETURNER_COMMAND:

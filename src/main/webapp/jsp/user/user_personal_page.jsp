@@ -33,10 +33,10 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><c:out value="${sessionScope.userByLoginAndPassword.login}"/></td>
-                    <td><c:out value="${sessionScope.userByLoginAndPassword.name}"/></td>
-                    <td><c:out value="${sessionScope.userByLoginAndPassword.surname}"/></td>
-                    <td><c:out value="${sessionScope.userByLoginAndPassword.phone}"/></td>
+                    <td><c:out value="${sessionScope.user.login}"/></td>
+                    <td><c:out value="${sessionScope.user.name}"/></td>
+                    <td><c:out value="${sessionScope.user.surname}"/></td>
+                    <td><c:out value="${sessionScope.user.phone}"/></td>
                     <td>
                         <button type="submit" class="btn btn-primary"><fmt:message key="edit_key"/></button>
                     </td>

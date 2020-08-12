@@ -4,8 +4,6 @@ import by.training.coffee.shop.dao.AbstractDAO;
 import by.training.coffee.shop.entity.Order;
 import by.training.coffee.shop.exception.DAOException;
 
-import java.math.BigDecimal;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,16 +21,16 @@ public class OrderDAO extends AbstractDAO<Order> {
 
 
             isCreated = preparedStatement.executeUpdate() > 0;
-            getConnection().commit();
+            if (isEndTrans) {
+                getConnection().commit();
+                endTransaction();
+            }
+            return isCreated;
         } catch (SQLException e) {
             rollBack();
             close();
             throw new DAOException();
         }
-        if (isEndTrans) {
-            endTransaction();
-        }
-        return isCreated;
     }
 
     @Override
