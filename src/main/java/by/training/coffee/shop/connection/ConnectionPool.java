@@ -15,11 +15,11 @@ public class ConnectionPool {
     private final static Logger logger = LogManager.getLogger(ConnectionPool.class);
     private BlockingQueue<Connection> pool = new ArrayBlockingQueue<>(10);
     private static final Properties PROPERTIES = new Properties();
-    private static final String URL = "jdbc:mysql://localhost:3306/coffeeshop";
+    private static final String URL = "jdbc:mysql://localhost:3306/coffeeshoptest";
 
     static {
-        PROPERTIES.put("user", "olya");
-        PROPERTIES.put("password", "66613777");
+        PROPERTIES.put("user", "root");
+        PROPERTIES.put("password", "1111");
         PROPERTIES.put("autoReconnect", "true");
         PROPERTIES.put("characterEncoding", "UTF-8");
         PROPERTIES.put("useUnicode", "true");

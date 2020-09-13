@@ -61,7 +61,7 @@ public class Item extends Entity {
     public String toString() {
         return "Item{"
                 + super.getId()
-                + "name=" + name
+                + ", name=" + name
                 + ", orderId=" + orderId
                 + ", cost=" + cost
                 + ", weight=" + weight
