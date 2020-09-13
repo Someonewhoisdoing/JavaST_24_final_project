@@ -1,7 +1,7 @@
 # JavaST_24_final_project
 CoffeeShop project (Проект CoffeeShop)
 
-Приложение написано на языке программирования Java c использованием шаблонов Layered architecture и MVC и следующих технологий:
+Приложение написано на языке программирования Java c использованием шаблона MVC и следующих технологий:
 - JDBC
 - Servlet (Controller запросов и ответов)
 - JSP
@@ -9,7 +9,6 @@ CoffeeShop project (Проект CoffeeShop)
 Шаблоны проектирования, используемые в приложении:
 - DAO
 - Factory method
-- Singleton
 
 При проектировании JSP страниц используется:
 - JSTL
@@ -17,13 +16,13 @@ CoffeeShop project (Проект CoffeeShop)
 - собственные теги
 
 Функциональность приложения (CRUD операции):
-- аунтентификация пользователя
+- аунтентификация пользователя (логин, пароль)
 - просмотр, редактирование, удаление информации
 - выход из системы
 
 Юзер:
-- login: savage 
-- password: 12345
+- login: user или user1
+- password: 1234
 - просмотр личной информации
 - редактирование личной информации
 - добавление пунктов меню в корзину
@@ -32,20 +31,20 @@ CoffeeShop project (Проект CoffeeShop)
 
 Администратор:
 - login: admin 
-- password: 666666
+- password: 1234
 - просмотр пунктов меню
-- добавление новых пунктов меню
+//- добавление новых пунктов меню
 - редактирование существующих пунктов меню
 - просмотр всех пользователей
 
 В приложении реализованы:
-- пагинация на страницах menu.jsp и menu_items_list_page.jsp
-- cмена языка RU/EN на странице меню
-- собственный тег (footer.tag)
+- пагинация
+- cмена языка RU/EN
+- собственные теги (footer.tag, menu.tag)
 - потокобезопасный пул
 - cессия
-- валидация входных данных для пользователя (LoginValidator.java, UserDataValidator.java, login.jsp, edit_personal_information.jsp)
-- bcrypt для хэширования паролей (util package, UserPersonalInformationEditorCommand.java)
+- валидация данных для пользователя (LoginValidator.java, UserDataValidator.java, login.jsp, edit_personal_information.jsp)
+- алгоритм SHA-256 для хэширования паролей (util package, UserPersonalInformationEditorCommand.java)
 - защита от sql injection 
 - фильтры
 
