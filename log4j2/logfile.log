@@ -16065,3 +16065,818 @@ java.sql.SQLNonTransientConnectionException: Communications link failure during 
 2020-08-09 23:12:11.917 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
 2020-08-09 23:12:11.928 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
 2020-08-09 23:19:20.945 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:03.371 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-13 22:23:32.733 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-13 22:23:33.003 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:33.451 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:33.663 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:38.917 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:51.245 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:23:52.311 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:23:52.312 [http-bio-8080-exec-8] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-13 22:23:52.462 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:23:52.462 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:23:54.737 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:21.586 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:21.587 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:21.587 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-13 22:25:21.650 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:21.650 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:24.714 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:24.717 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:24.717 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-13 22:25:24.725 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:24.725 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:26.683 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:26.689 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:26.698 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:26.699 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:29.222 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:35.570 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:35.579 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:35.580 [http-bio-8080-exec-5] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:25:35.581 [http-bio-8080-exec-5] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:25:35.631 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:35.631 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:35.659 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:36.449 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:36.452 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:36.468 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 22:25:36.485 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:36.485 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:38.011 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:38.011 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:38.012 [http-bio-8080-exec-5] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:25:38.012 [http-bio-8080-exec-5] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:25:38.029 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:38.029 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:41.916 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:41.916 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:41.917 [http-bio-8080-exec-5] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:25:41.935 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:41.936 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:44.272 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:44.276 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:44.303 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-13 22:25:44.307 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:44.307 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:46.453 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:46.454 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:46.467 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-13 22:25:46.472 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:46.473 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:47.888 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:47.888 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:47.894 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 22:25:47.903 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:47.903 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:50.169 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:50.171 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:50.182 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-13 22:25:50.186 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 22:25:50.190 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:50.190 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:51.631 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:51.641 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:51.673 [http-bio-8080-exec-5] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-13 22:25:51.711 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:51.712 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:25:58.288 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:25:58.288 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:25:58.289 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-13 22:25:58.298 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:25:58.298 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:08.777 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:08.780 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:08.780 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-13 22:26:08.787 [http-bio-8080-exec-5] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-13 22:26:08.788 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:26:08.788 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:08.798 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:13.869 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:13.869 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:13.877 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:13.878 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:17.586 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:17.586 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:17.592 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 22:26:17.598 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:17.598 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:18.429 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:18.429 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:18.434 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:18.435 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:19.458 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:19.458 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:19.458 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:26:19.458 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:26:19.470 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:19.470 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:21.555 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:21.556 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:21.566 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-13 22:26:21.572 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:21.573 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:34.122 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:41.062 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:44.930 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:44.931 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:44.940 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:44.940 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:46.989 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:46.989 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:46.990 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:26:46.990 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:26:47.005 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:47.005 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:47.594 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:47.595 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:47.595 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-13 22:26:47.601 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:47.601 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:48.833 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:48.833 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:48.836 [http-bio-8080-exec-8] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 22:26:48.841 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:26:48.841 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:50.442 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:26:50.446 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:26:50.447 [http-bio-8080-exec-8] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-13 22:26:50.448 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:26:50.448 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:26:50.455 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:01.944 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:08.056 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:08.056 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:08.057 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-13 22:27:08.087 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:08.087 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:09.505 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:09.508 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:09.514 [http-bio-8080-exec-10] INFO  shop.command.implementation.administrator.UsersListDisplayCommand - all users were found successfully
+2020-09-13 22:27:09.537 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:09.537 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:11.611 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:11.612 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:11.612 [http-bio-8080-exec-6] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:27:11.612 [http-bio-8080-exec-6] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:27:11.624 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:11.624 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:12.480 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:12.480 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:12.480 [http-bio-8080-exec-7] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-13 22:27:12.487 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:12.487 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:14.412 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:14.413 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:14.413 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-13 22:27:14.413 [http-bio-8080-exec-3] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-13 22:27:14.413 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:14.414 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:14.425 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:17.102 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:17.102 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:17.102 [http-bio-8080-exec-8] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-13 22:27:17.112 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:17.113 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:17.932 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:17.932 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:17.932 [http-bio-8080-exec-2] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:27:17.933 [http-bio-8080-exec-2] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:27:17.943 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:17.944 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:20.932 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:20.932 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:20.938 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:20.938 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:22.785 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:22.785 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:22.789 [http-bio-8080-exec-2] INFO  shop.command.implementation.administrator.UsersListDisplayCommand - all users were found successfully
+2020-09-13 22:27:22.798 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:22.798 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:26.460 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:26.460 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:26.467 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:26.467 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:27.753 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:27.756 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:27.762 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:27.762 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:27.772 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:33.253 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:33.254 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:33.259 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:33.259 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:33.266 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:35.299 [http-bio-8080-exec-2] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:35.299 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:35.306 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:35.307 [http-bio-8080-exec-2] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:35.314 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:37.924 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:37.924 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:37.926 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-13 22:27:37.926 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:37.927 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:37.938 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:39.945 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:46.333 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:46.334 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:46.334 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-13 22:27:46.347 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:27:46.347 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:47.584 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:27:47.584 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:27:47.587 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:27:47.588 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:27:47.594 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:00.326 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:07.179 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:10.658 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:10.658 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:10.661 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:10.661 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:10.669 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:15.833 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:20.346 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:23.660 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:23.661 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:23.664 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:23.666 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:23.673 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:25.692 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:25.692 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:25.695 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:25.696 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:25.702 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:30.478 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:30.479 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:30.483 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:30.483 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:30.490 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:32.101 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:32.102 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:32.106 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:32.107 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:32.113 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:35.598 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:35.598 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:35.598 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-13 22:28:35.599 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-13 22:28:35.612 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:28:35.612 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:39.985 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:39.986 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:39.990 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 22:28:39.990 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:41.075 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 22:28:41.075 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 22:28:41.075 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-13 22:28:41.075 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 22:28:41.076 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 22:28:41.084 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:26:59.953 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-13 23:28:02.809 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:05.749 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-13 23:28:08.440 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:16.452 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:17.408 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:17.408 [http-bio-8080-exec-7] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-13 23:28:17.538 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:17.538 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:20.215 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:20.217 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:20.223 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:20.223 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:21.741 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:21.751 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:21.757 [http-bio-8080-exec-9] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 23:28:21.808 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:21.808 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:25.841 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:25.843 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:25.856 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-13 23:28:25.860 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 23:28:25.867 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:25.868 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:26.575 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:26.576 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:26.588 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-13 23:28:26.592 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 23:28:26.595 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:26.595 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:26.672 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:26.673 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:26.679 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-13 23:28:26.682 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 23:28:26.684 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:26.686 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:26.819 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:26.819 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:26.827 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-13 23:28:26.831 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-13 23:28:26.841 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-13 23:28:26.841 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:30.492 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:28:30.494 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-13 23:28:30.495 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-13 23:28:30.496 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-13 23:28:30.497 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-13 23:28:30.504 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-13 23:42:29.300 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-13 23:49:14.396 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-14 00:07:38.902 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-14 00:07:39.309 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:41.669 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:46.604 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:47.675 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:47.675 [http-bio-8080-exec-6] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 00:07:47.832 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:47.832 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:50.769 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:50.777 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:50.781 [http-bio-8080-exec-8] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 00:07:50.806 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:50.806 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:51.634 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:51.637 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:51.640 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:51.641 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:53.368 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:53.371 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:53.371 [http-bio-8080-exec-10] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 00:07:53.372 [http-bio-8080-exec-10] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 00:07:53.411 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:53.411 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:55.167 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:55.170 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:55.183 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 00:07:55.188 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:55.189 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:56.779 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:56.780 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:56.784 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 00:07:56.791 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:56.791 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:57.759 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:57.768 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:57.781 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-14 00:07:57.802 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:57.802 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:07:59.790 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:07:59.791 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:07:59.791 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 00:07:59.791 [http-bio-8080-exec-3] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 00:07:59.803 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:07:59.804 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:00.669 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:00.671 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:00.671 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 00:08:00.676 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:00.676 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:02.379 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:02.381 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:02.382 [http-bio-8080-exec-3] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-14 00:08:02.389 [http-bio-8080-exec-3] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-14 00:08:02.389 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 00:08:02.390 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:02.398 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:03.643 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:03.644 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:03.647 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 00:08:03.652 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:03.652 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:05.555 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:05.558 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:05.559 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-14 00:08:05.559 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 00:08:05.560 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:05.565 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:08.255 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:17.442 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:17.443 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:17.443 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 00:08:17.473 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:17.473 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:20.260 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:20.261 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:20.261 [http-bio-8080-exec-1] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 00:08:20.268 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:20.268 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:21.689 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:21.689 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:21.689 [http-bio-8080-exec-1] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-14 00:08:21.690 [http-bio-8080-exec-1] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-14 00:08:21.690 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 00:08:21.690 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:21.702 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:24.863 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:24.864 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:24.874 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:24.874 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:26.820 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:26.822 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:26.826 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 00:08:26.826 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:26.831 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:31.963 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:31.964 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:31.972 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:31.973 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:34.060 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:34.063 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:34.068 [http-bio-8080-exec-3] INFO  shop.command.implementation.administrator.UsersListDisplayCommand - all users were found successfully
+2020-09-14 00:08:34.089 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:34.089 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:35.957 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:35.958 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:35.959 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 00:08:35.964 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 00:08:35.964 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:38.137 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 00:08:38.138 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 00:08:38.138 [http-bio-8080-exec-7] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-14 00:08:38.139 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 00:08:38.139 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 00:08:38.146 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:56:28.349 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-14 11:58:09.823 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:14.279 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:20.299 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:21.298 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:21.298 [http-bio-8080-exec-6] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 11:58:21.418 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:21.418 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:26.188 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:26.192 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:26.198 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:26.198 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:28.560 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:28.570 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:28.571 [http-bio-8080-exec-8] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 11:58:28.571 [http-bio-8080-exec-8] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 11:58:28.617 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:28.617 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:31.394 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:31.400 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:49.028 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:49.029 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:49.041 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:49.041 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:52.268 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:52.268 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:52.269 [http-bio-8080-exec-1] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 11:58:52.269 [http-bio-8080-exec-1] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 11:58:52.290 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:52.290 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:53.963 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:53.964 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:53.982 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 11:58:53.988 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:53.988 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:56.437 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:56.440 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:56.444 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:58:56.465 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:56.465 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:58:59.515 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:58:59.517 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:58:59.528 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 11:58:59.533 [http-bio-8080-exec-3] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:58:59.536 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:58:59.536 [http-bio-8080-exec-3] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:00.517 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:00.517 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:00.525 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 11:59:00.529 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:00.536 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:00.536 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:02.384 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:02.391 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:02.392 [http-bio-8080-exec-6] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 11:59:02.400 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:02.400 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:04.065 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:04.065 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:04.071 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:04.071 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:06.354 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:06.355 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:06.360 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:06.366 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:06.366 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:08.704 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:08.704 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:08.704 [http-bio-8080-exec-6] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 11:59:08.704 [http-bio-8080-exec-6] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 11:59:08.722 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:08.722 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:10.895 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:10.895 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:10.911 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 11:59:10.916 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:10.916 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:16.495 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:16.498 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:16.500 [http-bio-8080-exec-6] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-14 11:59:16.501 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 11:59:16.501 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:16.512 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:17.870 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:26.701 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:26.702 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:26.703 [http-bio-8080-exec-7] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 11:59:26.719 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:26.719 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:32.711 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:37.544 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:37.551 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:37.562 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.UserPersonalInformationEditorCommand - user updated
+2020-09-14 11:59:37.566 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:37.566 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:40.084 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:40.084 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:40.087 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:40.088 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:41.221 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:41.221 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:41.222 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 11:59:41.222 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 11:59:41.236 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:41.237 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:44.745 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:44.746 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:44.760 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 11:59:44.764 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:44.765 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:46.565 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:46.567 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:46.572 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:46.579 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:46.579 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:50.426 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:50.426 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:50.438 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 11:59:50.442 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:50.443 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:50.443 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:50.957 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:50.958 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:50.966 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 11:59:50.968 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:50.971 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:50.971 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:52.180 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:52.181 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:52.189 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:52.190 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:53.021 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:53.022 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:53.022 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 11:59:53.023 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 11:59:53.032 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:53.032 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:55.299 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:55.299 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:55.310 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 11:59:55.314 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:55.314 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:56.857 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:56.857 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:56.862 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 11:59:56.866 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:56.866 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 11:59:58.612 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 11:59:58.619 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 11:59:58.635 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-14 11:59:58.658 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 11:59:58.658 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:01.014 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:01.015 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:01.015 [http-bio-8080-exec-1] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 12:00:01.021 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:01.021 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:02.955 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:02.960 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:02.961 [http-bio-8080-exec-1] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-14 12:00:02.968 [http-bio-8080-exec-1] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-14 12:00:02.968 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:00:02.968 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:02.977 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:05.270 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:05.270 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:05.277 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:05.277 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:07.224 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:07.225 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:07.225 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:00:07.225 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:00:07.235 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:07.235 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:10.477 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:10.478 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:10.478 [http-bio-8080-exec-4] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 12:00:10.487 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:10.487 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:14.574 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:14.575 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:14.575 [http-bio-8080-exec-4] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:00:14.575 [http-bio-8080-exec-4] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:00:14.586 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:14.587 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:17.864 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:17.865 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:17.880 [http-bio-8080-exec-4] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:00:17.884 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:17.884 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:21.079 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:21.079 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:21.092 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:00:21.099 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:21.099 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:23.813 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:23.814 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:23.814 [http-bio-8080-exec-6] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:00:23.824 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:23.824 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:26.733 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:26.734 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:26.748 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:00:26.753 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:26.754 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:28.837 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:28.837 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:28.840 [http-bio-8080-exec-6] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 12:00:28.845 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:28.846 [http-bio-8080-exec-6] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:33.353 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:33.353 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:33.365 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 12:00:33.369 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 12:00:33.374 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:33.374 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:00:35.197 [http-bio-8080-exec-1] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:00:35.198 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:00:35.214 [http-bio-8080-exec-1] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-14 12:00:35.217 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:00:35.217 [http-bio-8080-exec-1] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:06.279 [localhost-startStop-1] INFO  coffee.shop.controller.filter.EncodingFilter - filter is initialised
+2020-09-14 12:08:06.534 [http-bio-8080-exec-3] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:09.246 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:15.110 [http-bio-8080-exec-5] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:16.113 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:16.113 [http-bio-8080-exec-5] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 12:08:16.276 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:16.276 [http-bio-8080-exec-5] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:22.538 [http-bio-8080-exec-6] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:28.156 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:28.161 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:28.170 [http-bio-8080-exec-7] INFO  shop.command.implementation.user.UserPersonalInformationEditorCommand - user updated
+2020-09-14 12:08:28.177 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:28.177 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:31.816 [http-bio-8080-exec-8] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:31.818 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:31.819 [http-bio-8080-exec-8] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 12:08:31.828 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:31.829 [http-bio-8080-exec-8] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:33.808 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:33.812 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:33.813 [http-bio-8080-exec-9] INFO  shop.command.implementation.common.LanguageChangerCommand - language is ru
+2020-09-14 12:08:33.819 [http-bio-8080-exec-9] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-14 12:08:33.820 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:08:33.820 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:33.829 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:35.613 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:35.614 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:35.614 [http-bio-8080-exec-10] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 12:08:35.616 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:35.617 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:37.024 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:37.031 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:37.031 [http-bio-8080-exec-10] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:08:37.032 [http-bio-8080-exec-10] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:08:37.072 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:37.073 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:42.385 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:42.388 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:42.401 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:08:42.411 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:42.411 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:47.013 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:47.014 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:47.030 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:08:47.040 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:47.040 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:49.858 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:49.861 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:49.866 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 12:08:49.884 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:49.884 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:52.012 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:52.015 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:52.022 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemFromBasketDeleting - order item was deleted from basket
+2020-09-14 12:08:52.026 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 12:08:52.028 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:52.029 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:08:53.859 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:08:53.866 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:08:53.878 [http-bio-8080-exec-9] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-14 12:08:55.405 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:08:55.405 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:05.765 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:05.765 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:05.766 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:09:05.766 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:09:05.781 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:05.781 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:07.272 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:07.273 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:07.273 [http-bio-8080-exec-9] INFO  shop.command.implementation.common.HomePageReturnerCommand - returned to home page - HomePageReturnerCommand 
+2020-09-14 12:09:07.280 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:07.280 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:08.387 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:08.387 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:08.387 [http-bio-8080-exec-9] INFO  shop.command.implementation.common.LanguageChangerCommand - language is en
+2020-09-14 12:09:08.388 [http-bio-8080-exec-9] INFO  training.coffee.shop.language.ResourceManager - resource file was found
+2020-09-14 12:09:08.388 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:09:08.388 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:08.399 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:10.578 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:10.578 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:10.578 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:09:10.579 [http-bio-8080-exec-9] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:09:10.591 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:10.592 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:12.210 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:12.210 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:12.224 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ItemToBasketAddingCommand - orderItemToBasket was added to basket
+2020-09-14 12:09:12.227 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:12.227 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:15.057 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:15.058 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:15.063 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.ToBasketPageCommand - orderItemList in ToBasketPageCommand is not null
+2020-09-14 12:09:15.071 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:15.071 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:16.357 [http-bio-8080-exec-10] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:16.358 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:16.374 [http-bio-8080-exec-10] INFO  shop.command.implementation.user.OrderDisplayCommand - orderInfoList is not null and added to session in OrderInfoDisplayCommand
+2020-09-14 12:09:16.378 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:16.378 [http-bio-8080-exec-10] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:20.094 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:20.096 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:20.097 [http-bio-8080-exec-4] INFO  shop.command.implementation.common.LogoutCommand - LogoutCommand - session was invalidated
+2020-09-14 12:09:20.098 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:09:20.098 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:20.107 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:21.531 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:28.167 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:28.167 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:28.168 [http-bio-8080-exec-4] INFO  shop.command.implementation.common.LoginCommand - login and password received
+2020-09-14 12:09:28.195 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:28.195 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:29.761 [http-bio-8080-exec-4] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:29.764 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:29.773 [http-bio-8080-exec-4] INFO  shop.command.implementation.administrator.UsersListDisplayCommand - all users were found successfully
+2020-09-14 12:09:29.792 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:29.792 [http-bio-8080-exec-4] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:34.059 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:34.062 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:34.068 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:34.068 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:35.837 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:35.839 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:35.844 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:09:35.845 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:35.852 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:40.157 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:40.157 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:40.161 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:09:40.162 [http-bio-8080-exec-9] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:40.168 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:45.009 [http-bio-8080-exec-9] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:50.727 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:50.730 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:50.742 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - response redirected
+2020-09-14 12:09:50.742 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:50.747 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:54.141 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:54.142 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:54.147 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:54.147 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:09:55.589 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:09:55.590 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:09:55.590 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:09:55.590 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:09:55.600 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:09:55.601 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:10:00.417 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:10:00.418 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:10:00.418 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:10:00.429 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:10:00.429 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method
+2020-09-14 12:10:08.379 [http-bio-8080-exec-7] INFO  coffee.shop.controller.filter.EncodingFilter - encoding is set
+2020-09-14 12:10:08.381 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - page received in Controller
+2020-09-14 12:10:08.381 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - number of page in MenuItemInformationDisplayCommand was gotten
+2020-09-14 12:10:08.382 [http-bio-8080-exec-7] INFO  shop.command.implementation.menu.ItemInformationDisplayCommand - page == 1
+2020-09-14 12:10:08.395 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - request forwarded
+2020-09-14 12:10:08.395 [http-bio-8080-exec-7] INFO  training.coffee.shop.controller.Controller - process in post method

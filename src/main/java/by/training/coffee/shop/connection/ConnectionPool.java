@@ -15,7 +15,7 @@ public class ConnectionPool {
     private final static Logger logger = LogManager.getLogger(ConnectionPool.class);
     private BlockingQueue<Connection> pool = new ArrayBlockingQueue<>(10);
     private static final Properties PROPERTIES = new Properties();
-    private static final String URL = "jdbc:mysql://localhost:3306/coffeeshoptest";
+    private static final String URL = "jdbc:mysql://localhost:3306/coffeeshop";
 
     static {
         PROPERTIES.put("user", "root");

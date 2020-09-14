@@ -18,7 +18,7 @@
      <owntag:menu/>
 
     <div class="container p-3">
-        <h3>Your order information:</h3>
+        <h3><fmt:message key="your_order_key"/></h3>
     </div>
 
     <div class="container">
